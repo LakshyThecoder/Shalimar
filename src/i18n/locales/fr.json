@@ -1,0 +1,189 @@
+{
+  "nav": {
+    "story": "Histoire",
+    "menu": "Menu",
+    "visit": "Venir",
+    "reviews": "Avis",
+    "reserve": "Réserver",
+    "reserveTable": "Réserver une table",
+    "language": "Langue"
+  },
+  "hero": {
+    "tagline": "Le feu indien et pakistanais Halal au cœur de Milan.",
+    "ctaReserve": "Réserver une table",
+    "ctaMenu": "Découvrir le menu",
+    "scroll": "Défiler"
+  },
+  "marquee": {
+    "items": [
+      "Halal",
+      "Feu du Tandoor",
+      "Biryani",
+      "Naan frais du four",
+      "Spécialités pakistanaises",
+      "Milano · Zone 5",
+      "Adapté aux végétariens",
+      "Tables familiales",
+      "Chai & Douceurs"
+    ]
+  },
+  "story": {
+    "eyebrow": "01 — Notre histoire",
+    "title1": "Des épices qui",
+    "title2": "sentent la maison",
+    "lead": "Une salle petite et soignée. Des assiettes impeccables. Des visages accueillants. Des recettes qui voyagent du sous-continent jusqu'à Viale Toscana — sans perdre leur chaleur.",
+    "body": "Shalimar est la table indienne et pakistanaise Halal de Milan : poulet tandoori, biryani, naan frais et chai au goût de mémoire. Venez affamés. Repartez en en voulant encore une bouchée."
+  },
+  "signatures": {
+    "eyebrow": "02 — Signatures",
+    "title1": "Des plats pour",
+    "title2": "lesquels revenir",
+    "dishes": {
+      "tandoori": {
+        "name": "Poulet Tandoori",
+        "tag": "Du four d'argile",
+        "blurb": "Mariné toute la nuit, caressé par la chaleur du charbon — le plat pour lequel on revient."
+      },
+      "biryani": {
+        "name": "Royal Biryani",
+        "tag": "Parfumé et feuilleté",
+        "blurb": "Riz safrané, viande tendre, épices entières — une fête dans l'assiette."
+      },
+      "curry": {
+        "name": "Currys maison",
+        "tag": "Chaleur douce",
+        "blurb": "Pas particulièrement épicé sauf si vous le demandez — riche, équilibré, profondément aromatique."
+      },
+      "naan": {
+        "name": "Naan frais",
+        "tag": "Tout droit du tandoor",
+        "blurb": "Moelleux, boursouflé — à déchirer à la main et tremper dans chaque sauce."
+      },
+      "thali": {
+        "name": "Assortiments Thali",
+        "tag": "Goûter à tout",
+        "blurb": "Une constellation de saveurs — viande, légumes, dal, riz et douceurs en un seul repas."
+      }
+    }
+  },
+  "atmosphere": {
+    "eyebrow": "03 — La salle",
+    "title1": "Accueil chaleureux.",
+    "title2": "Ambiance superbe.",
+    "lead": "Des chaises confortables. Un service attentif. L'endroit qui vous fait sentir chez vous, même loin de chez vous.",
+    "stats": {
+      "rating": "Tripadvisor",
+      "halal": "Cuisine certifiée",
+      "value": "Excellent rapport qualité-prix",
+      "zone": "Viale Toscana"
+    }
+  },
+  "reviews": {
+    "eyebrow": "04 — Invités",
+    "title1": "Ce qu'on",
+    "title2": "en dit",
+    "ratingLabel": "sur 5 · 28 avis Tripadvisor"
+  },
+  "visit": {
+    "eyebrow": "05 — Venir",
+    "title1": "Nous trouver",
+    "title2": "à Milan",
+    "address": "Adresse",
+    "contact": "Contact",
+    "hours": "Horaires",
+    "closed": "Fermé",
+    "maps": "Ouvrir dans Maps",
+    "days": {
+      "sunday": "Dimanche",
+      "monday": "Lundi",
+      "tuesday": "Mardi",
+      "wednesday": "Mercredi",
+      "thursday": "Jeudi",
+      "friday": "Vendredi",
+      "saturday": "Samedi"
+    }
+  },
+  "reserve": {
+    "eyebrow": "06 — Réserver",
+    "title1": "Gardez",
+    "title2": "votre place",
+    "lead": "Déjeuner ou dîner — nous retenons une table. Vous préférez appeler ?",
+    "name": "Nom",
+    "phone": "Téléphone",
+    "date": "Date",
+    "guests": "Convives",
+    "time": "Heure",
+    "guestsLabel": "{{count}} convives",
+    "submit": "Demander une réservation",
+    "sending": "Envoi…",
+    "sentTitle": "Demande envoyée",
+    "sentBody": "Merci, {{name}}. Nous confirmerons votre table sous peu.",
+    "another": "Réserver à nouveau"
+  },
+  "footer": {
+    "eyebrow": "Shalimar Milano",
+    "title1": "Venez",
+    "title2": "affamés",
+    "cta": "Réserver une table",
+    "navigate": "Naviguer",
+    "cuisine": "Cuisine",
+    "address": "Adresse",
+    "call": "Appeler",
+    "cuisineItems": [
+      "Indienne",
+      "Pakistanaise",
+      "Halal",
+      "Adaptée aux végétariens"
+    ],
+    "credit": "Pour les amateurs d'épices à Milan",
+    "rights": "© {{year}} Shalimar — Ristorante Indiano Halal"
+  },
+  "loader": {
+    "line": "On allume le tandoor…",
+    "sub": "Indien · Pakistanais · Halal · Milano"
+  },
+  "menu": {
+    "title": "Le Menu",
+    "subtitle": "La vitrine de notre cuisine — demandez au personnel les spécialités du jour.",
+    "qrTitle": "Menu QR",
+    "qrSubtitle": "Carte complète avec prix · Indien & Pakistanais Halal",
+    "backHome": "Retour à l'accueil",
+    "viewFull": "Voir le menu complet",
+    "allergenTitle": "Avis allergènes",
+    "allergenReg": "Regolamento CE 852/2004 e D.G.R. 1105/2013 Reg. Lombardia",
+    "allergenIntro": "Cher Client, si vous souffrez d'ALLERGIES ou d'INTOLÉRANCES alimentaires, veuillez demander des informations à notre personnel. Il est toutefois impossible de garantir que les aliments servis ici n'aient pas été en contact avec les allergènes suivants :",
+    "management": "La Direction",
+    "spicy": "Épicé",
+    "includes": "Inclus",
+    "categories": {
+      "antipasti": "Entrées",
+      "zuppe": "Soupes",
+      "tandoori": "Tandoori",
+      "vegetarian": "Végétarien",
+      "nonVegetarian": "Non végétarien",
+      "lamb": "Agneau",
+      "rice": "Riz",
+      "bread": "Pain",
+      "burgers": "Burgers",
+      "desserts": "Desserts",
+      "fixedMenus": "Menus fixes",
+      "drinks": "Boissons"
+    },
+    "notes": {
+      "someGluten": "Certains plats contiennent du gluten",
+      "glutenFree": "Sans gluten",
+      "drinksExcluded": "Boissons non incluses"
+    },
+    "halalBadge": "100% Halal",
+    "scrollCats": "Parcourir",
+    "chapters": "Chapitres",
+    "chapter": "Chapitre",
+    "pickChapter": "Choisissez un chapitre. Pages courtes. Pas de liste interminable.",
+    "featured": "À la une",
+    "open": "Ouvrir",
+    "dishes": "plats",
+    "prev": "Préc",
+    "next": "Suiv",
+    "index": "Index"
+  }
+}

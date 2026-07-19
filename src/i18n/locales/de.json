@@ -1,0 +1,189 @@
+{
+  "nav": {
+    "story": "Geschichte",
+    "menu": "Menü",
+    "visit": "Besuch",
+    "reviews": "Bewertungen",
+    "reserve": "Reservieren",
+    "reserveTable": "Tisch reservieren",
+    "language": "Sprache"
+  },
+  "hero": {
+    "tagline": "Halal-indisches und pakistanisches Feuer im Herzen von Mailand.",
+    "ctaReserve": "Tisch reservieren",
+    "ctaMenu": "Menü entdecken",
+    "scroll": "Scrollen"
+  },
+  "marquee": {
+    "items": [
+      "Halal",
+      "Tandoor-Feuer",
+      "Biryani",
+      "Frisches Naan aus dem Ofen",
+      "Pakistanische Spezialitäten",
+      "Milano · Zone 5",
+      "Vegetarierfreundlich",
+      "Familientische",
+      "Chai & Süßes"
+    ]
+  },
+  "story": {
+    "eyebrow": "01 — Unsere Geschichte",
+    "title1": "Gewürze, die",
+    "title2": "sich wie Zuhause anfühlen",
+    "lead": "Ein kleiner, gepflegter Raum. Saubere Teller. Freundliche Gesichter. Rezepte, die vom Subkontinent nach Viale Toscana reisen — ohne die Hitze zu verlieren.",
+    "body": "Shalimar ist Mailands Halal-indischer und pakistanischer Tisch: Tandoori-Hähnchen, Biryani, frisches Naan und Chai, der nach Erinnerung schmeckt. Kommen Sie hungrig. Gehen Sie mit Lust auf noch einen Bissen."
+  },
+  "signatures": {
+    "eyebrow": "02 — Signaturen",
+    "title1": "Gerichte, für die",
+    "title2": "man zurückkehrt",
+    "dishes": {
+      "tandoori": {
+        "name": "Tandoori Chicken",
+        "tag": "Aus dem Lehmofen",
+        "blurb": "Über Nacht mariniert, von Holzkohlehitze geküsst — das Gericht, für das Gäste zurückkommen."
+      },
+      "biryani": {
+        "name": "Royal Biryani",
+        "tag": "Duftend & geschichtet",
+        "blurb": "Safranreis, zartes Fleisch, ganze Gewürze — ein Fest auf dem Teller."
+      },
+      "curry": {
+        "name": "Haus-Currys",
+        "tag": "Sanfte Schärfe",
+        "blurb": "Nicht besonders scharf, außer Sie wünschen es — reich, ausgewogen, tief aromatisch."
+      },
+      "naan": {
+        "name": "Frisches Naan",
+        "tag": "Direkt aus dem Tandoor",
+        "blurb": "Weich, blasenartig — von Hand zerreißen und durch jede Sauce ziehen."
+      },
+      "thali": {
+        "name": "Thali-Auswahl",
+        "tag": "Alles kosten",
+        "blurb": "Eine Konstellation von Aromen — Fleisch, Gemüse, Dal, Reis und Süßes in einem Gang."
+      }
+    }
+  },
+  "atmosphere": {
+    "eyebrow": "03 — Der Raum",
+    "title1": "Herzliche Begrüßung.",
+    "title2": "Hervorragende Atmosphäre.",
+    "lead": "Bequeme Stühle. Aufmerksamer Service. Der Ort, der sich wie Zuhause anfühlt — auch fern von zu Hause.",
+    "stats": {
+      "rating": "Tripadvisor",
+      "halal": "Zertifizierte Küche",
+      "value": "Preis-Leistung top",
+      "zone": "Viale Toscana"
+    }
+  },
+  "reviews": {
+    "eyebrow": "04 — Gäste",
+    "title1": "Was man",
+    "title2": "sich erzählt",
+    "ratingLabel": "von 5 · 28 Tripadvisor-Bewertungen"
+  },
+  "visit": {
+    "eyebrow": "05 — Besuch",
+    "title1": "Finden Sie uns",
+    "title2": "in Mailand",
+    "address": "Adresse",
+    "contact": "Kontakt",
+    "hours": "Öffnungszeiten",
+    "closed": "Geschlossen",
+    "maps": "In Maps öffnen",
+    "days": {
+      "sunday": "Sonntag",
+      "monday": "Montag",
+      "tuesday": "Dienstag",
+      "wednesday": "Mittwoch",
+      "thursday": "Donnerstag",
+      "friday": "Freitag",
+      "saturday": "Samstag"
+    }
+  },
+  "reserve": {
+    "eyebrow": "06 — Reservieren",
+    "title1": "Sichern Sie",
+    "title2": "Ihren Platz",
+    "lead": "Mittag- oder Abendessen — wir halten einen Tisch. Lieber anrufen?",
+    "name": "Name",
+    "phone": "Telefon",
+    "date": "Datum",
+    "guests": "Gäste",
+    "time": "Uhrzeit",
+    "guestsLabel": "{{count}} Gäste",
+    "submit": "Reservierung anfragen",
+    "sending": "Wird gesendet…",
+    "sentTitle": "Anfrage gesendet",
+    "sentBody": "Grazie, {{name}}. Wir bestätigen Ihren Tisch in Kürze.",
+    "another": "Erneut buchen"
+  },
+  "footer": {
+    "eyebrow": "Shalimar Milano",
+    "title1": "Kommen Sie",
+    "title2": "hungrig",
+    "cta": "Tisch buchen",
+    "navigate": "Navigieren",
+    "cuisine": "Küche",
+    "address": "Adresse",
+    "call": "Anrufen",
+    "cuisineItems": [
+      "Indisch",
+      "Pakistanisch",
+      "Halal",
+      "Vegetarierfreundlich"
+    ],
+    "credit": "Für Gewürzsuchende in Mailand",
+    "rights": "© {{year}} Shalimar — Ristorante Indiano Halal"
+  },
+  "loader": {
+    "line": "Der Tandoor wird angezündet…",
+    "sub": "Indisch · Pakistanisch · Halal · Milano"
+  },
+  "menu": {
+    "title": "Das Menü",
+    "subtitle": "Ein Einblick in unsere Küche — fragen Sie unser Personal nach den Tagesbesonderheiten.",
+    "qrTitle": "QR-Menü",
+    "qrSubtitle": "Vollständige Karte mit Preisen · Halal indisch & pakistanisch",
+    "backHome": "Zurück zur Startseite",
+    "viewFull": "Vollständiges Menü ansehen",
+    "allergenTitle": "Allergenhinweis",
+    "allergenReg": "Regolamento CE 852/2004 e D.G.R. 1105/2013 Reg. Lombardia",
+    "allergenIntro": "Sehr geehrter Gast, wenn Sie unter ALLERGIEN oder NAHRUNGSMITTELINSTOLERANZEN leiden, fragen Sie bitte unser Personal. Es kann jedoch nicht ausgeschlossen werden, dass die hier servierten Speisen mit folgenden Allergenen in Kontakt gekommen sind:",
+    "management": "Die Geschäftsleitung",
+    "spicy": "Scharf",
+    "includes": "Enthält",
+    "categories": {
+      "antipasti": "Vorspeisen",
+      "zuppe": "Suppen",
+      "tandoori": "Tandoori",
+      "vegetarian": "Vegetarisch",
+      "nonVegetarian": "Nicht vegetarisch",
+      "lamb": "Lamm",
+      "rice": "Reis",
+      "bread": "Brot",
+      "burgers": "Burger",
+      "desserts": "Desserts",
+      "fixedMenus": "Menüs",
+      "drinks": "Getränke"
+    },
+    "notes": {
+      "someGluten": "Einige Gerichte enthalten Gluten",
+      "glutenFree": "Glutenfrei",
+      "drinksExcluded": "Getränke nicht inbegriffen"
+    },
+    "halalBadge": "100% Halal",
+    "scrollCats": "Durchsuchen",
+    "chapters": "Kapitel",
+    "chapter": "Kapitel",
+    "pickChapter": "Wählen Sie ein Kapitel. Kurze Seiten. Keine endlose Liste.",
+    "featured": "Empfohlen",
+    "open": "Öffnen",
+    "dishes": "Gerichte",
+    "prev": "Zurück",
+    "next": "Weiter",
+    "index": "Index"
+  }
+}

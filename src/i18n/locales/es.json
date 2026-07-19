@@ -1,0 +1,189 @@
+{
+  "nav": {
+    "story": "Historia",
+    "menu": "Menú",
+    "visit": "Visítanos",
+    "reviews": "Reseñas",
+    "reserve": "Reservar",
+    "reserveTable": "Reservar una mesa",
+    "language": "Idioma"
+  },
+  "hero": {
+    "tagline": "Fuego indio y pakistaní Halal en el corazón de Milán.",
+    "ctaReserve": "Reservar una mesa",
+    "ctaMenu": "Explorar el menú",
+    "scroll": "Desplazar"
+  },
+  "marquee": {
+    "items": [
+      "Halal",
+      "Fuego del Tandoor",
+      "Biryani",
+      "Naan fresco del horno",
+      "Especialidades pakistaníes",
+      "Milano · Zone 5",
+      "Apto para vegetarianos",
+      "Mesas familiares",
+      "Chai y dulces"
+    ]
+  },
+  "story": {
+    "eyebrow": "01 — Nuestra historia",
+    "title1": "Especias que",
+    "title2": "saben a hogar",
+    "lead": "Una sala pequeña y cuidada. Platos limpios. Rostros amables. Recetas que viajan del subcontinente a Viale Toscana — sin perder el calor.",
+    "body": "Shalimar es la mesa india y pakistaní Halal de Milán: pollo tandoori, biryani, naan fresco y chai que sabe a memoria. Ven con hambre. Márchate queriendo un bocado más."
+  },
+  "signatures": {
+    "eyebrow": "02 — Firmas",
+    "title1": "Platos por los que",
+    "title2": "vale volver",
+    "dishes": {
+      "tandoori": {
+        "name": "Pollo Tandoori",
+        "tag": "Del horno de barro",
+        "blurb": "Marinado toda la noche, besado por el calor del carbón — el plato por el que regresan los invitados."
+      },
+      "biryani": {
+        "name": "Royal Biryani",
+        "tag": "Fragante y en capas",
+        "blurb": "Arroz azafranado, carne tierna, especias enteras — una celebración en el plato."
+      },
+      "curry": {
+        "name": "Currys de la casa",
+        "tag": "Calor suave",
+        "blurb": "No especialmente picante salvo que lo pidas — rico, equilibrado, profundamente aromático."
+      },
+      "naan": {
+        "name": "Naan fresco",
+        "tag": "Directo del tandoor",
+        "blurb": "Suave, abultado — para romper a mano y mojar en cada salsa."
+      },
+      "thali": {
+        "name": "Thali",
+        "tag": "Prueba de todo",
+        "blurb": "Una constelación de sabores — carne, verduras, dal, arroz y dulces en una sola comida."
+      }
+    }
+  },
+  "atmosphere": {
+    "eyebrow": "03 — La sala",
+    "title1": "Cálida bienvenida.",
+    "title2": "Ambiente soberbio.",
+    "lead": "Sillas cómodas. Servicio atento. El lugar que se siente como casa aunque estés lejos de casa.",
+    "stats": {
+      "rating": "Tripadvisor",
+      "halal": "Cocina certificada",
+      "value": "Excelente relación calidad-precio",
+      "zone": "Viale Toscana"
+    }
+  },
+  "reviews": {
+    "eyebrow": "04 — Invitados",
+    "title1": "Lo que se",
+    "title2": "cuenta",
+    "ratingLabel": "de 5 · 28 reseñas de Tripadvisor"
+  },
+  "visit": {
+    "eyebrow": "05 — Visítanos",
+    "title1": "Encuéntranos",
+    "title2": "en Milán",
+    "address": "Dirección",
+    "contact": "Contacto",
+    "hours": "Horario",
+    "closed": "Cerrado",
+    "maps": "Abrir en Maps",
+    "days": {
+      "sunday": "Domingo",
+      "monday": "Lunes",
+      "tuesday": "Martes",
+      "wednesday": "Miércoles",
+      "thursday": "Jueves",
+      "friday": "Viernes",
+      "saturday": "Sábado"
+    }
+  },
+  "reserve": {
+    "eyebrow": "06 — Reservar",
+    "title1": "Asegura",
+    "title2": "tu mesa",
+    "lead": "Almuerzo o cena — guardamos una mesa. ¿Prefieres llamar?",
+    "name": "Nombre",
+    "phone": "Teléfono",
+    "date": "Fecha",
+    "guests": "Comensales",
+    "time": "Hora",
+    "guestsLabel": "{{count}} comensales",
+    "submit": "Solicitar reserva",
+    "sending": "Enviando…",
+    "sentTitle": "Solicitud enviada",
+    "sentBody": "Grazie, {{name}}. Confirmaremos tu mesa en breve.",
+    "another": "Reservar otra"
+  },
+  "footer": {
+    "eyebrow": "Shalimar Milano",
+    "title1": "Ven",
+    "title2": "con hambre",
+    "cta": "Reservar una mesa",
+    "navigate": "Navegar",
+    "cuisine": "Cocina",
+    "address": "Dirección",
+    "call": "Llamar",
+    "cuisineItems": [
+      "India",
+      "Pakistaní",
+      "Halal",
+      "Apto para vegetarianos"
+    ],
+    "credit": "Para quienes buscan especias en Milán",
+    "rights": "© {{year}} Shalimar — Ristorante Indiano Halal"
+  },
+  "loader": {
+    "line": "Encendiendo el tandoor…",
+    "sub": "Indio · Pakistaní · Halal · Milano"
+  },
+  "menu": {
+    "title": "El Menú",
+    "subtitle": "Un escaparate de nuestra cocina — pregunta al personal por las especialidades del día.",
+    "qrTitle": "Menú QR",
+    "qrSubtitle": "Carta completa con precios · Indio y pakistaní Halal",
+    "backHome": "Volver al inicio",
+    "viewFull": "Ver menú completo",
+    "allergenTitle": "Aviso de alérgenos",
+    "allergenReg": "Regolamento CE 852/2004 e D.G.R. 1105/2013 Reg. Lombardia",
+    "allergenIntro": "Estimado Cliente, si padece ALERGIAS o INTOLERANCIAS alimentarias, solicite información a nuestro personal. En cualquier caso, no es posible garantizar que los alimentos servidos aquí no hayan entrado en contacto con los siguientes alérgenos:",
+    "management": "La Dirección",
+    "spicy": "Picante",
+    "includes": "Incluye",
+    "categories": {
+      "antipasti": "Entrantes",
+      "zuppe": "Sopas",
+      "tandoori": "Tandoori",
+      "vegetarian": "Vegetariano",
+      "nonVegetarian": "No vegetariano",
+      "lamb": "Cordero",
+      "rice": "Arroz",
+      "bread": "Pan",
+      "burgers": "Hamburguesas",
+      "desserts": "Postres",
+      "fixedMenus": "Menús fijos",
+      "drinks": "Bebidas"
+    },
+    "notes": {
+      "someGluten": "Algunos platos contienen gluten",
+      "glutenFree": "Sin gluten",
+      "drinksExcluded": "Bebidas no incluidas"
+    },
+    "halalBadge": "100% Halal",
+    "scrollCats": "Explorar",
+    "chapters": "Capítulos",
+    "chapter": "Capítulo",
+    "pickChapter": "Elige un capítulo. Páginas cortas. Sin lista infinita.",
+    "featured": "Destacado",
+    "open": "Abrir",
+    "dishes": "platos",
+    "prev": "Ant",
+    "next": "Sig",
+    "index": "Índice"
+  }
+}

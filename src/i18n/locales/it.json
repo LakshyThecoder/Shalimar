@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "story": "Storia",
+    "menu": "Menu",
+    "visit": "Dove siamo",
+    "reviews": "Recensioni",
+    "reserve": "Prenota",
+    "reserveTable": "Prenota un tavolo",
+    "language": "Lingua"
+  },
+  "hero": {
+    "tagline": "Fuoco indiano e pakistano Halal nel cuore di Milano.",
+    "ctaReserve": "Prenota un tavolo",
+    "ctaMenu": "Scopri il menu",
+    "scroll": "Scorri"
+  },
+  "marquee": {
+    "items": ["Halal", "Fuoco del Tandoor", "Biryani", "Naan fresco dal forno", "Specialità pakistane", "Milano · Zona 5", "Adatto ai vegetariani", "Tavoli per famiglie", "Chai & Dolci"]
+  },
+  "story": {
+    "eyebrow": "01 — La nostra storia",
+    "title1": "Spezie che",
+    "title2": "sanno di casa",
+    "lead": "Una sala piccola e curata. Piatti puliti. Volti cordiali. Ricette che dal subcontinente arrivano in Viale Toscana — senza perdere il calore.",
+    "body": "Shalimar è la tavola indiana e pakistana Halal di Milano: pollo tandoori, biryani, naan fresco e chai che sa di memoria. Vieni affamato. Tornerai per un altro morso."
+  },
+  "signatures": {
+    "eyebrow": "02 — Firme",
+    "title1": "Piatti per cui",
+    "title2": "vale tornare",
+    "dishes": {
+      "tandoori": { "name": "Pollo Tandoori", "tag": "Dal forno di argilla", "blurb": "Marinato tutta la notte, baciato dal carbone — il piatto per cui si ritorna." },
+      "biryani": { "name": "Biryani Reale", "tag": "Fragrante e stratificato", "blurb": "Riso allo zafferano, carne tenera, spezie intere — una festa nel piatto." },
+      "curry": { "name": "Curry della Casa", "tag": "Calore delicato", "blurb": "Non particolarmente piccante, a meno che non lo chiediate — ricco, bilanciato, aromatico." },
+      "naan": { "name": "Naan Fresco", "tag": "Diretto dal tandoor", "blurb": "Morbido, bollato, da spezzare a mano e passare in ogni salsa." },
+      "thali": { "name": "Thali", "tag": "Assaggia tutto", "blurb": "Una costellazione di sapori — carne, verdure, dal, riso e dolci in un solo percorso." }
+    }
+  },
+  "atmosphere": {
+    "eyebrow": "03 — La sala",
+    "title1": "Accoglienza calda.",
+    "title2": "Atmosfera superba.",
+    "lead": "Sedie comode. Servizio attento. Il posto che ti fa sentire a casa, anche lontano da casa.",
+    "stats": {
+      "rating": "Tripadvisor",
+      "halal": "Cucina certificata",
+      "value": "Ottimo rapporto qualità-prezzo",
+      "zone": "Viale Toscana"
+    }
+  },
+  "reviews": {
+    "eyebrow": "04 — Ospiti",
+    "title1": "Voce di",
+    "title2": "strada",
+    "ratingLabel": "su 5 · 28 recensioni Tripadvisor"
+  },
+  "visit": {
+    "eyebrow": "05 — Visita",
+    "title1": "Ci trovi",
+    "title2": "a Milano",
+    "address": "Indirizzo",
+    "contact": "Contatti",
+    "hours": "Orari",
+    "closed": "Chiuso",
+    "maps": "Apri in Maps",
+    "days": {
+      "sunday": "Domenica",
+      "monday": "Lunedì",
+      "tuesday": "Martedì",
+      "wednesday": "Mercoledì",
+      "thursday": "Giovedì",
+      "friday": "Venerdì",
+      "saturday": "Sabato"
+    }
+  },
+  "reserve": {
+    "eyebrow": "06 — Prenota",
+    "title1": "Assicurati",
+    "title2": "il posto",
+    "lead": "Pranzo o cena — teniamo un tavolo. Preferisci chiamare?",
+    "name": "Nome",
+    "phone": "Telefono",
+    "date": "Data",
+    "guests": "Ospiti",
+    "time": "Ora",
+    "guestsLabel": "{{count}} ospiti",
+    "submit": "Richiedi prenotazione",
+    "sending": "Invio…",
+    "sentTitle": "Richiesta inviata",
+    "sentBody": "Grazie, {{name}}. Confermeremo il tavolo a breve.",
+    "another": "Prenota ancora"
+  },
+  "footer": {
+    "eyebrow": "Shalimar Milano",
+    "title1": "Vieni",
+    "title2": "affamato",
+    "cta": "Prenota un tavolo",
+    "navigate": "Naviga",
+    "cuisine": "Cucina",
+    "address": "Indirizzo",
+    "call": "Chiama",
+    "cuisineItems": ["Indiana", "Pakistana", "Halal", "Adatta ai vegetariani"],
+    "credit": "Per chi cerca le spezie a Milano",
+    "rights": "© {{year}} Shalimar — Ristorante Indiano Halal"
+  },
+  "loader": {
+    "line": "Accendiamo il tandoor…",
+    "sub": "Indiano · Pakistano · Halal · Milano"
+  },
+  "menu": {
+    "title": "Il Menu",
+    "subtitle": "La nostra cucina in vetrina — chiedete allo staff le specialità del giorno.",
+    "qrTitle": "Menu QR",
+    "qrSubtitle": "Carta completa con prezzi · Indiano & Pakistano Halal",
+    "backHome": "Torna alla home",
+    "viewFull": "Vedi il menu",
+    "allergenTitle": "Avviso Allergeni",
+    "allergenReg": "Regolamento CE 852/2004 e D.G.R. 1105/2013 Reg. Lombardia",
+    "allergenIntro": "Gentile Cliente, se soffre di ALLERGIE o INTOLLERANZE alimentari richieda informazioni al nostro personale. Sappia comunque che per gli alimenti offerti in questo locale non è possibile escludere abbiano subito un contatto con i seguenti allergeni:",
+    "management": "La Direzione",
+    "spicy": "Piccante",
+    "includes": "Include",
+    "categories": {
+      "antipasti": "Antipasti",
+      "zuppe": "Zuppe",
+      "tandoori": "Piatti Tandoori",
+      "vegetarian": "Piatti Vegetariani",
+      "nonVegetarian": "Piatti Non Vegetariani",
+      "lamb": "Piatti di Agnello",
+      "rice": "Riso",
+      "bread": "Pane",
+      "burgers": "Burger",
+      "desserts": "Dolci",
+      "fixedMenus": "Menu Fissi",
+      "drinks": "Bevande"
+    },
+    "notes": {
+      "someGluten": "Alcuni piatti contengono glutine",
+      "glutenFree": "Senza glutine",
+      "drinksExcluded": "Bevande escluse"
+    },
+    "halalBadge": "100% Halal",
+    "scrollCats": "Sfoglia",
+    "chapters": "Capitoli",
+    "chapter": "Capitolo",
+    "pickChapter": "Scegli un capitolo. Pagine brevi. Niente lista infinita.",
+    "featured": "In evidenza",
+    "open": "Apri",
+    "dishes": "piatti",
+    "prev": "Prec",
+    "next": "Succ",
+    "index": "Indice"
+  }
+}

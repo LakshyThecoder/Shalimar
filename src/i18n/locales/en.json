@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "story": "Story",
+    "menu": "Menu",
+    "visit": "Visit",
+    "reviews": "Reviews",
+    "reserve": "Reserve",
+    "reserveTable": "Reserve a table",
+    "language": "Language"
+  },
+  "hero": {
+    "tagline": "Halal Indian & Pakistani fire in the heart of Milan.",
+    "ctaReserve": "Reserve a table",
+    "ctaMenu": "Explore the menu",
+    "scroll": "Scroll"
+  },
+  "marquee": {
+    "items": ["Halal", "Tandoor Fire", "Biryani", "Naan Fresh from the Oven", "Pakistani Specialties", "Milano · Zone 5", "Vegetarian Friendly", "Family Tables", "Chai & Sweets"]
+  },
+  "story": {
+    "eyebrow": "01 — Our story",
+    "title1": "Spice that",
+    "title2": "feels like home",
+    "lead": "A small, well-appointed room. Clean plates. Friendly faces. Recipes that travel from the subcontinent to Viale Toscana — without losing the heat.",
+    "body": "Shalimar is Milan's Halal Indian & Pakistani table: tandoori chicken, biryani, fresh naan, and chai that tastes like memory. Come hungry. Leave wanting one more bite."
+  },
+  "signatures": {
+    "eyebrow": "02 — Signatures",
+    "title1": "Dishes worth",
+    "title2": "coming back for",
+    "dishes": {
+      "tandoori": { "name": "Tandoori Chicken", "tag": "From the clay oven", "blurb": "Marinated overnight, kissed by charcoal heat — the dish guests come back for." },
+      "biryani": { "name": "Royal Biryani", "tag": "Fragrant & layered", "blurb": "Saffron rice, tender meat, whole spices — a celebration on a plate." },
+      "curry": { "name": "House Curries", "tag": "Gentle heat", "blurb": "Not particularly spicy unless you ask — rich, balanced, deeply aromatic." },
+      "naan": { "name": "Fresh Naan", "tag": "Straight from the tandoor", "blurb": "Soft, blistered, best torn by hand and dragged through every sauce." },
+      "thali": { "name": "Thali Spreads", "tag": "Taste everything", "blurb": "A constellation of flavors — meat, veg, dal, rice, and sweets in one sitting." }
+    }
+  },
+  "atmosphere": {
+    "eyebrow": "03 — The room",
+    "title1": "Warm welcome.",
+    "title2": "Superb ambience.",
+    "lead": "Comfortable chairs. Attentive service. The kind of place that feels like home while you're away from home.",
+    "stats": {
+      "rating": "Tripadvisor",
+      "halal": "Certified kitchen",
+      "value": "Great value",
+      "zone": "Viale Toscana"
+    }
+  },
+  "reviews": {
+    "eyebrow": "04 — Guests",
+    "title1": "Word on",
+    "title2": "the street",
+    "ratingLabel": "of 5 · 28 Tripadvisor reviews"
+  },
+  "visit": {
+    "eyebrow": "05 — Visit",
+    "title1": "Find us",
+    "title2": "in Milano",
+    "address": "Address",
+    "contact": "Contact",
+    "hours": "Hours",
+    "closed": "Closed",
+    "maps": "Open in Maps",
+    "days": {
+      "sunday": "Sunday",
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday"
+    }
+  },
+  "reserve": {
+    "eyebrow": "06 — Reserve",
+    "title1": "Save your",
+    "title2": "seat",
+    "lead": "Lunch or dinner — we'll hold a table. Prefer to call?",
+    "name": "Name",
+    "phone": "Phone",
+    "date": "Date",
+    "guests": "Guests",
+    "time": "Time",
+    "guestsLabel": "{{count}} guests",
+    "submit": "Request reservation",
+    "sending": "Sending…",
+    "sentTitle": "Request sent",
+    "sentBody": "Grazie, {{name}}. We'll confirm your table shortly.",
+    "another": "Book another"
+  },
+  "footer": {
+    "eyebrow": "Shalimar Milano",
+    "title1": "Come",
+    "title2": "hungry",
+    "cta": "Book a table",
+    "navigate": "Navigate",
+    "cuisine": "Cuisine",
+    "address": "Address",
+    "call": "Call",
+    "cuisineItems": ["Indian", "Pakistani", "Halal", "Vegetarian friendly"],
+    "credit": "Made for spice seekers in Milano",
+    "rights": "© {{year}} Shalimar — Ristorante Indiano Halal"
+  },
+  "loader": {
+    "line": "Lighting the tandoor…",
+    "sub": "Indian · Pakistani · Halal · Milano"
+  },
+  "menu": {
+    "title": "The Menu",
+    "subtitle": "A display of our kitchen — ask our staff for today's specials.",
+    "qrTitle": "QR Menu",
+    "qrSubtitle": "Full carta with prices · Halal Indian & Pakistani",
+    "backHome": "Back home",
+    "viewFull": "View full menu",
+    "allergenTitle": "Allergen Notice",
+    "allergenReg": "Regolamento CE 852/2004 e D.G.R. 1105/2013 Reg. Lombardia",
+    "allergenIntro": "Dear Customer, if you suffer from ALLERGIES or FOOD INTOLERANCE please ask our staff for information. In any case, it is impossible to safeguard that the food served here has not come into contact with the following allergens:",
+    "management": "The Management",
+    "spicy": "Spicy",
+    "includes": "Includes",
+    "categories": {
+      "antipasti": "Starters",
+      "zuppe": "Soups",
+      "tandoori": "Tandoori",
+      "vegetarian": "Vegetarian",
+      "nonVegetarian": "Non-Vegetarian",
+      "lamb": "Lamb",
+      "rice": "Rice",
+      "bread": "Bread",
+      "burgers": "Burgers",
+      "desserts": "Desserts",
+      "fixedMenus": "Set Menus",
+      "drinks": "Drinks"
+    },
+    "notes": {
+      "someGluten": "Some dishes contain gluten",
+      "glutenFree": "Gluten free",
+      "drinksExcluded": "Drinks not included"
+    },
+    "halalBadge": "100% Halal",
+    "scrollCats": "Browse",
+    "chapters": "Chapters",
+    "chapter": "Chapter",
+    "pickChapter": "Pick a chapter. Short pages. No endless scroll.",
+    "featured": "Featured",
+    "open": "Open",
+    "dishes": "dishes",
+    "prev": "Prev",
+    "next": "Next",
+    "index": "Index"
+  }
+}
