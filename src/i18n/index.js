@@ -12,14 +12,14 @@ import es from "./locales/es.json";
 import ar from "./locales/ar.json";
 
 export const LANGUAGES = [
-  { code: "it", label: "Italiano", short: "IT", dir: "ltr", flag: "🇮🇹" },
-  { code: "en", label: "English", short: "EN", dir: "ltr", flag: "🇬🇧" },
-  { code: "hi", label: "हिन्दी", short: "HI", dir: "ltr", flag: "🇮🇳" },
-  { code: "ur", label: "اردو", short: "UR", dir: "rtl", flag: "🇵🇰" },
-  { code: "fr", label: "Français", short: "FR", dir: "ltr", flag: "🇫🇷" },
-  { code: "de", label: "Deutsch", short: "DE", dir: "ltr", flag: "🇩🇪" },
-  { code: "es", label: "Español", short: "ES", dir: "ltr", flag: "🇪🇸" },
-  { code: "ar", label: "العربية", short: "AR", dir: "rtl", flag: "🇸🇦" },
+  { code: "it", label: "Italiano", short: "IT", dir: "ltr", country: "it", flag: "🇮🇹" },
+  { code: "en", label: "English", short: "EN", dir: "ltr", country: "gb", flag: "🇬🇧" },
+  { code: "hi", label: "हिन्दी", short: "HI", dir: "ltr", country: "in", flag: "🇮🇳" },
+  { code: "ur", label: "اردو", short: "UR", dir: "rtl", country: "pk", flag: "🇵🇰" },
+  { code: "fr", label: "Français", short: "FR", dir: "ltr", country: "fr", flag: "🇫🇷" },
+  { code: "de", label: "Deutsch", short: "DE", dir: "ltr", country: "de", flag: "🇩🇪" },
+  { code: "es", label: "Español", short: "ES", dir: "ltr", country: "es", flag: "🇪🇸" },
+  { code: "ar", label: "العربية", short: "AR", dir: "rtl", country: "sa", flag: "🇸🇦" },
 ];
 
 const picked =

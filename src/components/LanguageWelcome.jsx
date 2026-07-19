@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { LANGUAGES, applyDocumentDirection } from "../i18n";
+import FlagImg from "./FlagImg";
 
 const STORAGE_KEY = "shalimar_lang_picked";
 
@@ -73,9 +74,7 @@ export default function LanguageWelcome() {
                   transition={{ delay: 0.05 * i, duration: 0.4 }}
                   className="flex items-center gap-3 px-3.5 py-3.5 sm:py-4 border border-sh-border bg-sh-bg/50 hover:border-sh-saffron hover:bg-sh-saffron/10 active:scale-[0.98] transition-all text-start touch-manipulation"
                 >
-                  <span className="text-3xl sm:text-4xl leading-none shrink-0" role="img" aria-label={l.label}>
-                    {l.flag}
-                  </span>
+                  <FlagImg country={l.country} label={l.label} className="w-10 h-7 sm:w-11 sm:h-8" />
                   <span className="min-w-0">
                     <span className="block font-display text-lg sm:text-xl uppercase tracking-tight leading-none">
                       {l.short}

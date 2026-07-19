@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LANGUAGES } from "../i18n";
+import FlagImg from "./FlagImg";
 
 export default function LanguageSwitcher({ compact = false }) {
   const { i18n, t } = useTranslation();
@@ -33,13 +34,11 @@ export default function LanguageSwitcher({ compact = false }) {
         onClick={() => setOpen((s) => !s)}
         data-cursor-hover
         aria-label={t("nav.language")}
-        className={`inline-flex items-center gap-1.5 border border-sh-border/80 hover:border-sh-saffron text-sh-text/90 hover:text-sh-saffron transition-colors duration-300 touch-manipulation ${
+        className={`inline-flex items-center gap-2 border border-sh-border/80 hover:border-sh-saffron text-sh-text/90 hover:text-sh-saffron transition-colors duration-300 touch-manipulation ${
           compact ? "px-2 py-2 text-[10px] min-h-[40px]" : "px-3 py-2 text-[11px] min-h-[42px]"
         } uppercase tracking-[0.14em]`}
       >
-        <span className="text-[1.25rem] leading-none" role="img" aria-label={current.label}>
-          {current.flag}
-        </span>
+        <FlagImg country={current.country} label={current.label} className="w-6 h-4" />
         <span>{current.short}</span>
       </button>
 
@@ -56,9 +55,7 @@ export default function LanguageSwitcher({ compact = false }) {
                   : "text-sh-text/85 hover:bg-white/5 hover:text-sh-saffron"
               }`}
             >
-              <span className="text-2xl leading-none shrink-0" role="img" aria-label={l.label}>
-                {l.flag}
-              </span>
+              <FlagImg country={l.country} label={l.label} className="w-7 h-5" />
               <span className="font-semibold tracking-wide">{l.short}</span>
               <span className="text-sh-muted text-xs truncate">{l.label}</span>
             </button>
