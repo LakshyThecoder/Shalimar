@@ -49,12 +49,6 @@ export default function Hero() {
 
       <EmberField count={22} className="z-[2]" />
 
-      {/* Fine gold frame — atmosphere, not a badge */}
-      <div
-        className="absolute inset-4 md:inset-6 z-[3] pointer-events-none border border-sh-saffron/15"
-        aria-hidden
-      />
-
       <motion.div
         className="relative z-10 px-5 sm:px-6 md:px-12 lg:px-16 flex flex-col justify-end min-h-[100svh] pb-14 sm:pb-16 md:pb-24 pt-28 sm:pt-32"
         style={{ y: textY, opacity: brandOpacity, perspective: "1400px" }}
