@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { LANGUAGES, applyDocumentDirection } from "../i18n";
@@ -6,25 +7,41 @@ import FlagImg from "./FlagImg";
 
 const STORAGE_KEY = "shalimar_lang_picked";
 
+/** Routes that should always ask for language on open (QR guests land here directly). */
+const FORCE_ASK = ["/qrmenu", "/menu"];
+
 export default function LanguageWelcome() {
   const { i18n } = useTranslation();
+  const location = useLocation();
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
+    const force = FORCE_ASK.includes(location.pathname);
     const picked = localStorage.getItem(STORAGE_KEY);
-    if (!picked) {
+    const sessionKey = `shalimar_lang_asked_${location.pathname}`;
+    const askedThisVisit = sessionStorage.getItem(sessionKey);
+
+    if (force && !askedThisVisit) {
       setOpen(true);
       document.body.style.overflow = "hidden";
+    } else if (!force && !picked) {
+      setOpen(true);
+      document.body.style.overflow = "hidden";
+    } else {
+      setOpen(false);
+      document.body.style.overflow = "";
     }
+
     return () => {
       document.body.style.overflow = "";
     };
-  }, []);
+  }, [location.pathname]);
 
   const choose = (code) => {
     i18n.changeLanguage(code);
     applyDocumentDirection(code);
     localStorage.setItem(STORAGE_KEY, code);
+    sessionStorage.setItem(`shalimar_lang_asked_${location.pathname}`, "1");
     setOpen(false);
     document.body.style.overflow = "";
   };
@@ -55,6 +72,11 @@ export default function LanguageWelcome() {
               <h1 className="font-display text-4xl sm:text-5xl uppercase tracking-tighter leading-none">
                 Shalimar
               </h1>
+              {FORCE_ASK.includes(location.pathname) && (
+                <p className="mt-2 text-[10px] uppercase tracking-[0.25em] text-sh-chili">
+                  {location.pathname === "/qrmenu" ? "QR Menu" : "Menu"}
+                </p>
+              )}
               <p className="mt-4 text-[11px] sm:text-xs uppercase tracking-[0.22em] text-sh-muted leading-relaxed">
                 Scegli la lingua · Choose your language
               </p>
