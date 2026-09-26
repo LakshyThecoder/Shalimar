@@ -8,7 +8,7 @@ export default function RatingsBand() {
     { value: "4.2", label: "Tripadvisor" },
     { value: "28+", label: "Reviews" },
     { value: "100%", label: t("menu.halalBadge") },
-    { value: "Zone 5", label: "Milano" },
+    { value: "2", label: t("visit.kitchens") },
   ];
 
   return (

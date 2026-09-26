@@ -9,7 +9,7 @@
     "language": "भाषा"
   },
   "hero": {
-    "tagline": "मिलान के हृदय में हलाल भारतीय और पाकिस्तानी अग्नि।",
+    "tagline": "मिलान में दो हलाल रसोई — बैठकर खाएँ, या ले जाएँ।",
     "ctaReserve": "टेबल बुक करें",
     "ctaMenu": "मेनू देखें",
     "scroll": "स्क्रॉल"
@@ -21,7 +21,7 @@
       "Biryani",
       "तंदूर से ताज़ा Naan",
       "पाकिस्तानी विशेषताएँ",
-      "Milano · Zone 5",
+      "Viale Toscana · Porta Romana",
       "शाकाहारी अनुकूल",
       "पारिवारिक टेबल",
       "Chai और मिठाइयाँ"
@@ -31,8 +31,8 @@
     "eyebrow": "01 — हमारी कहानी",
     "title1": "मसाले जो",
     "title2": "घर जैसा लगें",
-    "lead": "एक छोटी, सुसज्जित जगह। साफ़ प्लेटें। मिलनसार चेहरे। व्यंजन जो उपमहाद्वीप से Viale Toscana तक आते हैं — गर्मी खोए बिना।",
-    "body": "Shalimar मिलान की हलाल भारतीय और पाकिस्तानी मेज़ है: तंदूरी चिकन, बिरयानी, ताज़ा नान, और चाय जो यादों जैसी लगे। भूखे आएँ। एक और निवाला चाहकर जाएँ।"
+    "lead": "Viale Toscana पर भोजन कक्ष, और Corso di Porta Romana पर मिठाई के साथ टेकअवे। वही हलाल आग, दो मेनू।",
+    "body": "तंदूरी चिकन, बिरयानी, ताज़ा नान और चाय। रेस्तरां में बैठें, या Porta Romana से ले जाएँ। भूखे आएँ।"
   },
   "signatures": {
     "eyebrow": "02 — सिग्नेचर",
@@ -75,7 +75,7 @@
       "rating": "Tripadvisor",
       "halal": "प्रमाणित रसोई",
       "value": "बेहतरीन मूल्य",
-      "zone": "Viale Toscana"
+      "zone": "पते"
     }
   },
   "reviews": {
@@ -88,6 +88,9 @@
     "eyebrow": "05 — आएँ",
     "title1": "हमें खोजें",
     "title2": "मिलानो में",
+    "placesLead": "एक रेस्तरां। एक टेकअवे। अलग मेनू।",
+    "takeawayNote": "पार्सल और मिठाई · बुकिंग नहीं",
+    "kitchens": "रसोई",
     "address": "पता",
     "contact": "संपर्क",
     "hours": "समय",
@@ -107,7 +110,8 @@
     "eyebrow": "06 — आरक्षण",
     "title1": "अपनी सीट",
     "title2": "सुरक्षित करें",
-    "lead": "दोपहर या रात का भोजन — हम टेबल रखेंगे। फ़ोन करना पसंद है?",
+    "lead": "Viale Toscana की टेबल फ़ोन पर बुक होती है। कोई ऑनलाइन फ़ॉर्म नहीं है।",
+    "takeawayNote": "Porta Romana सिर्फ़ टेकअवे है। कॉल करें",
     "name": "नाम",
     "phone": "फ़ोन",
     "date": "तारीख",
@@ -167,7 +171,17 @@
       "burgers": "बर्गर",
       "desserts": "मिठाइयाँ",
       "fixedMenus": "सेट मेनू",
-      "drinks": "पेय"
+      "drinks": "पेय",
+      "fritti": "तले हुए",
+      "secondi": "मुख्य व्यंजन",
+      "basmati": "बासमती",
+      "salse": "सॉस",
+      "naan": "नान",
+      "combo": "कॉम्बो मेनू",
+      "dolci": "मिठाइयाँ",
+      "bevande": "पेय",
+      "birre": "बीयर",
+      "offerta": "विशेष ऑफर"
     },
     "notes": {
       "someGluten": "कुछ व्यंजनों में ग्लूटेन है",
@@ -184,6 +198,19 @@
     "dishes": "व्यंजन",
     "prev": "पिछला",
     "next": "अगला",
-    "index": "सूची"
+    "index": "सूची",
+    "branch": {
+      "ask": "कौन सा Shalimar?",
+      "hint": "दो शाखाएँ, दो अलग मेनू।",
+      "takeaway": "Shalimar Takeaway",
+      "restaurant": "Shalimar Restaurant",
+      "takeawayKind": "टेकअवे और मिठाई",
+      "restaurantKind": "रेस्तरां",
+      "takeawayAddress": "Corso di Porta Romana, 25 · 20122 Milan",
+      "restaurantAddress": "Viale Toscana, 2 · 20136 Milan",
+      "takeawayPrice": "€1–10",
+      "restaurantPrice": "€10–20",
+      "change": "शाखा बदलें"
+    }
   }
 }

@@ -9,7 +9,7 @@
     "language": "Idioma"
   },
   "hero": {
-    "tagline": "Fuego indio y pakistaní Halal en el corazón de Milán.",
+    "tagline": "Dos cocinas Halal en Milán — en la mesa, o para llevar.",
     "ctaReserve": "Reservar una mesa",
     "ctaMenu": "Explorar el menú",
     "scroll": "Desplazar"
@@ -21,7 +21,7 @@
       "Biryani",
       "Naan fresco del horno",
       "Especialidades pakistaníes",
-      "Milano · Zone 5",
+      "Viale Toscana · Porta Romana",
       "Apto para vegetarianos",
       "Mesas familiares",
       "Chai y dulces"
@@ -31,8 +31,8 @@
     "eyebrow": "01 — Nuestra historia",
     "title1": "Especias que",
     "title2": "saben a hogar",
-    "lead": "Una sala pequeña y cuidada. Platos limpios. Rostros amables. Recetas que viajan del subcontinente a Viale Toscana — sin perder el calor.",
-    "body": "Shalimar es la mesa india y pakistaní Halal de Milán: pollo tandoori, biryani, naan fresco y chai que sabe a memoria. Ven con hambre. Márchate queriendo un bocado más."
+    "lead": "Un comedor en Viale Toscana y un para llevar con dulces en Corso di Porta Romana. El mismo fuego Halal, dos menús.",
+    "body": "Pollo tandoori, biryani, naan fresco y chai. Siéntate en el restaurante o recógelo en Porta Romana. Ven con hambre."
   },
   "signatures": {
     "eyebrow": "02 — Firmas",
@@ -75,7 +75,7 @@
       "rating": "Tripadvisor",
       "halal": "Cocina certificada",
       "value": "Excelente relación calidad-precio",
-      "zone": "Viale Toscana"
+      "zone": "Direcciones"
     }
   },
   "reviews": {
@@ -88,6 +88,9 @@
     "eyebrow": "05 — Visítanos",
     "title1": "Encuéntranos",
     "title2": "en Milán",
+    "placesLead": "Un restaurante. Un para llevar. Dos menús.",
+    "takeawayNote": "Para llevar y dulces · sin reservas",
+    "kitchens": "Cocinas",
     "address": "Dirección",
     "contact": "Contacto",
     "hours": "Horario",
@@ -107,7 +110,8 @@
     "eyebrow": "06 — Reservar",
     "title1": "Asegura",
     "title2": "tu mesa",
-    "lead": "Almuerzo o cena — guardamos una mesa. ¿Prefieres llamar?",
+    "lead": "Las mesas de Viale Toscana se reservan por teléfono. No hay formulario online.",
+    "takeawayNote": "Porta Romana es solo para llevar. Llama",
     "name": "Nombre",
     "phone": "Teléfono",
     "date": "Fecha",
@@ -167,7 +171,17 @@
       "burgers": "Hamburguesas",
       "desserts": "Postres",
       "fixedMenus": "Menús fijos",
-      "drinks": "Bebidas"
+      "drinks": "Bebidas",
+      "fritti": "Fritos",
+      "secondi": "Segundos",
+      "basmati": "Basmati",
+      "salse": "Salsas",
+      "naan": "Naan",
+      "combo": "Menú combo Coca-Cola",
+      "dolci": "Dulces",
+      "bevande": "Bebidas",
+      "birre": "Cerveza",
+      "offerta": "Oferta especial"
     },
     "notes": {
       "someGluten": "Algunos platos contienen gluten",
@@ -184,6 +198,19 @@
     "dishes": "platos",
     "prev": "Ant",
     "next": "Sig",
-    "index": "Índice"
+    "index": "Índice",
+    "branch": {
+      "ask": "¿Qué Shalimar?",
+      "hint": "Dos locales, dos menús distintos.",
+      "takeaway": "Shalimar Takeaway",
+      "restaurant": "Shalimar Restaurant",
+      "takeawayKind": "Para llevar y dulces",
+      "restaurantKind": "Restaurante",
+      "takeawayAddress": "Corso di Porta Romana, 25 · 20122 Milán",
+      "restaurantAddress": "Viale Toscana, 2 · 20136 Milán",
+      "takeawayPrice": "€1–10",
+      "restaurantPrice": "€10–20",
+      "change": "Cambiar local"
+    }
   }
 }

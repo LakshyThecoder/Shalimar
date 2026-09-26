@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { IMG } from "../lib/images";
+import { RESTAURANT, TAKEAWAY } from "../data/locations";
 import Magnetic from "./Magnetic";
 import EmberField from "./EmberField";
 
@@ -70,16 +71,36 @@ export default function Footer() {
           </div>
           <div className="col-span-2 md:col-span-1">
             <p className="text-[11px] uppercase tracking-[0.2em] text-sh-muted mb-3">{t("footer.address")}</p>
+            <p className="text-[10px] uppercase tracking-[0.18em] text-sh-saffron mb-1">
+              {t("menu.branch.restaurantKind")}
+            </p>
             <p className="text-sh-muted leading-relaxed">
-              Viale Toscana 2
+              {RESTAURANT.street}
               <br />
-              20136 Milan
+              {RESTAURANT.area}
+            </p>
+            <p className="text-[10px] uppercase tracking-[0.18em] text-sh-saffron mt-4 mb-1">
+              {t("menu.branch.takeawayKind")}
+            </p>
+            <p className="text-sh-muted leading-relaxed">
+              {TAKEAWAY.street}
+              <br />
+              {TAKEAWAY.area}
             </p>
           </div>
           <div>
             <p className="text-[11px] uppercase tracking-[0.2em] text-sh-muted mb-3">{t("footer.call")}</p>
-            <a href="tel:+393391785899" className="hover:text-sh-saffron transition-colors">
-              +39 339 178 5899
+            <p className="text-[10px] uppercase tracking-[0.18em] text-sh-saffron mb-1">
+              {t("menu.branch.restaurantKind")}
+            </p>
+            <a href={RESTAURANT.tel} className="block hover:text-sh-saffron transition-colors">
+              {RESTAURANT.phone}
+            </a>
+            <p className="text-[10px] uppercase tracking-[0.18em] text-sh-saffron mt-4 mb-1">
+              {t("menu.branch.takeawayKind")}
+            </p>
+            <a href={TAKEAWAY.tel} className="block hover:text-sh-saffron transition-colors">
+              {TAKEAWAY.phone}
             </a>
           </div>
         </div>

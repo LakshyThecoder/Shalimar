@@ -8,7 +8,9 @@ import FlagImg from "./FlagImg";
 const STORAGE_KEY = "shalimar_lang_picked";
 
 /** Routes that should always ask for language on open (QR guests land here directly). */
-const FORCE_ASK = ["/qrmenu", "/menu"];
+function shouldAskLanguage(pathname) {
+  return pathname === "/menu" || pathname === "/qrmenu" || pathname.startsWith("/qrmenu/");
+}
 
 export default function LanguageWelcome() {
   const { i18n } = useTranslation();
@@ -16,7 +18,7 @@ export default function LanguageWelcome() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const force = FORCE_ASK.includes(location.pathname);
+    const force = shouldAskLanguage(location.pathname);
     const picked = localStorage.getItem(STORAGE_KEY);
     const sessionKey = `shalimar_lang_asked_${location.pathname}`;
     const askedThisVisit = sessionStorage.getItem(sessionKey);
@@ -33,7 +35,9 @@ export default function LanguageWelcome() {
     }
 
     return () => {
-      document.body.style.overflow = "";
+      if (!document.querySelector("[data-branch-picker]")) {
+        document.body.style.overflow = "";
+      }
     };
   }, [location.pathname]);
 
@@ -72,9 +76,9 @@ export default function LanguageWelcome() {
               <h1 className="font-display text-4xl sm:text-5xl uppercase tracking-tighter leading-none">
                 Shalimar
               </h1>
-              {FORCE_ASK.includes(location.pathname) && (
+              {shouldAskLanguage(location.pathname) && (
                 <p className="mt-2 text-[10px] uppercase tracking-[0.25em] text-sh-chili">
-                  {location.pathname === "/qrmenu" ? "QR Menu" : "Menu"}
+                  {location.pathname.startsWith("/qrmenu") ? "QR Menu" : "Menu"}
                 </p>
               )}
               <p className="mt-4 text-[11px] sm:text-xs uppercase tracking-[0.22em] text-sh-muted leading-relaxed">

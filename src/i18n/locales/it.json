@@ -9,20 +9,20 @@
     "language": "Lingua"
   },
   "hero": {
-    "tagline": "Fuoco indiano e pakistano Halal nel cuore di Milano.",
+    "tagline": "Due cucine Halal a Milano — a tavola, oppure d'asporto.",
     "ctaReserve": "Prenota un tavolo",
     "ctaMenu": "Scopri il menu",
     "scroll": "Scorri"
   },
   "marquee": {
-    "items": ["Halal", "Fuoco del Tandoor", "Biryani", "Naan fresco dal forno", "Specialità pakistane", "Milano · Zona 5", "Adatto ai vegetariani", "Tavoli per famiglie", "Chai & Dolci"]
+    "items": ["Halal", "Fuoco del Tandoor", "Biryani", "Naan fresco dal forno", "Specialità pakistane", "Viale Toscana · Porta Romana", "Adatto ai vegetariani", "Tavoli per famiglie", "Chai & Dolci"]
   },
   "story": {
     "eyebrow": "01 — La nostra storia",
     "title1": "Spezie che",
     "title2": "sanno di casa",
-    "lead": "Una sala piccola e curata. Piatti puliti. Volti cordiali. Ricette che dal subcontinente arrivano in Viale Toscana — senza perdere il calore.",
-    "body": "Shalimar è la tavola indiana e pakistana Halal di Milano: pollo tandoori, biryani, naan fresco e chai che sa di memoria. Vieni affamato. Tornerai per un altro morso."
+    "lead": "Una sala in Viale Toscana e un take away con dolci in Corso di Porta Romana. Stesso fuoco Halal, due menu.",
+    "body": "Pollo tandoori, biryani, naan fresco e chai. A tavola nel ristorante, oppure d'asporto in Porta Romana. Vieni affamato."
   },
   "signatures": {
     "eyebrow": "02 — Firme",
@@ -45,7 +45,7 @@
       "rating": "Tripadvisor",
       "halal": "Cucina certificata",
       "value": "Ottimo rapporto qualità-prezzo",
-      "zone": "Viale Toscana"
+      "zone": "Indirizzi"
     }
   },
   "reviews": {
@@ -58,6 +58,9 @@
     "eyebrow": "05 — Visita",
     "title1": "Ci trovi",
     "title2": "a Milano",
+    "placesLead": "Un ristorante. Un take away. Menu diversi.",
+    "takeawayNote": "Asporto e dolci · senza prenotazione",
+    "kitchens": "Cucine",
     "address": "Indirizzo",
     "contact": "Contatti",
     "hours": "Orari",
@@ -77,7 +80,8 @@
     "eyebrow": "06 — Prenota",
     "title1": "Assicurati",
     "title2": "il posto",
-    "lead": "Pranzo o cena — teniamo un tavolo. Preferisci chiamare?",
+    "lead": "I tavoli in Viale Toscana si prenotano per telefono. Non c'è un modulo online.",
+    "takeawayNote": "Porta Romana è solo asporto. Chiama",
     "name": "Nome",
     "phone": "Telefono",
     "date": "Data",
@@ -132,7 +136,17 @@
       "burgers": "Burger",
       "desserts": "Dolci",
       "fixedMenus": "Menu Fissi",
-      "drinks": "Bevande"
+      "drinks": "Bevande",
+      "fritti": "Fritti",
+      "secondi": "Secondi",
+      "basmati": "Piatti Basmati",
+      "salse": "Salse",
+      "naan": "Naan",
+      "combo": "Combo Menu Coca-Cola",
+      "dolci": "Dolci",
+      "bevande": "Bevande",
+      "birre": "Birre",
+      "offerta": "Offerta Speciale"
     },
     "notes": {
       "someGluten": "Alcuni piatti contengono glutine",
@@ -149,6 +163,19 @@
     "dishes": "piatti",
     "prev": "Prec",
     "next": "Succ",
-    "index": "Indice"
+    "index": "Indice",
+    "branch": {
+      "ask": "Quale Shalimar?",
+      "hint": "Due sedi, due menu diversi.",
+      "takeaway": "Shalimar Takeaway",
+      "restaurant": "Shalimar Restaurant",
+      "takeawayKind": "Take away e dolci",
+      "restaurantKind": "Ristorante",
+      "takeawayAddress": "Corso di Porta Romana, 25 · 20122 Milano",
+      "restaurantAddress": "Viale Toscana, 2 · 20136 Milano",
+      "takeawayPrice": "€1–10",
+      "restaurantPrice": "€10–20",
+      "change": "Cambia sede"
+    }
   }
 }

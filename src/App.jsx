@@ -22,7 +22,7 @@ function AnimatedRoutes() {
         <Routes location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<MenuPage />} />
-          <Route path="/qrmenu" element={<QRMenuPage />} />
+          <Route path="/qrmenu/:branch?" element={<QRMenuPage />} />
         </Routes>
       </motion.div>
     </AnimatePresence>

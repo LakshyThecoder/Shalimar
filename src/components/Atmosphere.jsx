@@ -15,7 +15,7 @@ export default function Atmosphere() {
     { k: "4.2", l: t("atmosphere.stats.rating") },
     { k: "Halal", l: t("atmosphere.stats.halal") },
     { k: "$$", l: t("atmosphere.stats.value") },
-    { k: "Zone 5", l: t("atmosphere.stats.zone") },
+    { k: "2", l: t("atmosphere.stats.zone") },
   ];
 
   return (

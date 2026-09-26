@@ -59,10 +59,14 @@ export default function Hero() {
           transition={{ delay: 0.55, duration: 0.9 }}
           className="flex flex-wrap items-center gap-4 mb-5 text-[11px] uppercase tracking-[0.32em] text-sh-text/70"
         >
-          <span className="flex items-center gap-2">
+          <a href="#restaurant" className="flex items-center gap-2 hover:text-sh-saffron transition-colors">
             <span className="w-1.5 h-1.5 rounded-full bg-sh-chili pulse-dot" />
-            Viale Toscana 2
-          </span>
+            Viale Toscana
+          </a>
+          <span className="text-sh-border">·</span>
+          <a href="#takeaway" className="hover:text-sh-saffron transition-colors">
+            Porta Romana
+          </a>
           <span className="hidden sm:inline text-sh-border">|</span>
           <span className="text-sh-saffron font-semibold">Halal · Indian · Pakistani</span>
         </motion.div>

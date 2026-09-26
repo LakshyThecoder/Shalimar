@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight, ChevronLeft } from "lucide-react";
 import { ALLERGENS, MENU_SECTIONS, formatPrice, getItemDesc } from "../../data/menu";
+import { TAKEAWAY_SECTIONS } from "../../data/takeawayMenu";
 import LanguageSwitcher from "../LanguageSwitcher";
 import EmberField from "../EmberField";
 import MenuImage from "./MenuImage";
@@ -22,16 +23,35 @@ const ACCENTS = {
   desserts: "from-rose-950/70",
   fixedMenus: "from-sh-saffron/40",
   drinks: "from-sky-950/70",
+  fritti: "from-sh-chili/80",
+  secondi: "from-orange-950/80",
+  basmati: "from-sh-saffron/45",
+  salse: "from-amber-900/70",
+  naan: "from-orange-900/70",
+  combo: "from-sh-chili/75",
+  dolci: "from-rose-950/70",
+  bevande: "from-sky-950/70",
+  birre: "from-stone-900/80",
+  offerta: "from-sh-saffron/40",
 };
 
 const ease = [0.22, 1, 0.36, 1];
 
-export default function MenuDisplay({ showPrices = false }) {
+export default function MenuDisplay({ showPrices = false, initialBranch = null }) {
   const { t, i18n } = useTranslation();
   const lang = i18n.language?.startsWith("it") ? "it" : "en";
-  const sections = useMemo(() => MENU_SECTIONS, []);
+  const [branch, setBranch] = useState(initialBranch);
+  const sections = useMemo(
+    () => (branch === "takeaway" ? TAKEAWAY_SECTIONS : MENU_SECTIONS),
+    [branch],
+  );
   const [view, setView] = useState("index");
   const [allergenOpen, setAllergenOpen] = useState(false);
+
+  const chooseBranch = (id) => {
+    setBranch(id);
+    setView("index");
+  };
 
   const activeIndex = sections.findIndex((s) => s.id === view);
   const activeSection = activeIndex >= 0 ? sections[activeIndex] : null;
@@ -87,6 +107,15 @@ export default function MenuDisplay({ showPrices = false }) {
             >
               {t("menu.allergenTitle")}
             </button>
+            {branch && (
+              <button
+                type="button"
+                onClick={() => chooseBranch(null)}
+                className="text-[10px] uppercase tracking-[0.16em] text-sh-saffron border border-sh-saffron/40 hover:bg-sh-saffron hover:text-sh-bg px-2.5 py-1.5 transition-colors"
+              >
+                {t("menu.branch.change")}
+              </button>
+            )}
             <LanguageSwitcher compact />
             <Link
               to="/"
@@ -98,8 +127,10 @@ export default function MenuDisplay({ showPrices = false }) {
         </div>
       </header>
 
+      {!branch && <BranchPicker onChoose={chooseBranch} t={t} />}
+
       <AnimatePresence mode="wait">
-        {view === "index" ? (
+        {branch && view === "index" ? (
           <motion.div
             key="index"
             initial={{ opacity: 0, y: 16 }}
@@ -112,10 +143,12 @@ export default function MenuDisplay({ showPrices = false }) {
               showPrices={showPrices}
               onOpen={goSection}
               onAllergens={() => setAllergenOpen(true)}
+              branchLabel={t(branch === "takeaway" ? "menu.branch.takeaway" : "menu.branch.restaurant")}
+              branchAddress={t(branch === "takeaway" ? "menu.branch.takeawayAddress" : "menu.branch.restaurantAddress")}
               t={t}
             />
           </motion.div>
-        ) : (
+        ) : branch ? (
           <motion.div
             key={view}
             initial={{ opacity: 0, x: 24 }}
@@ -136,7 +169,7 @@ export default function MenuDisplay({ showPrices = false }) {
               hasNext={activeIndex < sections.length - 1}
             />
           </motion.div>
-        )}
+        ) : null}
       </AnimatePresence>
 
       <AllergenModal open={allergenOpen} onClose={() => setAllergenOpen(false)} lang={lang} t={t} />
@@ -144,9 +177,84 @@ export default function MenuDisplay({ showPrices = false }) {
   );
 }
 
-function MenuIndex({ sections, showPrices, onOpen, onAllergens, t }) {
-  const featured = sections.find((s) => s.id === "fixedMenus");
-  const regular = sections.filter((s) => s.id !== "fixedMenus");
+function BranchPicker({ onChoose, t }) {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, []);
+  const options = [
+    {
+      id: "takeaway",
+      kind: t("menu.branch.takeawayKind"),
+      name: t("menu.branch.takeaway"),
+      address: t("menu.branch.takeawayAddress"),
+      price: t("menu.branch.takeawayPrice"),
+    },
+    {
+      id: "restaurant",
+      kind: t("menu.branch.restaurantKind"),
+      name: t("menu.branch.restaurant"),
+      address: t("menu.branch.restaurantAddress"),
+      price: t("menu.branch.restaurantPrice"),
+    },
+  ];
+
+  return (
+    <motion.div
+      data-branch-picker
+      className="fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-0 sm:p-6"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <div className="absolute inset-0 bg-sh-bg" />
+      <div className="absolute inset-0 indian-glow opacity-60" />
+      <div className="absolute inset-0 paisley-bg opacity-[0.04]" />
+      <motion.div
+        initial={{ y: 40, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease }}
+        className="relative w-full max-w-lg bg-sh-surface border border-sh-border sm:rounded-sm max-h-[92svh] overflow-y-auto safe-pb"
+      >
+        <div className="px-5 pt-8 pb-4 sm:px-8 sm:pt-10 text-center">
+          <p className="font-editorial italic text-sh-saffron text-lg sm:text-xl mb-2">शालिमार</p>
+          <h1 className="font-display text-4xl sm:text-5xl uppercase tracking-tighter leading-none">
+            {t("menu.branch.ask")}
+          </h1>
+          <p className="mt-4 text-[11px] sm:text-xs uppercase tracking-[0.22em] text-sh-muted leading-relaxed">
+            {t("menu.branch.hint")}
+          </p>
+        </div>
+        <div className="px-4 sm:px-6 pb-6 sm:pb-8 grid gap-3">
+          {options.map((option, i) => (
+            <motion.button
+              key={option.id}
+              type="button"
+              onClick={() => onChoose(option.id)}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.08 * i, duration: 0.4 }}
+              className="w-full text-start px-4 py-5 border border-sh-border bg-sh-bg/50 hover:border-sh-saffron hover:bg-sh-saffron/10 active:scale-[0.98] transition-all touch-manipulation"
+            >
+              <span className="block text-[10px] uppercase tracking-[0.22em] text-sh-saffron">{option.kind}</span>
+              <span className="mt-1 block font-display text-2xl sm:text-3xl uppercase tracking-tight leading-none">
+                {option.name}
+              </span>
+              <span className="mt-3 block text-sm text-sh-muted">{option.address}</span>
+              <span className="mt-1 block text-[11px] uppercase tracking-[0.16em] text-sh-text/80">{option.price}</span>
+            </motion.button>
+          ))}
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+function MenuIndex({ sections, showPrices, onOpen, onAllergens, branchLabel, branchAddress, t }) {
+  const featured = sections.find((s) => s.featured);
+  const regular = sections.filter((s) => !s.featured);
 
   return (
     <>
@@ -159,6 +267,8 @@ function MenuIndex({ sections, showPrices, onOpen, onAllergens, t }) {
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl uppercase tracking-tighter leading-[0.85]">
             {showPrices ? t("menu.qrTitle") : t("menu.title")}
           </h1>
+          <p className="mt-3 font-display text-lg uppercase tracking-tight text-sh-text">{branchLabel}</p>
+          <p className="mt-1 max-w-md text-sh-muted text-sm">{branchAddress}</p>
           <p className="mt-2 max-w-md text-sh-muted text-sm">{t("menu.pickChapter")}</p>
           <div className="mt-4 flex flex-wrap items-center gap-3">
             <span className="text-[10px] uppercase tracking-[0.2em] text-sh-saffron border border-sh-saffron/40 px-2.5 py-1">
@@ -181,12 +291,12 @@ function MenuIndex({ sections, showPrices, onOpen, onAllergens, t }) {
             <div>
               <p className="text-[10px] uppercase tracking-[0.3em] text-sh-chili mb-1.5">{t("menu.featured")}</p>
               <h2 className="font-display text-3xl md:text-4xl uppercase tracking-tight">
-                {t("menu.categories.fixedMenus")}
+                {t(`menu.categories.${featured.id}`)}
               </h2>
             </div>
             <button
               type="button"
-              onClick={() => onOpen("fixedMenus")}
+              onClick={() => onOpen(featured.id)}
               className="text-[10px] uppercase tracking-[0.2em] text-sh-saffron inline-flex items-center gap-1"
             >
               {t("menu.open")} →
@@ -197,11 +307,11 @@ function MenuIndex({ sections, showPrices, onOpen, onAllergens, t }) {
               <button
                 key={item.id}
                 type="button"
-                onClick={() => onOpen("fixedMenus")}
+                onClick={() => onOpen(featured.id)}
                 className="relative aspect-[5/4] overflow-hidden text-start group ring-1 ring-white/10 hover:ring-sh-saffron/50 transition-all"
               >
                 <MenuImage
-                  src={SECTION_IMAGES.fixedMenus}
+                  src={SECTION_IMAGES[featured.id] || IMG.spices}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />

@@ -1,9 +1,11 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { IMG } from "../lib/images";
+import { RESTAURANT, TAKEAWAY } from "../data/locations";
 
-const HOUR_KEYS = [
+const RESTAURANT_HOURS = [
   { day: "sunday", hours: "11:30 – 14:20 · 18:00 – 22:10" },
   { day: "monday", hours: "closed" },
   { day: "tuesday", hours: "11:30 – 14:20 · 18:00 – 22:10" },
@@ -13,22 +15,27 @@ const HOUR_KEYS = [
   { day: "saturday", hours: "11:30 – 14:20 · 18:00 – 22:10" },
 ];
 
+const TAKEAWAY_HOURS = [
+  "sunday",
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "friday",
+  "saturday",
+].map((day) => ({ day, hours: "11:30 – 22:00" }));
+
 export default function Visit() {
   const { t } = useTranslation();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-10%" });
 
   return (
-    <section id="visit" ref={ref} className="relative py-24 md:py-32 bg-sh-bg overflow-hidden">
-      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[70vh]">
-        <div className="relative min-h-[45vh] lg:min-h-full">
-          <img src={IMG.milan} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-sh-bg/90 hidden lg:block" />
-          <div className="absolute inset-0 bg-gradient-to-t from-sh-bg via-transparent to-transparent lg:hidden" />
-        </div>
-
-        <div className="px-6 md:px-12 lg:px-16 py-14 lg:py-20 flex flex-col justify-center">
+    <section id="visit" ref={ref} className="relative py-24 md:py-32 bg-sh-bg overflow-hidden scroll-mt-24">
+      <div className="px-6 md:px-12 lg:px-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-end mb-12 md:mb-16">
           <motion.div
+            className="lg:col-span-5"
             initial={{ opacity: 0, y: 24 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
@@ -41,53 +48,133 @@ export default function Visit() {
               <br />
               <span className="text-stroke">{t("visit.title2")}</span>
             </h2>
-
-            <div className="mt-10 space-y-6">
-              <div>
-                <p className="text-[11px] uppercase tracking-[0.22em] text-sh-muted mb-2">{t("visit.address")}</p>
-                <p className="text-lg md:text-xl">
-                  Viale Toscana 2
-                  <br />
-                  20136 Milan, Italy
-                  <br />
-                  <span className="text-sh-muted text-base">Zone 5</span>
-                </p>
-              </div>
-              <div>
-                <p className="text-[11px] uppercase tracking-[0.22em] text-sh-muted mb-2">{t("visit.contact")}</p>
-                <a href="tel:+393391785899" className="text-lg md:text-xl hover:text-sh-saffron transition-colors">
-                  +39 339 178 5899
-                </a>
-              </div>
-            </div>
-
-            <div className="mt-12 border-t border-sh-border pt-8">
-              <p className="text-[11px] uppercase tracking-[0.22em] text-sh-muted mb-5">{t("visit.hours")}</p>
-              <ul className="space-y-2.5">
-                {HOUR_KEYS.map((h) => (
-                  <li key={h.day} className="flex justify-between gap-6 text-sm md:text-base">
-                    <span className={h.hours === "closed" ? "text-sh-muted" : ""}>
-                      {t(`visit.days.${h.day}`)}
-                    </span>
-                    <span className={h.hours === "closed" ? "text-sh-chili" : "text-sh-muted"}>
-                      {h.hours === "closed" ? t("visit.closed") : h.hours}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Viale+Toscana+2+20136+Milan"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex mt-10 items-center gap-2 text-xs uppercase tracking-[0.22em] font-semibold text-sh-saffron hover:gap-3 transition-all"
-            >
-              {t("visit.maps")} →
-            </a>
+            <p className="font-editorial italic text-xl text-sh-muted mt-6 max-w-md">
+              {t("visit.placesLead")}
+            </p>
           </motion.div>
+          <div className="lg:col-span-7 relative min-h-[28vh] md:min-h-[34vh] overflow-hidden">
+            <img src={IMG.milan} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-t from-sh-bg via-sh-bg/20 to-transparent" />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-5">
+          <LocationCard
+            id="restaurant"
+            kind={t("menu.branch.restaurantKind")}
+            name={t("menu.branch.restaurant")}
+            place={RESTAURANT}
+            inView={inView}
+            delay={0.05}
+          >
+            <HoursList rows={RESTAURANT_HOURS} t={t} />
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
+              <a
+                href="#reserve"
+                className="text-xs uppercase tracking-[0.22em] font-semibold text-sh-saffron hover:gap-3 transition-all"
+              >
+                {t("nav.reserve")} →
+              </a>
+              <Link
+                to="/menu"
+                className="text-xs uppercase tracking-[0.22em] font-semibold text-sh-text/80 hover:text-sh-saffron transition-colors"
+              >
+                {t("nav.menu")} →
+              </Link>
+              <a
+                href={RESTAURANT.maps}
+                target="_blank"
+                rel="noreferrer"
+                className="text-xs uppercase tracking-[0.22em] text-sh-muted hover:text-sh-saffron transition-colors"
+              >
+                {t("visit.maps")}
+              </a>
+            </div>
+          </LocationCard>
+
+          <LocationCard
+            id="takeaway"
+            kind={t("menu.branch.takeawayKind")}
+            name={t("menu.branch.takeaway")}
+            place={TAKEAWAY}
+            inView={inView}
+            delay={0.15}
+          >
+            <HoursList rows={TAKEAWAY_HOURS} t={t} />
+            <p className="mt-4 text-sm text-sh-muted leading-relaxed max-w-sm">
+              {t("visit.takeawayNote")}
+            </p>
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
+              <a
+                href={TAKEAWAY.tel}
+                className="text-xs uppercase tracking-[0.22em] font-semibold text-sh-saffron transition-colors"
+              >
+                {t("footer.call")} →
+              </a>
+              <Link
+                to="/menu"
+                className="text-xs uppercase tracking-[0.22em] font-semibold text-sh-text/80 hover:text-sh-saffron transition-colors"
+              >
+                {t("nav.menu")} →
+              </Link>
+              <a
+                href={TAKEAWAY.maps}
+                target="_blank"
+                rel="noreferrer"
+                className="text-xs uppercase tracking-[0.22em] text-sh-muted hover:text-sh-saffron transition-colors"
+              >
+                {t("visit.maps")}
+              </a>
+            </div>
+          </LocationCard>
         </div>
       </div>
     </section>
+  );
+}
+
+function HoursList({ rows, t }) {
+  return (
+    <>
+      <p className="text-[11px] uppercase tracking-[0.22em] text-sh-muted mt-8 mb-4">{t("visit.hours")}</p>
+      <ul className="space-y-2">
+        {rows.map((h) => (
+          <li key={h.day} className="flex justify-between gap-6 text-sm">
+            <span className={h.hours === "closed" ? "text-sh-muted" : ""}>
+              {t(`visit.days.${h.day}`)}
+            </span>
+            <span className={h.hours === "closed" ? "text-sh-chili" : "text-sh-muted"}>
+              {h.hours === "closed" ? t("visit.closed") : h.hours}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
+function LocationCard({ id, kind, name, place, inView, delay, children }) {
+  return (
+    <motion.article
+      id={id}
+      initial={{ opacity: 0, y: 20 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ delay, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      className="border border-sh-border bg-sh-surface/50 p-6 md:p-8 scroll-mt-28 flex flex-col"
+    >
+      <p className="text-[10px] uppercase tracking-[0.28em] text-sh-saffron">{kind}</p>
+      <h3 className="font-display text-4xl md:text-5xl uppercase tracking-tight leading-none mt-2">
+        {name}
+      </h3>
+      <p className="mt-5 text-lg">
+        {place.street}
+        <br />
+        <span className="text-sh-muted text-base">{place.area}</span>
+      </p>
+      <a href={place.tel} className="mt-3 inline-block text-lg hover:text-sh-saffron transition-colors">
+        {place.phone}
+      </a>
+      {children}
+    </motion.article>
   );
 }

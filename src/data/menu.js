@@ -172,6 +172,7 @@ export const MENU_SECTIONS = [
   {
     id: "fixedMenus",
     noteKey: "menu.notes.drinksExcluded",
+    featured: true,
     isSetMenu: true,
     items: [
       {
