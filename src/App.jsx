@@ -3,9 +3,23 @@ import { AnimatePresence, motion } from "framer-motion";
 import Cursor from "./components/Cursor";
 import SmoothScroll from "./components/SmoothScroll";
 import LanguageWelcome from "./components/LanguageWelcome";
+import GoogleTranslate from "./components/GoogleTranslate";
 import Home from "./pages/Home";
 import MenuPage from "./pages/MenuPage";
 import QRMenuPage from "./pages/QRMenuPage";
+import AdminPage from "./pages/AdminPage";
+import { SiteProvider } from "./context/SiteContent";
+
+function SiteChrome({ children }) {
+  return (
+    <SiteProvider>
+      <GoogleTranslate />
+      <LanguageWelcome />
+      <Cursor />
+      {children}
+    </SiteProvider>
+  );
+}
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -29,16 +43,47 @@ function AnimatedRoutes() {
   );
 }
 
+function AppShell() {
+  const location = useLocation();
+  const isAdmin = location.pathname.startsWith("/admin");
+
+  if (isAdmin) {
+    return (
+      <Routes>
+        <Route path="/admin" element={<AdminPage />} />
+      </Routes>
+    );
+  }
+
+  return (
+    <SiteChrome>
+      <AnimatedRoutes />
+    </SiteChrome>
+  );
+}
+
+function Root() {
+  const location = useLocation();
+  const isAdmin = location.pathname.startsWith("/admin");
+  const shell = (
+    <div
+      className={`${
+        isAdmin ? "h-dvh overflow-hidden" : "min-h-screen grain"
+      } bg-sh-bg text-sh-text`}
+    >
+      <AppShell />
+    </div>
+  );
+
+  // Admin needs normal browser scroll — Lenis fights sticky navs / wheel there
+  if (isAdmin) return shell;
+  return <SmoothScroll>{shell}</SmoothScroll>;
+}
+
 export default function App() {
   return (
     <BrowserRouter>
-      <SmoothScroll>
-        <div className="grain min-h-screen bg-sh-bg text-sh-text">
-          <LanguageWelcome />
-          <Cursor />
-          <AnimatedRoutes />
-        </div>
-      </SmoothScroll>
+      <Root />
     </BrowserRouter>
   );
 }

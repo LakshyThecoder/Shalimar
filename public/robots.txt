@@ -1,0 +1,8 @@
+# Shalimar Milano — crawl rules
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /uploads/
+
+Sitemap: https://shalimar-milano.vercel.app/sitemap.xml

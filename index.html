@@ -1,16 +1,172 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/og-shalimar.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#0A0908" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Shalimar" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- Primary SEO (crawlers reading first HTML paint) -->
+    <title>Shalimar Milano | Miglior Ristorante Indiano Halal &amp; Take Away</title>
     <meta
       name="description"
-      content="Shalimar — Halal Indian restaurant and takeaway in Milan. Viale Toscana 2 and Corso di Porta Romana 25."
+      content="Shalimar: ristorante indiano e pakistano Halal a Milano. Viale Toscana 2 e take away Porta Romana 25. Tandoor, curry, biryani, naan e dolci. Prenota o ordina asporto."
     />
-    <title>Shalimar — Ristorante Indiano Halal · Milano</title>
+    <meta
+      name="keywords"
+      content="Shalimar, Shalimar restaurant, Shalimar Milano, best Indian food Milan, ristorante indiano Milano, Halal Milano, Indian restaurant Milan, takeaway indiano, Porta Romana, Viale Toscana, Pakistani food Milan, tandoori, biryani, curry Halal"
+    />
+    <meta name="author" content="Shalimar Milano" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="geo.region" content="IT-MI" />
+    <meta name="geo.placename" content="Milano" />
+    <meta name="geo.position" content="45.4435;9.1945" />
+    <meta name="ICBM" content="45.4435, 9.1945" />
+
+    <link rel="canonical" href="https://shalimar-milano.vercel.app/" />
+    <link rel="alternate" hreflang="it" href="https://shalimar-milano.vercel.app/" />
+    <link rel="alternate" hreflang="en" href="https://shalimar-milano.vercel.app/" />
+    <link rel="alternate" hreflang="x-default" href="https://shalimar-milano.vercel.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Shalimar Milano" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:title" content="Shalimar Milano | Best Halal Indian Restaurant &amp; Takeaway" />
+    <meta
+      property="og:description"
+      content="Best Halal Indian &amp; Pakistani food in Milan. Restaurant Viale Toscana · Takeaway Porta Romana. Book or order takeaway."
+    />
+    <meta property="og:url" content="https://shalimar-milano.vercel.app/" />
+    <meta property="og:image" content="https://shalimar-milano.vercel.app/og-shalimar.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Shalimar — Halal Indian restaurant Milano" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Shalimar Milano | Best Halal Indian Restaurant" />
+    <meta
+      name="twitter:description"
+      content="Halal Indian &amp; Pakistani restaurant and takeaway in Milan. Viale Toscana &amp; Porta Romana."
+    />
+    <meta name="twitter:image" content="https://shalimar-milano.vercel.app/og-shalimar.jpg" />
+
+    <!-- Local business JSON-LD (static bootstrap; React Seo refreshes on navigate) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://shalimar-milano.vercel.app/#website",
+            "url": "https://shalimar-milano.vercel.app/",
+            "name": "Shalimar Milano",
+            "alternateName": ["Shalimar", "Shalimar Restaurant Milano", "Shalimar Halal"],
+            "inLanguage": ["it-IT", "en"],
+            "description": "Best Halal Indian & Pakistani restaurant and takeaway in Milan."
+          },
+          {
+            "@type": "Restaurant",
+            "@id": "https://shalimar-milano.vercel.app/#restaurant",
+            "name": "Shalimar Restaurant",
+            "alternateName": "Shalimar Viale Toscana",
+            "image": "https://shalimar-milano.vercel.app/og-shalimar.jpg",
+            "url": "https://shalimar-milano.vercel.app/",
+            "telephone": "+39-02-9166-3939",
+            "priceRange": "€€",
+            "servesCuisine": ["Indian", "Pakistani", "Halal"],
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Viale Toscana 2",
+              "addressLocality": "Milano",
+              "postalCode": "20136",
+              "addressCountry": "IT"
+            },
+            "hasMap": "https://www.google.com/maps/search/?api=1&query=Shalimar+Viale+Toscana+2+20136+Milano",
+            "acceptsReservations": true,
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "11:30",
+                "closes": "14:20"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "18:00",
+                "closes": "22:10"
+              }
+            ]
+          },
+          {
+            "@type": "FoodEstablishment",
+            "@id": "https://shalimar-milano.vercel.app/#takeaway",
+            "name": "Shalimar Take Away & Sweet House",
+            "alternateName": "Shalimar Porta Romana",
+            "image": "https://shalimar-milano.vercel.app/og-shalimar.jpg",
+            "url": "https://shalimar-milano.vercel.app/",
+            "telephone": "+39-02-5830-7508",
+            "priceRange": "€",
+            "servesCuisine": ["Indian", "Pakistani", "Halal"],
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Corso di Porta Romana 25",
+              "addressLocality": "Milano",
+              "postalCode": "20122",
+              "addressCountry": "IT"
+            },
+            "hasMap": "https://www.google.com/maps/search/?api=1&query=Shalimar+Corso+di+Porta+Romana+25+20122+Milano",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "11:00",
+                "closes": "21:30"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is Shalimar Halal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Shalimar serves Halal Indian and Pakistani food at both Milan locations."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where is Shalimar restaurant in Milan?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Restaurant: Viale Toscana 2, 20136 Milano. Takeaway: Corso di Porta Romana 25, 20122 Milano."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the best Indian food at Shalimar?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Guests often choose chicken tandoori, chicken tikka, curries, biryani, naan and samosas."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,6 +176,19 @@
   </head>
   <body class="antialiased">
     <div id="root"></div>
+    <noscript>
+      <main style="font-family: system-ui, sans-serif; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; color: #111">
+        <h1>Shalimar Milano — Best Halal Indian Restaurant &amp; Takeaway</h1>
+        <p>
+          Shalimar is a Halal Indian and Pakistani restaurant in Milan (Viale Toscana 2) and a takeaway &amp; sweet
+          house on Corso di Porta Romana 25. Enjoy tandoor, curries, biryani, naan and Indian sweets.
+        </p>
+        <p>
+          Ristorante: +39 02 9166 3939 · Take away: +39 02 5830 7508 ·
+          <a href="/menu">Menu</a>
+        </p>
+      </main>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

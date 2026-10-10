@@ -282,6 +282,30 @@ html[dir="rtl"] .animate-marquee {
   border-right: 1px solid;
 }
 
+/* Google Translate — hide default chrome; keep our custom language UI */
+.google-translate-host {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-icon,
+body > .skiptranslate,
+iframe.skiptranslate {
+  display: none !important;
+  visibility: hidden !important;
+}
+body {
+  top: 0 !important;
+}
+/* Google wraps translated text in <font> — keep brand fonts */
+font {
+  font-family: inherit !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

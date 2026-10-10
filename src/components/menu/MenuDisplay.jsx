@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight, ChevronLeft } from "lucide-react";
 import { ALLERGENS, MENU_SECTIONS, formatPrice, getItemDesc } from "../../data/menu";
 import { TAKEAWAY_SECTIONS } from "../../data/takeawayMenu";
+import { fetchPublicMenu, sectionTitle } from "../../lib/menuApi";
 import LanguageSwitcher from "../LanguageSwitcher";
 import EmberField from "../EmberField";
 import MenuImage from "./MenuImage";
@@ -41,17 +42,45 @@ export default function MenuDisplay({ showPrices = false, initialBranch = null }
   const { t, i18n } = useTranslation();
   const lang = i18n.language?.startsWith("it") ? "it" : "en";
   const [branch, setBranch] = useState(initialBranch);
-  const sections = useMemo(
+  const [liveSections, setLiveSections] = useState(null);
+  const [allergens, setAllergens] = useState(ALLERGENS);
+  const fallbackSections = useMemo(
     () => (branch === "takeaway" ? TAKEAWAY_SECTIONS : MENU_SECTIONS),
     [branch],
   );
+  const sections = liveSections || fallbackSections;
   const [view, setView] = useState("index");
   const [allergenOpen, setAllergenOpen] = useState(false);
 
   const chooseBranch = (id) => {
     setBranch(id);
+    setLiveSections(null);
     setView("index");
   };
+
+  useEffect(() => {
+    if (!branch) return;
+    let cancelled = false;
+    const load = () => {
+      fetchPublicMenu(branch)
+        .then((data) => {
+          if (cancelled) return;
+          if (Array.isArray(data.sections)) setLiveSections(data.sections);
+          if (Array.isArray(data.allergens)) setAllergens(data.allergens);
+        })
+        .catch(() => {
+          if (!cancelled) setLiveSections(null);
+        });
+    };
+    load();
+    // Pick up admin photo/text saves when returning to this tab
+    const onFocus = () => load();
+    window.addEventListener("focus", onFocus);
+    return () => {
+      cancelled = true;
+      window.removeEventListener("focus", onFocus);
+    };
+  }, [branch]);
 
   const activeIndex = sections.findIndex((s) => s.id === view);
   const activeSection = activeIndex >= 0 ? sections[activeIndex] : null;
@@ -145,6 +174,7 @@ export default function MenuDisplay({ showPrices = false, initialBranch = null }
               onAllergens={() => setAllergenOpen(true)}
               branchLabel={t(branch === "takeaway" ? "menu.branch.takeaway" : "menu.branch.restaurant")}
               branchAddress={t(branch === "takeaway" ? "menu.branch.takeawayAddress" : "menu.branch.restaurantAddress")}
+              lang={lang}
               t={t}
             />
           </motion.div>
@@ -172,7 +202,13 @@ export default function MenuDisplay({ showPrices = false, initialBranch = null }
         ) : null}
       </AnimatePresence>
 
-      <AllergenModal open={allergenOpen} onClose={() => setAllergenOpen(false)} lang={lang} t={t} />
+      <AllergenModal
+        open={allergenOpen}
+        onClose={() => setAllergenOpen(false)}
+        lang={lang}
+        t={t}
+        allergens={allergens}
+      />
     </div>
   );
 }
@@ -252,7 +288,11 @@ function BranchPicker({ onChoose, t }) {
   );
 }
 
-function MenuIndex({ sections, showPrices, onOpen, onAllergens, branchLabel, branchAddress, t }) {
+function sectionImage(section) {
+  return section?.image || SECTION_IMAGES[section?.id] || IMG.spices;
+}
+
+function MenuIndex({ sections, showPrices, onOpen, onAllergens, branchLabel, branchAddress, lang, t }) {
   const featured = sections.find((s) => s.featured);
   const regular = sections.filter((s) => !s.featured);
 
@@ -291,7 +331,7 @@ function MenuIndex({ sections, showPrices, onOpen, onAllergens, branchLabel, bra
             <div>
               <p className="text-[10px] uppercase tracking-[0.3em] text-sh-chili mb-1.5">{t("menu.featured")}</p>
               <h2 className="font-display text-3xl md:text-4xl uppercase tracking-tight">
-                {t(`menu.categories.${featured.id}`)}
+                {sectionTitle(featured, lang)}
               </h2>
             </div>
             <button
@@ -311,7 +351,7 @@ function MenuIndex({ sections, showPrices, onOpen, onAllergens, branchLabel, bra
                 className="relative aspect-[5/4] overflow-hidden text-start group ring-1 ring-white/10 hover:ring-sh-saffron/50 transition-all"
               >
                 <MenuImage
-                  src={SECTION_IMAGES[featured.id] || IMG.spices}
+                  src={item.image || sectionImage(featured)}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
@@ -320,9 +360,11 @@ function MenuIndex({ sections, showPrices, onOpen, onAllergens, branchLabel, bra
                   <h3 className="font-display text-lg md:text-xl uppercase tracking-tight leading-tight group-hover:text-sh-saffron transition-colors">
                     {item.name}
                   </h3>
-                  <p className="text-[11px] text-sh-text/70 mt-1 line-clamp-1">
-                    {item.includes?.length || 0} {t("menu.includes").toLowerCase()}
-                  </p>
+                  {item.includes?.length > 0 && (
+                    <p className="text-[11px] text-sh-text/70 mt-1 line-clamp-1">
+                      {item.includes.length} {t("menu.includes").toLowerCase()}
+                    </p>
+                  )}
                   {showPrices && (
                     <p className="font-display text-xl text-sh-saffron mt-1">{formatPrice(item.price)}</p>
                   )}
@@ -349,7 +391,7 @@ function MenuIndex({ sections, showPrices, onOpen, onAllergens, branchLabel, bra
               className="group relative aspect-[3/4] sm:aspect-[4/5] md:aspect-[5/6] overflow-hidden text-start ring-1 ring-white/10 hover:ring-sh-saffron/50 transition-all touch-manipulation active:scale-[0.98]"
             >
               <MenuImage
-                src={SECTION_IMAGES[section.id] || IMG.spices}
+                src={sectionImage(section)}
                 className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-[1.1s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
               />
               <div
@@ -361,7 +403,7 @@ function MenuIndex({ sections, showPrices, onOpen, onAllergens, branchLabel, bra
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="font-display text-xl md:text-2xl uppercase tracking-tight leading-none mt-1 group-hover:text-sh-saffron transition-colors">
-                  {t(`menu.categories.${section.id}`)}
+                  {sectionTitle(section, lang)}
                 </h3>
                 <p className="mt-1.5 text-[11px] text-sh-text/65 uppercase tracking-[0.12em]">
                   {section.items.length} {t("menu.dishes")}
@@ -388,7 +430,7 @@ function CategoryPage({
   hasNext,
 }) {
   if (!section) return null;
-  const img = SECTION_IMAGES[section.id] || IMG.spices;
+  const img = sectionImage(section);
   const accent = ACCENTS[section.id] || "from-black/80";
 
   return (
@@ -402,10 +444,14 @@ function CategoryPage({
             {t("menu.chapter")} {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
           </p>
           <h1 className="font-display text-3xl sm:text-4xl md:text-5xl uppercase tracking-tighter leading-[0.9]">
-            {t(`menu.categories.${section.id}`)}
+            {sectionTitle(section, lang)}
           </h1>
-          {section.noteKey && (
-            <p className="mt-1.5 text-[11px] uppercase tracking-[0.16em] text-sh-muted">{t(section.noteKey)}</p>
+          {(section.note?.en || section.note?.it || section.noteKey) && (
+            <p className="mt-1.5 text-[11px] uppercase tracking-[0.16em] text-sh-muted">
+              {section.note?.en || section.note?.it
+                ? section.note?.[lang] || section.note?.en || section.note?.it
+                : t(section.noteKey)}
+            </p>
           )}
         </div>
       </section>
@@ -416,8 +462,16 @@ function CategoryPage({
             {section.items.map((item) => (
               <article
                 key={item.id}
-                className="border border-sh-border bg-sh-surface/60 p-5 hover:border-sh-saffron/40 transition-colors h-full"
+                className={`border border-sh-border bg-sh-surface/60 p-5 hover:border-sh-saffron/40 transition-colors h-full ${
+                  item.available === false ? "opacity-50" : ""
+                }`}
               >
+                {item.image ? (
+                  <MenuImage
+                    src={item.image}
+                    className="w-full aspect-[16/10] object-cover mb-4 border border-sh-border/50"
+                  />
+                ) : null}
                 <div className="flex items-start justify-between gap-3 mb-2">
                   <h3 className="font-display text-2xl uppercase tracking-tight">{item.name}</h3>
                   {showPrices && (
@@ -441,34 +495,46 @@ function CategoryPage({
             ))}
           </div>
         ) : (
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
             {section.items.map((item) => {
               const desc = getItemDesc(item, lang);
               return (
                 <li
                   key={item.id}
-                  className="py-3 border-b border-sh-border/60 flex items-start justify-between gap-3 group"
+                  className={`border border-sh-border/70 bg-sh-surface/40 overflow-hidden group ${
+                    item.available === false ? "opacity-50" : ""
+                  }`}
                 >
-                  <div className="min-w-0 flex-1">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <h3 className="font-display text-lg md:text-xl uppercase tracking-tight group-hover:text-sh-saffron transition-colors">
-                        {item.name}
-                      </h3>
-                      {item.spicy && (
-                        <span className="text-[9px] uppercase tracking-[0.14em] text-sh-chili border border-sh-chili/40 px-1.5 py-0.5">
-                          {t("menu.spicy")}
-                        </span>
-                      )}
+                  {item.image ? (
+                    <div className="aspect-[16/10] overflow-hidden">
+                      <MenuImage
+                        src={item.image}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
                     </div>
-                    {desc ? (
-                      <p className="text-sm text-sh-muted mt-0.5 leading-snug">{desc}</p>
-                    ) : null}
+                  ) : null}
+                  <div className="p-4 flex items-start justify-between gap-3">
+                    <div className="min-w-0">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <h3 className="font-display text-lg md:text-xl uppercase tracking-tight group-hover:text-sh-saffron transition-colors">
+                          {item.name}
+                        </h3>
+                        {item.spicy && (
+                          <span className="text-[9px] uppercase tracking-[0.14em] text-sh-chili border border-sh-chili/40 px-1.5 py-0.5">
+                            {t("menu.spicy")}
+                          </span>
+                        )}
+                      </div>
+                      {desc ? (
+                        <p className="text-sm text-sh-muted mt-1 leading-snug">{desc}</p>
+                      ) : null}
+                    </div>
+                    {showPrices && (
+                      <span className="font-display text-lg text-sh-saffron shrink-0 tabular-nums">
+                        {formatPrice(item.price)}
+                      </span>
+                    )}
                   </div>
-                  {showPrices && (
-                    <span className="font-display text-lg text-sh-saffron shrink-0 tabular-nums pt-0.5">
-                      {formatPrice(item.price)}
-                    </span>
-                  )}
                 </li>
               );
             })}
@@ -508,7 +574,7 @@ function CategoryPage({
   );
 }
 
-function AllergenModal({ open, onClose, lang, t }) {
+function AllergenModal({ open, onClose, lang, t, allergens = ALLERGENS }) {
   return (
     <AnimatePresence>
       {open && (
@@ -539,7 +605,7 @@ function AllergenModal({ open, onClose, lang, t }) {
             </div>
             <p className="text-sm leading-relaxed text-sh-text/90 mb-6">{t("menu.allergenIntro")}</p>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 mb-6">
-              {ALLERGENS.map((a) => (
+              {allergens.map((a) => (
                 <li key={a.id} className="flex gap-2 text-sm text-sh-muted">
                   <span className="text-sh-saffron mt-1">◆</span>
                   <span>{lang === "it" ? a.it : a.en}</span>

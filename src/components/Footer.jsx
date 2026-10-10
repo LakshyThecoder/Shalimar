@@ -93,15 +93,19 @@ export default function Footer() {
             <p className="text-[10px] uppercase tracking-[0.18em] text-sh-saffron mb-1">
               {t("menu.branch.restaurantKind")}
             </p>
-            <a href={RESTAURANT.tel} className="block hover:text-sh-saffron transition-colors">
-              {RESTAURANT.phone}
-            </a>
+            {RESTAURANT.phones.map((p) => (
+              <a key={p.tel} href={p.tel} className="block hover:text-sh-saffron transition-colors">
+                {p.display}
+              </a>
+            ))}
             <p className="text-[10px] uppercase tracking-[0.18em] text-sh-saffron mt-4 mb-1">
               {t("menu.branch.takeawayKind")}
             </p>
-            <a href={TAKEAWAY.tel} className="block hover:text-sh-saffron transition-colors">
-              {TAKEAWAY.phone}
-            </a>
+            {TAKEAWAY.phones.map((p) => (
+              <a key={p.tel} href={p.tel} className="block hover:text-sh-saffron transition-colors">
+                {p.display}
+              </a>
+            ))}
           </div>
         </div>
 

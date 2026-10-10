@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTranslation } from "react-i18next";
-import { LANGUAGES, applyDocumentDirection } from "../i18n";
+import { ALL_LANGUAGES, LANGUAGES, selectLanguage } from "../i18n";
 import FlagImg from "./FlagImg";
 
 const STORAGE_KEY = "shalimar_lang_picked";
@@ -13,9 +12,9 @@ function shouldAskLanguage(pathname) {
 }
 
 export default function LanguageWelcome() {
-  const { i18n } = useTranslation();
   const location = useLocation();
   const [open, setOpen] = useState(false);
+  const [showMore, setShowMore] = useState(false);
 
   useEffect(() => {
     const force = shouldAskLanguage(location.pathname);
@@ -42,13 +41,13 @@ export default function LanguageWelcome() {
   }, [location.pathname]);
 
   const choose = (code) => {
-    i18n.changeLanguage(code);
-    applyDocumentDirection(code);
-    localStorage.setItem(STORAGE_KEY, code);
     sessionStorage.setItem(`shalimar_lang_asked_${location.pathname}`, "1");
     setOpen(false);
     document.body.style.overflow = "";
+    selectLanguage(code);
   };
+
+  const extras = ALL_LANGUAGES.filter((l) => l.via === "google");
 
   return (
     <AnimatePresence>
@@ -84,12 +83,9 @@ export default function LanguageWelcome() {
               <p className="mt-4 text-[11px] sm:text-xs uppercase tracking-[0.22em] text-sh-muted leading-relaxed">
                 Scegli la lingua · Choose your language
               </p>
-              <p className="mt-1 text-[11px] text-sh-muted/80 tracking-wide">
-                اختر اللغة · भाषा चुनें
-              </p>
             </div>
 
-            <div className="px-4 sm:px-6 pb-6 sm:pb-8 grid grid-cols-2 gap-2.5 sm:gap-3">
+            <div className="px-4 sm:px-6 pb-4 grid grid-cols-2 gap-2.5 sm:gap-3">
               {LANGUAGES.map((l, i) => (
                 <motion.button
                   key={l.code}
@@ -109,6 +105,55 @@ export default function LanguageWelcome() {
                   </span>
                 </motion.button>
               ))}
+            </div>
+
+            <div className="px-4 sm:px-6 pb-6 sm:pb-8">
+              <button
+                type="button"
+                onClick={() => setShowMore((s) => !s)}
+                className="w-full py-3 text-[10px] uppercase tracking-[0.2em] text-sh-muted hover:text-sh-saffron border border-dashed border-sh-border hover:border-sh-saffron/50 transition-colors"
+              >
+                {showMore ? "Nascondi · Hide" : "Altre lingue · More languages (Google)"}
+              </button>
+
+              <AnimatePresence>
+                {showMore && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.35 }}
+                    className="overflow-hidden"
+                  >
+                    <p className="mt-3 mb-2 text-[10px] text-sh-muted/70 text-center tracking-wide">
+                      Powered by Google Translate
+                    </p>
+                    <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
+                      {extras.map((l, i) => (
+                        <motion.button
+                          key={l.code}
+                          type="button"
+                          onClick={() => choose(l.code)}
+                          initial={{ opacity: 0, y: 8 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.03 * i, duration: 0.3 }}
+                          className="flex items-center gap-3 px-3.5 py-3 border border-sh-border/70 bg-sh-bg/40 hover:border-sh-saffron hover:bg-sh-saffron/10 active:scale-[0.98] transition-all text-start touch-manipulation"
+                        >
+                          <FlagImg country={l.country} label={l.label} className="w-9 h-6" />
+                          <span className="min-w-0">
+                            <span className="block font-display text-base uppercase tracking-tight leading-none">
+                              {l.short}
+                            </span>
+                            <span className="block text-[11px] text-sh-muted mt-0.5 truncate">
+                              {l.label}
+                            </span>
+                          </span>
+                        </motion.button>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </motion.div>
         </motion.div>

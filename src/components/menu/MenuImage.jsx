@@ -1,19 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IMG } from "../../lib/images";
 
 /** Reliable cover image with graceful fallback */
 export default function MenuImage({ src, alt = "", className = "" }) {
-  const [current, setCurrent] = useState(src);
+  const [failed, setFailed] = useState(false);
+
+  useEffect(() => {
+    setFailed(false);
+  }, [src]);
+
+  const resolved = src && !failed ? src : IMG.spices;
 
   return (
     <img
-      src={current}
+      key={src || "fallback"}
+      src={resolved}
       alt={alt}
       className={className}
       loading="lazy"
       decoding="async"
       onError={() => {
-        if (current !== IMG.spices) setCurrent(IMG.spices);
+        if (!failed) setFailed(true);
       }}
     />
   );

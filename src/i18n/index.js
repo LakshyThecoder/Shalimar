@@ -4,26 +4,44 @@ import LanguageDetector from "i18next-browser-languagedetector";
 
 import en from "./locales/en.json";
 import it from "./locales/it.json";
-import hi from "./locales/hi.json";
-import ur from "./locales/ur.json";
-import fr from "./locales/fr.json";
-import de from "./locales/de.json";
-import es from "./locales/es.json";
-import ar from "./locales/ar.json";
+import {
+  GOOGLE_LANGUAGES,
+  getGoogleLang,
+  clearGoogleTranslate,
+  setGoogleTranslate,
+  isGoogleLanguage,
+} from "./googleTranslate";
 
+/** Native, curated translations */
 export const LANGUAGES = [
-  { code: "it", label: "Italiano", short: "IT", dir: "ltr", country: "it", flag: "🇮🇹" },
-  { code: "en", label: "English", short: "EN", dir: "ltr", country: "gb", flag: "🇬🇧" },
-  { code: "hi", label: "हिन्दी", short: "HI", dir: "ltr", country: "in", flag: "🇮🇳" },
-  { code: "ur", label: "اردو", short: "UR", dir: "rtl", country: "pk", flag: "🇵🇰" },
-  { code: "fr", label: "Français", short: "FR", dir: "ltr", country: "fr", flag: "🇫🇷" },
-  { code: "de", label: "Deutsch", short: "DE", dir: "ltr", country: "de", flag: "🇩🇪" },
-  { code: "es", label: "Español", short: "ES", dir: "ltr", country: "es", flag: "🇪🇸" },
-  { code: "ar", label: "العربية", short: "AR", dir: "rtl", country: "sa", flag: "🇸🇦" },
+  { code: "it", label: "Italiano", short: "IT", dir: "ltr", country: "it", via: "native" },
+  { code: "en", label: "English", short: "EN", dir: "ltr", country: "gb", via: "native" },
 ];
+
+/** Native IT/EN + Google-powered extras */
+export const ALL_LANGUAGES = [...LANGUAGES, ...GOOGLE_LANGUAGES];
+
+export {
+  GOOGLE_LANGUAGES,
+  getGoogleLang,
+  clearGoogleTranslate,
+  setGoogleTranslate,
+  isGoogleLanguage,
+};
 
 const picked =
   typeof window !== "undefined" ? localStorage.getItem("shalimar_lang_picked") : null;
+
+const googleActive =
+  typeof window !== "undefined" ? getGoogleLang() : null;
+
+// If Google Translate is active, keep i18n on Italian (source for Google)
+const initialLng =
+  googleActive && isGoogleLanguage(googleActive)
+    ? "it"
+    : picked && LANGUAGES.some((l) => l.code === picked)
+      ? picked
+      : undefined;
 
 i18n
   .use(LanguageDetector)
@@ -32,33 +50,78 @@ i18n
     resources: {
       en: { translation: en },
       it: { translation: it },
-      hi: { translation: hi },
-      ur: { translation: ur },
-      fr: { translation: fr },
-      de: { translation: de },
-      es: { translation: es },
-      ar: { translation: ar },
     },
-    lng: picked || undefined,
+    lng: initialLng,
     fallbackLng: "it",
-    supportedLngs: ["it", "en", "hi", "ur", "fr", "de", "es", "ar"],
+    supportedLngs: ["it", "en"],
     interpolation: { escapeValue: false },
     detection: {
-      // Only auto-detect after user has picked once (stored as shalimar_lang_picked + i18nextLng)
-      order: picked ? ["localStorage", "navigator"] : ["localStorage"],
+      order: initialLng ? ["localStorage"] : picked ? ["localStorage", "navigator"] : ["localStorage"],
       caches: ["localStorage"],
     },
   });
 
 export function applyDocumentDirection(lng) {
-  const meta = LANGUAGES.find((l) => l.code === lng) || LANGUAGES[0];
+  const meta = ALL_LANGUAGES.find((l) => l.code === lng) || LANGUAGES[0];
   document.documentElement.lang = lng;
   document.documentElement.dir = meta.dir;
 }
 
-i18n.on("languageChanged", applyDocumentDirection);
+export function getActiveLanguageMeta() {
+  const google = getGoogleLang();
+  if (google && isGoogleLanguage(google)) {
+    return ALL_LANGUAGES.find((l) => l.code === google) || LANGUAGES[0];
+  }
+  const code = i18n.language?.slice(0, 2) || "it";
+  return ALL_LANGUAGES.find((l) => l.code === code) || LANGUAGES[0];
+}
+
+/**
+ * Switch language: IT/EN use native i18n; others use Google Translate.
+ * Reloads when toggling Google on/off so the engine applies cleanly.
+ */
+export function selectLanguage(code) {
+  const wasGoogle = getGoogleLang();
+  const goingGoogle = isGoogleLanguage(code);
+
+  localStorage.setItem("shalimar_lang_picked", code);
+
+  if (goingGoogle) {
+    i18n.changeLanguage("it");
+    setGoogleTranslate(code);
+    applyDocumentDirection(code);
+    if (wasGoogle !== code) {
+      window.location.reload();
+    }
+    return;
+  }
+
+  // Native IT / EN
+  if (wasGoogle) {
+    clearGoogleTranslate();
+    i18n.changeLanguage(code);
+    applyDocumentDirection(code);
+    window.location.reload();
+    return;
+  }
+
+  i18n.changeLanguage(code);
+  applyDocumentDirection(code);
+}
+
+i18n.on("languageChanged", (lng) => {
+  if (!getGoogleLang()) {
+    applyDocumentDirection(lng?.slice(0, 2) || "it");
+  }
+});
+
 if (typeof document !== "undefined") {
-  applyDocumentDirection(i18n.language?.slice(0, 2) || "it");
+  const google = getGoogleLang();
+  if (google && isGoogleLanguage(google)) {
+    applyDocumentDirection(google);
+  } else {
+    applyDocumentDirection(i18n.language?.slice(0, 2) || "it");
+  }
 }
 
 export default i18n;

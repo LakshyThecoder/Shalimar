@@ -1,0 +1,2388 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-10T18:29:47.611Z",
+  "allergens": [
+    {
+      "id": "gluten",
+      "it": "Cereali contenenti glutine",
+      "en": "Cereals containing gluten"
+    },
+    {
+      "id": "crustaceans",
+      "it": "Crostacei e prodotti a base di crostacei",
+      "en": "Crustaceans and products thereof"
+    },
+    {
+      "id": "eggs",
+      "it": "Uova e prodotti a base di uova",
+      "en": "Eggs and products thereof"
+    },
+    {
+      "id": "fish",
+      "it": "Pesce e prodotti a base di pesce",
+      "en": "Fish and products thereof"
+    },
+    {
+      "id": "peanuts",
+      "it": "Arachidi e prodotti a base di arachidi",
+      "en": "Peanuts and products thereof"
+    },
+    {
+      "id": "soy",
+      "it": "Soia e prodotti a base di soia",
+      "en": "Soybeans and products thereof"
+    },
+    {
+      "id": "milk",
+      "it": "Latte e prodotti a base di latte, incluso lattosio",
+      "en": "Milk and products thereof, including lactose"
+    },
+    {
+      "id": "nuts",
+      "it": "Frutta a guscio",
+      "en": "Nuts"
+    },
+    {
+      "id": "celery",
+      "it": "Sedano e prodotti a base di sedano",
+      "en": "Celery and products thereof"
+    },
+    {
+      "id": "mustard",
+      "it": "Senape e prodotti a base di senape",
+      "en": "Mustard and products thereof"
+    },
+    {
+      "id": "sesame",
+      "it": "Semi di sesamo e prodotti a base di semi di sesamo",
+      "en": "Sesame seeds and products thereof"
+    },
+    {
+      "id": "sulphites",
+      "it": "Anidride solforosa e solfiti",
+      "en": "Sulphur dioxide and sulphites"
+    },
+    {
+      "id": "lupin",
+      "it": "Lupini e prodotti a base di lupini",
+      "en": "Lupin and products thereof"
+    },
+    {
+      "id": "molluscs",
+      "it": "Molluschi e prodotti a base di molluschi",
+      "en": "Molluscs and products thereof"
+    }
+  ],
+  "branches": {
+    "restaurant": {
+      "id": "restaurant",
+      "sections": [
+        {
+          "id": "antipasti",
+          "label": {
+            "it": "Antipasti",
+            "en": "Starterss"
+          },
+          "noteKey": "menu.notes.someGluten",
+          "featured": false,
+          "isSetMenu": false,
+          "image": "/uploads/1791656985424-chatgpt-image-sep-17-2026-10-22-14-pm.png",
+          "items": [
+            {
+              "id": "samosa-veg",
+              "name": "Samosa Veg",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Fagottini fritti ripieni di verdure",
+                "en": "Fried pastries filled with vegetables"
+              },
+              "includes": []
+            },
+            {
+              "id": "samosa-carne",
+              "name": "Samosa Carne",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Fagottini fritti ripieni di carne",
+                "en": "Fried pastries filled with meat"
+              },
+              "includes": []
+            },
+            {
+              "id": "pakora",
+              "name": "Pakora",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Frittelle di verdure con farina di ceci",
+                "en": "Vegetable fritters with chickpea flour"
+              },
+              "includes": []
+            },
+            {
+              "id": "chicken-pakora",
+              "name": "Chicken Pakora",
+              "price": 4,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Bocconcini di pollo marinati con spezie, immersi nella pastella e fritti",
+                "en": "Marinated spiced chicken bites in batter, fried"
+              },
+              "includes": []
+            },
+            {
+              "id": "paneer-pakora",
+              "name": "Paneer Pakora",
+              "price": 5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Polpettine fritte di formaggio e spezie",
+                "en": "Fried cheese and spice fritters"
+              },
+              "includes": []
+            },
+            {
+              "id": "jhinga-pakora",
+              "name": "Jhinga Pakora",
+              "price": 5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Gamberoni in pastella fritti ceci e spezie",
+                "en": "Prawns in chickpea batter with spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "pappadams",
+              "name": "Pappadams / Masala Pappadams",
+              "price": 1,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Sfoglie croccanti a base di legumi",
+                "en": "Crispy lentil wafers"
+              },
+              "includes": []
+            },
+            {
+              "id": "kashmiri-tikki",
+              "name": "Kashmiri Tikki",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Polpettine fritte di formaggio e spezie",
+                "en": "Fried cheese and spice patties"
+              },
+              "includes": []
+            },
+            {
+              "id": "shami-kebab",
+              "name": "Shami Kebab",
+              "price": 4,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Polpette di carne trita con lenticchie e spezie",
+                "en": "Minced meat patties with lentils and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "mix-starter",
+              "name": "Mix Starter",
+              "price": 4,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Misto con samosa, pakora, papad",
+                "en": "Assorted samosa, pakora and papad"
+              },
+              "includes": []
+            },
+            {
+              "id": "veggie-roll",
+              "name": "Veggie Roll",
+              "price": 4,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pane naan con verdure miste, insalata e salsine",
+                "en": "Naan with mixed vegetables, salad and sauces"
+              },
+              "includes": []
+            },
+            {
+              "id": "chicken-roll",
+              "name": "Chicken Roll",
+              "price": 4,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pane naan con pollo speziato e salsine",
+                "en": "Naan with spiced chicken and sauces"
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "zuppe",
+          "label": {
+            "it": "Zuppe",
+            "en": "Soups"
+          },
+          "noteKey": null,
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "chicken-soup",
+              "name": "Chicken Soup",
+              "price": 4,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Zuppa di pollo con spezie",
+                "en": "Chicken soup with spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "daal-soup",
+              "name": "Daal Soup",
+              "price": 4,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Zuppa di lenticchie e spezie",
+                "en": "Lentil soup with spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "veg-soup",
+              "name": "Vegetarian Soup",
+              "price": 4,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Zuppa di verdure fresche e spezie",
+                "en": "Fresh vegetable soup with spices"
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "tandoori",
+          "label": {
+            "it": "Piatti Tandoori",
+            "en": "Tandoori"
+          },
+          "noteKey": "menu.notes.glutenFree",
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "chicken-tikka",
+              "name": "Chicken Tikka",
+              "price": 9,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Bocconcini di petto di pollo marinati, cotti nel forno tandoor",
+                "en": "Marinated chicken breast pieces cooked in the tandoor"
+              },
+              "includes": []
+            },
+            {
+              "id": "lamb-tikka",
+              "name": "Lamb Tikka",
+              "price": 10,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Bocconcini di agnello marinati, cotti nel forno tandoor",
+                "en": "Marinated lamb pieces cooked in the tandoor"
+              },
+              "includes": []
+            },
+            {
+              "id": "haryalli-tikka",
+              "name": "Haryalli Tikka",
+              "price": 10,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Bocconcini di pollo marinato in salsa alla menta, zenzero, aglio",
+                "en": "Chicken marinated in mint, ginger and garlic sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "malai-tikka",
+              "name": "Malai Tikka",
+              "price": 10,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Bocconcini di petto di pollo marinato in formaggio e spezie",
+                "en": "Chicken breast marinated in cheese and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "chicken-tandoori",
+              "name": "Chicken Tandoori",
+              "price": 8,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Cosce di pollo marinate in spezie, cotte nel forno tandoor",
+                "en": "Chicken legs marinated in spices, cooked in the tandoor"
+              },
+              "includes": []
+            },
+            {
+              "id": "fish-tandoori",
+              "name": "Fish Tandoori",
+              "price": 12,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Orata intera marinata in spezie, cotta nel forno tandoor",
+                "en": "Whole sea bream marinated in spices, cooked in the tandoor"
+              },
+              "includes": []
+            },
+            {
+              "id": "seekh-kebab",
+              "name": "Seekh Kebab",
+              "price": 10,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Carne macinata e spezie cotta nel forno tandoor",
+                "en": "Minced meat and spices cooked in the tandoor"
+              },
+              "includes": []
+            },
+            {
+              "id": "reshmi-kebab",
+              "name": "Reshmi Kebab",
+              "price": 10,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Carne trita marinata in formaggio e spezie, cotta nel forno tandoor",
+                "en": "Minced meat marinated in cheese and spices, cooked in the tandoor"
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "vegetarian",
+          "label": {
+            "it": "Piatti Vegetariani",
+            "en": "Vegetarian"
+          },
+          "noteKey": "menu.notes.glutenFree",
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "matar-paneer",
+              "name": "Matar Paneer",
+              "price": 8,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Formaggio indiano a pezzi e piselli in salsa curry",
+                "en": "Indian cheese and peas in curry sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "palak-paneer",
+              "name": "Palak Paneer",
+              "price": 8,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Passato di spinaci con formaggio magro prodotto da noi",
+                "en": "Spinach purée with our house-made paneer"
+              },
+              "includes": []
+            },
+            {
+              "id": "veg-kofta",
+              "name": "Vegetarian Kofta",
+              "price": 7,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Frittelle di verdure ripassate in salsa curry",
+                "en": "Vegetable fritters finished in curry sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "chana-masala",
+              "name": "Chana Masala",
+              "price": 6,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Ceci e patate con salsa speziata al pomodoro",
+                "en": "Chickpeas and potatoes in spiced tomato sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "veg-korma",
+              "name": "Vegetable Korma",
+              "price": 7,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Verdure miste in salsa a base di yogurt, mandorle e spezie, di sapore delicato",
+                "en": "Mixed vegetables in a delicate yogurt, almond and spice sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "punjabi-bharta",
+              "name": "Punjabi Bharta",
+              "price": 7,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Melanzane macinate con spezie",
+                "en": "Mashed aubergine with spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "veg-curry",
+              "name": "Vegetable Curry",
+              "price": 6,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Verdure miste in salsa curry",
+                "en": "Mixed vegetables in curry sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "punjabi-tori",
+              "name": "Punjabi Tori",
+              "price": 6,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Zucchine con spezie",
+                "en": "Courgettes with spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "bhindi-masala",
+              "name": "Bhindi Masala",
+              "price": 7,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Okra con cipolla e spezie",
+                "en": "Okra with onion and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "daal-tarka",
+              "name": "Daal Tarka",
+              "price": 6,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Lenticchie con spezie",
+                "en": "Lentils with spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "daal-makhni",
+              "name": "Daal Makhni",
+              "price": 6,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Lenticchie nere con spezie",
+                "en": "Black lentils with spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "aloo-gobhi",
+              "name": "Aloo Gobhi",
+              "price": 6,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Cavolfiore con patate e spezie",
+                "en": "Cauliflower with potatoes and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "saag-aloo",
+              "name": "Saag Aloo",
+              "price": 6,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Patate cotte con spinaci e spezie",
+                "en": "Potatoes cooked with spinach and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "raita",
+              "name": "Raita",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Yogurt con verdure fresche",
+                "en": "Yogurt with fresh vegetables"
+              },
+              "includes": []
+            },
+            {
+              "id": "mix-salad",
+              "name": "Mix Salad",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Insalata fresca stile indiano",
+                "en": "Fresh Indian-style salad"
+              },
+              "includes": []
+            },
+            {
+              "id": "russian-salad",
+              "name": "Russian Salad",
+              "price": 5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Patate, piselli, ananas e mela con salsa cremosa",
+                "en": "Potatoes, peas, pineapple and apple with creamy sauce"
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "nonVegetarian",
+          "label": {
+            "it": "Piatti Non Vegetariani",
+            "en": "Non-Vegetarian"
+          },
+          "noteKey": "menu.notes.glutenFree",
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "karahi-chicken",
+              "name": "Karahi Chicken",
+              "price": 9,
+              "spicy": true,
+              "image": "",
+              "desc": {
+                "it": "Pollo con curry e peperoni (piuttosto piccante)",
+                "en": "Chicken with curry and peppers (quite spicy)"
+              },
+              "includes": []
+            },
+            {
+              "id": "karahi-prawn",
+              "name": "Karahi Prawn",
+              "price": 12,
+              "spicy": true,
+              "image": "",
+              "desc": {
+                "it": "Gamberoni con curry e peperoni verdi (piuttosto piccante)",
+                "en": "Prawns with curry and green peppers (quite spicy)"
+              },
+              "includes": []
+            },
+            {
+              "id": "chicken-tikka-masala",
+              "name": "Chicken Tikka Masala",
+              "price": 9,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Bocconcini di petto di pollo cotti nel tandoor e ripassati in salsa curry",
+                "en": "Tandoor chicken breast finished in curry sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "chicken-curry",
+              "name": "Chicken Curry",
+              "price": 9,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pollo con curry e spezie",
+                "en": "Chicken with curry and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "chicken-palak",
+              "name": "Chicken Palak",
+              "price": 9,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pollo con spinaci e spezie",
+                "en": "Chicken with spinach and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "chicken-achari",
+              "name": "Chicken Achari",
+              "price": 9,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Bocconcini di pollo saltati in padella con mango",
+                "en": "Pan-tossed chicken with mango pickle spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "chicken-korma",
+              "name": "Chicken Korma",
+              "price": 9,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pollo con salsa di yogurt, mandorle e spezie",
+                "en": "Chicken in yogurt, almond and spice sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "chicken-madras",
+              "name": "Chicken Madras",
+              "price": 9,
+              "spicy": true,
+              "image": "",
+              "desc": {
+                "it": "Bocconcini di pollo con salsa madras piccante",
+                "en": "Chicken in spicy Madras sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "chicken-jalfrezi",
+              "name": "Chicken Jalfrezi",
+              "price": 9,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Bocconcini di pollo con sapore delicato jalfrezi e spezie",
+                "en": "Chicken with delicate jalfrezi spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "chicken-vindaloo",
+              "name": "Chicken Vindaloo",
+              "price": 9,
+              "spicy": true,
+              "image": "",
+              "desc": {
+                "it": "Bocconcini di pollo con patate in salsa curry",
+                "en": "Chicken with potatoes in curry sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "keema-matar",
+              "name": "Keema Matar",
+              "price": 9,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Carne macinata e piselli in salsa curry",
+                "en": "Minced meat and peas in curry sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "aloo-keema",
+              "name": "Aloo Keema",
+              "price": 9,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Carne macinata con patate in salsa curry",
+                "en": "Minced meat with potatoes in curry sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "murgh-channa",
+              "name": "Murgh Channa",
+              "price": 9,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Bocconcini di pollo con ceci in salsa curry",
+                "en": "Chicken with chickpeas in curry sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "butter-chicken",
+              "name": "Butter Chicken",
+              "price": 9,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Bocconcini di petto di pollo cotti nel tandoor e ripassati in salsa curry e burro",
+                "en": "Tandoor chicken breast finished in butter curry sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "chicken-mushroom",
+              "name": "Chicken Mushroom Masala",
+              "price": 9,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pollo cotto con funghi e spezie",
+                "en": "Chicken cooked with mushrooms and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "fish-curry",
+              "name": "Fish Curry",
+              "price": 10,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pesce salmone con salsa al curry e spezie",
+                "en": "Salmon in curry sauce with spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "prawn-curry",
+              "name": "Prawn Curry",
+              "price": 10,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Gamberoni con salsa al curry e spezie",
+                "en": "Prawns in curry sauce with spices"
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "lamb",
+          "label": {
+            "it": "Piatti di Agnello",
+            "en": "Lamb"
+          },
+          "noteKey": null,
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "lamb-curry",
+              "name": "Lamb Curry",
+              "price": 10,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Agnello con curry e spezie",
+                "en": "Lamb with curry and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "lamb-karahi",
+              "name": "Lamb Karahi",
+              "price": 10,
+              "spicy": true,
+              "image": "",
+              "desc": {
+                "it": "Agnello con curry, peperoni e spezie",
+                "en": "Lamb with curry, peppers and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "lamb-achari",
+              "name": "Lamb Achari",
+              "price": 10,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Bocconcini di agnello saltati in padella e spezie",
+                "en": "Pan-tossed lamb with pickle spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "lamb-korma",
+              "name": "Lamb Korma",
+              "price": 10,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Agnello con salsa di yogurt, mandorle e spezie",
+                "en": "Lamb in yogurt, almond and spice sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "lamb-palak",
+              "name": "Lamb Palak",
+              "price": 10,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Agnello con spinaci e spezie",
+                "en": "Lamb with spinach and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "lamb-madras",
+              "name": "Lamb Madras",
+              "price": 10,
+              "spicy": true,
+              "image": "",
+              "desc": {
+                "it": "Bocconcini di agnello in salsa madras piccante",
+                "en": "Lamb in spicy Madras sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "lamb-jalfrezi",
+              "name": "Lamb Jalfrezi",
+              "price": 10,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Bocconcini di agnello con sapore delicato jalfrezi e spezie",
+                "en": "Lamb with delicate jalfrezi spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "lamb-vindaloo",
+              "name": "Lamb Vindaloo",
+              "price": 10,
+              "spicy": true,
+              "image": "",
+              "desc": {
+                "it": "Bocconcini di agnello con patate in salsa curry",
+                "en": "Lamb with potatoes in curry sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "rogan-josh",
+              "name": "Rogan Josh",
+              "price": 10,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Agnello con curry e salsa di yogurt con peperoni e spezie",
+                "en": "Lamb with curry, yogurt sauce, peppers and spices"
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "rice",
+          "label": {
+            "it": "Riso",
+            "en": "Rice"
+          },
+          "noteKey": "menu.notes.glutenFree",
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "chicken-biryani",
+              "name": "Chicken Biryani",
+              "price": 7,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Riso con pollo e spezie",
+                "en": "Rice with chicken and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "lamb-biryani",
+              "name": "Lamb Biryani",
+              "price": 8,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Riso con agnello e spezie",
+                "en": "Rice with lamb and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "prawn-biryani",
+              "name": "Prawn Biryani",
+              "price": 8,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Riso con gamberetti e spezie",
+                "en": "Rice with prawns and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "veg-biryani",
+              "name": "Vegetarian Biryani",
+              "price": 6,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Riso con verdure e spezie",
+                "en": "Rice with vegetables and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "keema-biryani",
+              "name": "Keema Biryani",
+              "price": 7,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Riso con carne macinata e spezie",
+                "en": "Rice with minced meat and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "riso-pulao",
+              "name": "Riso Pulao",
+              "price": 5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Riso con zafferano, spezie e mandorle",
+                "en": "Rice with saffron, spices and almonds"
+              },
+              "includes": []
+            },
+            {
+              "id": "white-rice",
+              "name": "White Rice",
+              "price": 5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Riso basmati dell'Himalaya profumato",
+                "en": "Fragrant Himalayan basmati rice"
+              },
+              "includes": []
+            },
+            {
+              "id": "channa-pulao",
+              "name": "Channa Pulao",
+              "price": 6,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Riso con ceci e spezie",
+                "en": "Rice with chickpeas and spices"
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "bread",
+          "label": {
+            "it": "Pane",
+            "en": "Bread"
+          },
+          "noteKey": null,
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "garlic-naan",
+              "name": "Garlic Naan",
+              "price": 2,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pane con aglio cotto nel forno tandoor",
+                "en": "Garlic bread baked in the tandoor"
+              },
+              "includes": []
+            },
+            {
+              "id": "cheese-naan",
+              "name": "Cheese Naan",
+              "price": 2,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pane con formaggio cotto nel forno tandoor",
+                "en": "Cheese bread baked in the tandoor"
+              },
+              "includes": []
+            },
+            {
+              "id": "butter-naan",
+              "name": "Butter Naan",
+              "price": 2,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pane con burro cotto nel forno tandoor",
+                "en": "Butter bread baked in the tandoor"
+              },
+              "includes": []
+            },
+            {
+              "id": "keema-naan",
+              "name": "Keema Naan",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pane con carne cotto nel forno tandoor",
+                "en": "Bread stuffed with meat, baked in the tandoor"
+              },
+              "includes": []
+            },
+            {
+              "id": "stuffed-naan",
+              "name": "Stuffed Naan",
+              "price": 2.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pane con verdure cotto nel forno tandoor",
+                "en": "Bread stuffed with vegetables, baked in the tandoor"
+              },
+              "includes": []
+            },
+            {
+              "id": "peshawari-naan",
+              "name": "Peshawari Naan",
+              "price": 2,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pane bianco con semi di sesamo cotto nel forno tandoor",
+                "en": "White bread with sesame seeds, baked in the tandoor"
+              },
+              "includes": []
+            },
+            {
+              "id": "naan",
+              "name": "Naan",
+              "price": 1.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pane semplice cotto nel forno tandoor",
+                "en": "Plain bread baked in the tandoor"
+              },
+              "includes": []
+            },
+            {
+              "id": "tandoori-roti",
+              "name": "Tandoori Roti",
+              "price": 1.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pane di farina integrale cotto nel forno tandoor",
+                "en": "Wholemeal bread baked in the tandoor"
+              },
+              "includes": []
+            },
+            {
+              "id": "puri",
+              "name": "Puri",
+              "price": 2,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pane di farina integrale, fritto",
+                "en": "Fried wholemeal bread"
+              },
+              "includes": []
+            },
+            {
+              "id": "chapati",
+              "name": "Chapati",
+              "price": 1.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pane di farina integrale",
+                "en": "Wholemeal flatbread"
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "burgers",
+          "label": {
+            "it": "Burger",
+            "en": "Burgers"
+          },
+          "noteKey": null,
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "veg-burger",
+              "name": "Veg Burger",
+              "price": 5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Hamburger vegetariano",
+                "en": "Vegetarian burger"
+              },
+              "includes": []
+            },
+            {
+              "id": "chicken-burger",
+              "name": "Chicken Burger",
+              "price": 6,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Hamburger di pollo",
+                "en": "Chicken burger"
+              },
+              "includes": []
+            },
+            {
+              "id": "fish-burger",
+              "name": "Fish Burger",
+              "price": 6,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Hamburger di pesce",
+                "en": "Fish burger"
+              },
+              "includes": []
+            },
+            {
+              "id": "cheese-burger",
+              "name": "Cheese Burger",
+              "price": 6,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Hamburger con formaggio",
+                "en": "Cheese burger"
+              },
+              "includes": []
+            },
+            {
+              "id": "patatine",
+              "name": "Patatine",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Patatine fritte",
+                "en": "French fries"
+              },
+              "includes": []
+            },
+            {
+              "id": "menu-burger",
+              "name": "Menu Burger",
+              "price": 8,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Menu hamburger completo",
+                "en": "Full burger menu"
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "desserts",
+          "label": {
+            "it": "Dolci",
+            "en": "Desserts"
+          },
+          "noteKey": "menu.notes.glutenFree",
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "mango-kulfi",
+              "name": "Mango Kulfi",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Gelato indiano al latte con mango",
+                "en": "Indian milk ice cream with mango"
+              },
+              "includes": []
+            },
+            {
+              "id": "pista-kulfi",
+              "name": "Pista Kulfi",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Gelato indiano al latte con pistacchi",
+                "en": "Indian milk ice cream with pistachios"
+              },
+              "includes": []
+            },
+            {
+              "id": "gulab-jamin",
+              "name": "Gulab Jamin",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Frittelle di ricotta in sciroppo di zucchero",
+                "en": "Ricotta fritters in sugar syrup"
+              },
+              "includes": []
+            },
+            {
+              "id": "coconut-barfi",
+              "name": "Coconut Barfi",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Dolce al cocco",
+                "en": "Coconut sweet"
+              },
+              "includes": []
+            },
+            {
+              "id": "kheer",
+              "name": "Kheer",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Budino di riso al latte con pistacchi e mandorle",
+                "en": "Rice pudding with pistachios and almonds"
+              },
+              "includes": []
+            },
+            {
+              "id": "ras-malai",
+              "name": "Ras Malai",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Formaggio indiano con sciroppo di latte",
+                "en": "Indian cheese in sweet milk syrup"
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "fixedMenus",
+          "label": {
+            "it": "Menu Fissi",
+            "en": "Set Menus"
+          },
+          "noteKey": "menu.notes.drinksExcluded",
+          "featured": true,
+          "isSetMenu": true,
+          "image": "",
+          "items": [
+            {
+              "id": "menu-veg",
+              "name": "Menu Vegetarian",
+              "price": 18,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Percorso vegetariano completo",
+                "en": "Complete vegetarian set"
+              },
+              "includes": [
+                "Mix Starters",
+                "Veg Korma",
+                "Dhal",
+                "Riso Pulao",
+                "Pane",
+                "Dolce a scelta"
+              ]
+            },
+            {
+              "id": "menu-carne",
+              "name": "Menu Carne",
+              "price": 20,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Percorso di carne completo",
+                "en": "Complete meat set"
+              },
+              "includes": [
+                "Mix Starters",
+                "Chicken Tandoori",
+                "Chicken Curry",
+                "Riso Pulao",
+                "Pane",
+                "Dolce a scelta"
+              ]
+            },
+            {
+              "id": "menu-pesce",
+              "name": "Menu Pesce",
+              "price": 22,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Percorso di pesce completo",
+                "en": "Complete fish set"
+              },
+              "includes": [
+                "Mix Starters",
+                "Prawn Malai",
+                "Fish Curry",
+                "Riso Pulao",
+                "Pane",
+                "Dolce a scelta"
+              ]
+            },
+            {
+              "id": "menu-shalimar",
+              "name": "Menu Shalimar",
+              "price": 22,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Il percorso della casa",
+                "en": "The house signature set"
+              },
+              "includes": [
+                "Papad, Shami Kebab, Samosa Carne",
+                "Chicken Tikka Masala",
+                "Shahi Tandoori",
+                "Riso Pulao",
+                "Pane a scelta",
+                "Dolce a scelta"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "drinks",
+          "label": {
+            "it": "Bevande",
+            "en": "Drinks"
+          },
+          "noteKey": null,
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "lassy-mango",
+              "name": "Lassy Mango",
+              "price": 2.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Bevanda allo yogurt e mango",
+                "en": "Mango yogurt drink"
+              },
+              "includes": []
+            },
+            {
+              "id": "lassy-dolce",
+              "name": "Lassy Dolce",
+              "price": 2.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Bevanda allo yogurt dolce",
+                "en": "Sweet yogurt drink"
+              },
+              "includes": []
+            },
+            {
+              "id": "lassy-salato",
+              "name": "Lassy Salato",
+              "price": 2.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Bevanda allo yogurt salato",
+                "en": "Salted yogurt drink"
+              },
+              "includes": []
+            },
+            {
+              "id": "mango-juice",
+              "name": "Mango Juice",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Succo di mango",
+                "en": "Mango juice"
+              },
+              "includes": []
+            },
+            {
+              "id": "orange-juice",
+              "name": "Orange Juice",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Succo d'arancia",
+                "en": "Orange juice"
+              },
+              "includes": []
+            },
+            {
+              "id": "coca-cola",
+              "name": "Coca Cola",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "33 cl",
+                "en": "33 cl"
+              },
+              "includes": []
+            },
+            {
+              "id": "coca-zero",
+              "name": "Coca Cola Zero",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "33 cl",
+                "en": "33 cl"
+              },
+              "includes": []
+            },
+            {
+              "id": "pepsi",
+              "name": "Pepsi",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "33 cl",
+                "en": "33 cl"
+              },
+              "includes": []
+            },
+            {
+              "id": "sprite",
+              "name": "Sprite",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "33 cl",
+                "en": "33 cl"
+              },
+              "includes": []
+            },
+            {
+              "id": "fanta",
+              "name": "Fanta",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "33 cl",
+                "en": "33 cl"
+              },
+              "includes": []
+            },
+            {
+              "id": "red-bull",
+              "name": "Red Bull",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "25 cl",
+                "en": "25 cl"
+              },
+              "includes": []
+            },
+            {
+              "id": "water",
+              "name": "Mineral Water",
+              "price": 2.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Naturale & gasata",
+                "en": "Still & sparkling"
+              },
+              "includes": []
+            },
+            {
+              "id": "te-indiano",
+              "name": "Tè Indiano",
+              "price": 2,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Con latte / senza latte",
+                "en": "With or without milk"
+              },
+              "includes": []
+            },
+            {
+              "id": "te-verde",
+              "name": "Tè Verde",
+              "price": 2,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Tè verde",
+                "en": "Green tea"
+              },
+              "includes": []
+            },
+            {
+              "id": "masala-chai",
+              "name": "Masala Chai",
+              "price": 2,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Tè speziato indiano",
+                "en": "Indian spiced tea"
+              },
+              "includes": []
+            },
+            {
+              "id": "espresso",
+              "name": "Caffè Espresso",
+              "price": 1.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Espresso italiano",
+                "en": "Italian espresso"
+              },
+              "includes": []
+            },
+            {
+              "id": "macchiato",
+              "name": "Caffè Macchiato",
+              "price": 1.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Espresso macchiato",
+                "en": "Espresso with a dash of milk"
+              },
+              "includes": []
+            },
+            {
+              "id": "americano",
+              "name": "Caffè Americano",
+              "price": 1.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Caffè lungo",
+                "en": "Long coffee"
+              },
+              "includes": []
+            },
+            {
+              "id": "cappuccino",
+              "name": "Cappuccino",
+              "price": 2,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Con schiuma di latte",
+                "en": "With milk foam"
+              },
+              "includes": []
+            },
+            {
+              "id": "ginseng",
+              "name": "Ginseng",
+              "price": 2,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Caffè al ginseng",
+                "en": "Ginseng coffee"
+              },
+              "includes": []
+            }
+          ]
+        }
+      ]
+    },
+    "takeaway": {
+      "id": "takeaway",
+      "sections": [
+        {
+          "id": "offerta",
+          "label": {
+            "it": "Offerta Speciale",
+            "en": "Special Box"
+          },
+          "noteKey": null,
+          "featured": true,
+          "isSetMenu": true,
+          "image": "",
+          "items": [
+            {
+              "id": "meno-carne-box",
+              "name": "Meno Carne - Box",
+              "price": 13,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Riso pulao o riso bianco, lenticchie, chicken tikka masala, e pepsi lattina o acqua da 50 cl",
+                "en": "Pulao or white rice, lentils, chicken tikka masala, and a can of Pepsi or 50 cl water"
+              },
+              "includes": [
+                "Riso pulao o riso bianco",
+                "Lenticchie",
+                "Chicken tikka masala",
+                "Pepsi lattina o acqua da 50 cl"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fritti",
+          "label": {
+            "it": "Fritti",
+            "en": "Fried"
+          },
+          "noteKey": null,
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "pakora-ta",
+              "name": "Pakora",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Verdure miste passate in pastella di farina di ceci e fritti",
+                "en": "Mixed vegetables in chickpea batter, fried"
+              },
+              "includes": []
+            },
+            {
+              "id": "samosa-chat-ta",
+              "name": "Samosa Chat",
+              "price": 6,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Samosa, ceci, salsa yogurt, menta e salsa piccante",
+                "en": "Samosa, chickpeas, yogurt sauce, mint and spicy sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "samosa-carne-ta",
+              "name": "Samosa Carne - 1 Pezzo",
+              "price": 1.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Fagottini ripieni di carne, cumino, sale, peperoncino e farina 00",
+                "en": "Pastry filled with meat, cumin, salt, chilli and flour"
+              },
+              "includes": []
+            },
+            {
+              "id": "kashmiri-tikki-ta",
+              "name": "Kashmiri Tikki",
+              "price": 1.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Patate, formaggio, curcuma, peperoncino, coriandolo, olio, comino e timo",
+                "en": "Potato and cheese with turmeric, chilli, coriander, cumin and thyme"
+              },
+              "includes": []
+            },
+            {
+              "id": "papad-ta",
+              "name": "Papad",
+              "price": 1,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Croccanti frittatine a base di legumi",
+                "en": "Crispy lentil wafers"
+              },
+              "includes": []
+            },
+            {
+              "id": "samosa-ta",
+              "name": "Samosa",
+              "price": 1.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Fagottini ripieni di verdure",
+                "en": "Pastries filled with vegetables"
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "vegetarian",
+          "label": {
+            "it": "Piatti Vegetariani",
+            "en": "Vegetarian"
+          },
+          "noteKey": null,
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "daal-ta",
+              "name": "Daal",
+              "price": 7,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Legumi, in salsa di spezie",
+                "en": "Legumes in a spiced sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "spinaci-patate",
+              "name": "Spinaci E Patate",
+              "price": 9,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Spinaci, patate, acqua, olio, pomodori, coriandolo e curcuma",
+                "en": "Spinach and potatoes with tomato, coriander and turmeric"
+              },
+              "includes": []
+            },
+            {
+              "id": "daal-makhani-ta",
+              "name": "Daal Makhani",
+              "price": 8,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Lenticchie nere, pomodori, cipolla, curcuma, olio e coriandolo",
+                "en": "Black lentils with tomato, onion, turmeric and coriander"
+              },
+              "includes": []
+            },
+            {
+              "id": "punjabi-bartha",
+              "name": "Punjabi Bartha",
+              "price": 8,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Melanzane, cipolla, pomodori, olio, curcuma e sale",
+                "en": "Aubergine with onion, tomato and turmeric"
+              },
+              "includes": []
+            },
+            {
+              "id": "fagiolini-curry",
+              "name": "Fagiolini Al Curry",
+              "price": 7,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Fagiolini, pomodori, olio, cipolla e spezia",
+                "en": "Green beans with tomato, onion and spices"
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "secondi",
+          "label": {
+            "it": "Secondi",
+            "en": "Mains"
+          },
+          "noteKey": null,
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "pollo-tandoori-ta",
+              "name": "Pollo Tandoori",
+              "price": 10,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pollo marinato in yogurt speziato",
+                "en": "Chicken marinated in spiced yogurt"
+              },
+              "includes": []
+            },
+            {
+              "id": "agnello-curry-ta",
+              "name": "Agnello Al Curry",
+              "price": 12,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Agnello in salsa curry",
+                "en": "Lamb in curry sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "pollo-curry-ta",
+              "name": "Pollo Al Curry",
+              "price": 11,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pollo in salsa curry",
+                "en": "Chicken in curry sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "chicken-karahi-ta",
+              "name": "Chicken Karahi",
+              "price": 11,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pollo in salsa curry e spezie",
+                "en": "Chicken in curry sauce and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "madras-curry-ta",
+              "name": "Madras Curry",
+              "price": 11,
+              "spicy": true,
+              "image": "",
+              "desc": {
+                "it": "Pollo in salsa curry e spezie",
+                "en": "Chicken in curry sauce and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "pollo-tikka-ta",
+              "name": "Pollo Tikka",
+              "price": 11,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Bocconcini di pollo disossato marinato in yogurt speziato",
+                "en": "Boneless chicken pieces marinated in spiced yogurt"
+              },
+              "includes": []
+            },
+            {
+              "id": "shami-kebab-ta",
+              "name": "Shami Kebab",
+              "price": 1.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pollo, lenticchie macinate, pepe nero, uova e spezie",
+                "en": "Chicken, ground lentils, black pepper, egg and spices"
+              },
+              "includes": []
+            },
+            {
+              "id": "pollo-kurma-ta",
+              "name": "Pollo Kurma",
+              "price": 11,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pollo con mandorle, yogurt e salsa kurma",
+                "en": "Chicken with almonds, yogurt and korma sauce"
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "basmati",
+          "label": {
+            "it": "Piatti Basmati",
+            "en": "Basmati"
+          },
+          "noteKey": null,
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "pollo-biryani-ta",
+              "name": "Pollo Biryani",
+              "price": 8,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Riso con pollo speziato con mandorle e anacardi",
+                "en": "Spiced rice with chicken, almonds and cashews"
+              },
+              "includes": []
+            },
+            {
+              "id": "riso-bianco-ta",
+              "name": "Riso Bianco",
+              "price": 6,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Riso basmati e piselli",
+                "en": "Basmati rice and peas"
+              },
+              "includes": []
+            },
+            {
+              "id": "riso-pulao-ta",
+              "name": "Riso Pulao",
+              "price": 6,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Riso cucinato con zafferano indiano",
+                "en": "Rice cooked with Indian saffron"
+              },
+              "includes": []
+            },
+            {
+              "id": "biryani-veg-ta",
+              "name": "Biryani Vegetariano",
+              "price": 7,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Riso basmati e verdure speziati",
+                "en": "Spiced basmati rice and vegetables"
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "salse",
+          "label": {
+            "it": "Salse",
+            "en": "Sauces"
+          },
+          "noteKey": null,
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "salsa-piccante",
+              "name": "Salsa Piccante",
+              "price": 1,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Salsa piccante",
+                "en": "Spicy sauce"
+              },
+              "includes": []
+            },
+            {
+              "id": "salsa-yogurt-menta",
+              "name": "Salsa Yoghurt E Menta",
+              "price": 1,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Salsa menta",
+                "en": "Mint yogurt sauce"
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "naan",
+          "label": {
+            "it": "Naan",
+            "en": "Naan"
+          },
+          "noteKey": null,
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "stuffed-paratha",
+              "name": "Stuffed Paratha",
+              "price": 2.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Focaccine di farina integrale ripiene di verdure",
+                "en": "Wholemeal flatbread stuffed with vegetables"
+              },
+              "includes": []
+            },
+            {
+              "id": "cheese-naan-ta",
+              "name": "Cheese Naan",
+              "price": 2,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Focaccine ripiene di formaggio",
+                "en": "Flatbread stuffed with cheese"
+              },
+              "includes": []
+            },
+            {
+              "id": "naan-ta",
+              "name": "Naan",
+              "price": 1.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Focaccine di farina bianca cotte nel forno",
+                "en": "White-flour flatbread baked in the oven"
+              },
+              "includes": []
+            },
+            {
+              "id": "chicken-roll-ta",
+              "name": "Chicken Roll",
+              "price": 5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Panino indiano con pollo",
+                "en": "Indian roll with chicken"
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "combo",
+          "label": {
+            "it": "Combo Menu Coca-Cola",
+            "en": "Combo + Coca-Cola"
+          },
+          "noteKey": null,
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "pollo-tikka-masala-combo",
+              "name": "Pollo Tikka Masala",
+              "price": 13.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Pezzi di pollo e spezie",
+                "en": "Chicken pieces and spices"
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "dolci",
+          "label": {
+            "it": "Dolci",
+            "en": "Sweets"
+          },
+          "noteKey": null,
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "berfi-pistacchio",
+              "name": "Berfi Pistacchio",
+              "price": 1.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Zucchero, latte in polvere, burro, acqua, cardamomo e pistacchio",
+                "en": "Sugar, milk powder, butter, water, cardamom and pistachio"
+              },
+              "includes": []
+            },
+            {
+              "id": "laddu",
+              "name": "Laddu",
+              "price": 1.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Farina di ceci, zucchero, acqua, cardamomo, olio e pistacchio",
+                "en": "Chickpea flour, sugar, water, cardamom, oil and pistachio"
+              },
+              "includes": []
+            },
+            {
+              "id": "dolce-cocco",
+              "name": "Dolce Di Cocco",
+              "price": 1.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Acqua, latte, zucchero e cocco",
+                "en": "Water, milk, sugar and coconut"
+              },
+              "includes": []
+            },
+            {
+              "id": "ciam-ciam",
+              "name": "Ciam Ciam",
+              "price": 1.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Zucchero, latte, acqua, burro e cardamomo",
+                "en": "Sugar, milk, water, butter and cardamom"
+              },
+              "includes": []
+            },
+            {
+              "id": "berfi-mandorle",
+              "name": "Berfi Mandorle",
+              "price": 1.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Zucchero, latte in polvere, burro, acqua, cardamomo e mandorle",
+                "en": "Sugar, milk powder, butter, water, cardamom and almonds"
+              },
+              "includes": []
+            },
+            {
+              "id": "gullab-giamin",
+              "name": "Gullab Giamin",
+              "price": 1.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Zucchero, latte in polvere, acqua, cardamomo, olio e bicarbonato di sodio",
+                "en": "Sugar, milk powder, water, cardamom, oil and bicarbonate of soda"
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "bevande",
+          "label": {
+            "it": "Bevande",
+            "en": "Drinks"
+          },
+          "noteKey": null,
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "acqua-frizzante",
+              "name": "Acqua Frizzante 50cl",
+              "price": 1,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "",
+                "en": ""
+              },
+              "includes": []
+            },
+            {
+              "id": "acqua-naturale",
+              "name": "Acqua Naturale 50cl",
+              "price": 1,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "",
+                "en": ""
+              },
+              "includes": []
+            },
+            {
+              "id": "bibita-lattina",
+              "name": "Bibita In Lattina 33cl",
+              "price": 2.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "",
+                "en": ""
+              },
+              "includes": []
+            },
+            {
+              "id": "bibita-33",
+              "name": "Bibita 33cl",
+              "price": 2.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "",
+                "en": ""
+              },
+              "includes": []
+            },
+            {
+              "id": "bibita-50",
+              "name": "Bibita 50cl",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "",
+                "en": ""
+              },
+              "includes": []
+            },
+            {
+              "id": "succo-mango-ta",
+              "name": "Succo Di Mango",
+              "price": 2.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Succo di mango",
+                "en": "Mango juice"
+              },
+              "includes": []
+            },
+            {
+              "id": "redbull-ta",
+              "name": "Red Bull Energy Drink, 355ml",
+              "price": 2.5,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "",
+                "en": ""
+              },
+              "includes": []
+            }
+          ]
+        },
+        {
+          "id": "birre",
+          "label": {
+            "it": "Birre",
+            "en": "Beer"
+          },
+          "noteKey": null,
+          "featured": false,
+          "isSetMenu": false,
+          "image": "",
+          "items": [
+            {
+              "id": "birra-33",
+              "name": "Birra 33cl",
+              "price": 3,
+              "spicy": false,
+              "image": "",
+              "desc": {
+                "it": "Zero alcol. Moretti o Heineken",
+                "en": "Zero alcohol. Moretti or Heineken"
+              },
+              "includes": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

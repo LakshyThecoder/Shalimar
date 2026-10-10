@@ -9,7 +9,7 @@ export default function Reserve() {
   const inView = useInView(ref, { once: true, margin: "-10%" });
 
   return (
-    <section id="reserve" ref={ref} className="relative py-24 md:py-32 px-6 md:px-12 lg:px-16 bg-sh-surface scroll-mt-24">
+    <section id="reserve" ref={ref} className="relative py-20 md:py-28 px-6 md:px-12 lg:px-16 bg-sh-surface scroll-mt-24">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         <motion.div
           className="lg:col-span-6"
@@ -42,20 +42,25 @@ export default function Reserve() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.12, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
-          <a
-            href={RESTAURANT.tel}
-            className="block border border-sh-saffron/40 bg-sh-bg/60 p-8 md:p-12 hover:border-sh-saffron transition-colors"
-          >
+          <div className="border border-sh-saffron/40 bg-sh-bg/60 p-8 md:p-12 space-y-6">
             <p className="text-[10px] uppercase tracking-[0.28em] text-sh-saffron">
               {t("menu.branch.restaurantKind")} · {RESTAURANT.street}
             </p>
-            <p className="font-display text-4xl md:text-6xl uppercase tracking-tight text-sh-text mt-4">
-              {RESTAURANT.phone}
-            </p>
-            <p className="mt-6 text-xs uppercase tracking-[0.22em] font-semibold text-sh-saffron">
+            {RESTAURANT.phones.map((p) => (
+              <a
+                key={p.tel}
+                href={p.tel}
+                className="block hover:text-sh-saffron transition-colors"
+              >
+                <p className="font-display text-3xl md:text-5xl uppercase tracking-tight text-sh-text">
+                  {p.display}
+                </p>
+              </a>
+            ))}
+            <p className="text-xs uppercase tracking-[0.22em] font-semibold text-sh-saffron">
               {t("footer.call")} →
             </p>
-          </a>
+          </div>
         </motion.div>
       </div>
     </section>

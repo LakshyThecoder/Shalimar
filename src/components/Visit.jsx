@@ -6,13 +6,13 @@ import { IMG } from "../lib/images";
 import { RESTAURANT, TAKEAWAY } from "../data/locations";
 
 const RESTAURANT_HOURS = [
-  { day: "sunday", hours: "11:30 – 14:20 · 18:00 – 22:10" },
+  { day: "sunday", hours: "11:30 – 14:20 · 14:30 – 22:30" },
   { day: "monday", hours: "closed" },
-  { day: "tuesday", hours: "11:30 – 14:20 · 18:00 – 22:10" },
-  { day: "wednesday", hours: "11:30 – 14:20 · 18:00 – 22:10" },
-  { day: "thursday", hours: "11:30 – 14:20 · 18:00 – 22:10" },
-  { day: "friday", hours: "11:30 – 14:20 · 18:00 – 22:10" },
-  { day: "saturday", hours: "11:30 – 14:20 · 18:00 – 22:10" },
+  { day: "tuesday", hours: "11:30 – 14:20 · 14:30 – 22:30" },
+  { day: "wednesday", hours: "11:30 – 14:20 · 14:30 – 22:30" },
+  { day: "thursday", hours: "11:30 – 14:20 · 14:30 – 22:30" },
+  { day: "friday", hours: "11:30 – 14:20 · 14:30 – 22:30" },
+  { day: "saturday", hours: "11:30 – 14:20 · 14:30 – 22:30" },
 ];
 
 const TAKEAWAY_HOURS = [
@@ -23,7 +23,7 @@ const TAKEAWAY_HOURS = [
   "thursday",
   "friday",
   "saturday",
-].map((day) => ({ day, hours: "11:30 – 22:00" }));
+].map((day) => ({ day, hours: "11:30 – 21:30" }));
 
 export default function Visit() {
   const { t } = useTranslation();
@@ -171,9 +171,17 @@ function LocationCard({ id, kind, name, place, inView, delay, children }) {
         <br />
         <span className="text-sh-muted text-base">{place.area}</span>
       </p>
-      <a href={place.tel} className="mt-3 inline-block text-lg hover:text-sh-saffron transition-colors">
-        {place.phone}
-      </a>
+      <div className="mt-3 flex flex-col gap-1">
+        {(place.phones || [{ display: place.phone, tel: place.tel }]).map((p) => (
+          <a
+            key={p.tel}
+            href={p.tel}
+            className="inline-block text-lg hover:text-sh-saffron transition-colors"
+          >
+            {p.display}
+          </a>
+        ))}
+      </div>
       {children}
     </motion.article>
   );

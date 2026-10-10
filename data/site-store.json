@@ -1,0 +1,462 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-10T18:12:22.066Z",
+  "brand": {
+    "name": "SHALIMAR",
+    "hindi": "शालिमार",
+    "tagline": {
+      "en": "Indian and Pakistani food in Milan",
+      "it": "Cucina indiana e pakistana a Milano"
+    },
+    "footerLine": {
+      "en": "Halal Indian and Pakistani food in Milan.",
+      "it": "Cucina indiana e pakistana Halal a Milano."
+    }
+  },
+  "nav": {
+    "links": [
+      {
+        "id": "restaurant",
+        "label": {
+          "en": "Restaurant",
+          "it": "Ristorante"
+        },
+        "href": "#restaurant"
+      },
+      {
+        "id": "takeaway",
+        "label": {
+          "en": "Takeaway",
+          "it": "Take away"
+        },
+        "href": "#takeaway"
+      },
+      {
+        "id": "menus",
+        "label": {
+          "en": "Menus",
+          "it": "Menu"
+        },
+        "href": "#menus"
+      },
+      {
+        "id": "locations",
+        "label": {
+          "en": "Locations",
+          "it": "Dove siamo"
+        },
+        "href": "#visit"
+      },
+      {
+        "id": "contact",
+        "label": {
+          "en": "Contact",
+          "it": "Contatti"
+        },
+        "href": "#visit"
+      }
+    ],
+    "book": {
+      "en": "Book a table",
+      "it": "Prenota un tavolo"
+    },
+    "orderTakeaway": {
+      "en": "Order takeaway",
+      "it": "Ordina asporto"
+    }
+  },
+  "hero": {
+    "title": "SHALIMAR",
+    "headline": {
+      "en": "Two locations.",
+      "it": "Due sedi."
+    },
+    "subhead": {
+      "en": "Two different Shalimar menus.",
+      "it": "Due menu Shalimar diversi."
+    },
+    "paragraphs": [
+      {
+        "en": "Sit down for lunch or dinner at our restaurant on Viale Toscana.",
+        "it": "Pranzi e cene al ristorante in Viale Toscana."
+      },
+      {
+        "en": "For a quick meal, takeaway or Indian sweets, visit us on Corso di Porta Romana.",
+        "it": "Per un pasto veloce, asporto o dolci indiani, vieni in Corso di Porta Romana."
+      }
+    ],
+    "cards": [
+      {
+        "id": "restaurant",
+        "label": {
+          "en": "Viale Toscana restaurant",
+          "it": "Ristorante Viale Toscana"
+        },
+        "href": "#restaurant"
+      },
+      {
+        "id": "takeaway",
+        "label": {
+          "en": "Porta Romana takeaway",
+          "it": "Take away Porta Romana"
+        },
+        "href": "#takeaway"
+      }
+    ],
+    "tags": {
+      "en": "Halal · Vegetarian options · Takeaway · Delivery",
+      "it": "Halal · Opzioni vegetariane · Asporto · Delivery"
+    }
+  },
+  "restaurant": {
+    "eyebrow": {
+      "en": "SHALIMAR RESTAURANT",
+      "it": "SHALIMAR RISTORANTE"
+    },
+    "title": {
+      "en": "Viale Toscana",
+      "it": "Viale Toscana"
+    },
+    "lead": {
+      "en": "A small restaurant with a large menu.",
+      "it": "Un ristorante piccolo, con un menu grande."
+    },
+    "paragraphs": [
+      {
+        "en": "Start with samosas or pakora, order something from the tandoor and choose from more than 30 curries and main dishes. There are also biryanis, kebabs, seafood, vegetarian dishes and 12 kinds of bread.",
+        "it": "Inizia con samosa o pakora, scegli qualcosa dal tandoor e tra più di 30 curry e secondi. Ci sono anche biryani, kebab, pesce, piatti vegetariani e 12 tipi di pane."
+      },
+      {
+        "en": "The food can be mild or spicy. If you are unsure what to order, tell us what you like and we will help you choose.",
+        "it": "I piatti possono essere delicati o piccanti. Se non sai cosa ordinare, dicci cosa ti piace e ti aiutiamo a scegliere."
+      }
+    ],
+    "addressLine": "Viale Toscana 2, Milano",
+    "ctaBook": {
+      "en": "Book a table",
+      "it": "Prenota un tavolo"
+    },
+    "ctaMenu": {
+      "en": "View the restaurant menu",
+      "it": "Vedi il menu del ristorante"
+    }
+  },
+  "takeaway": {
+    "eyebrow": {
+      "en": "INDIAN TAKE AWAY & SWEET HOUSE",
+      "it": "INDIAN TAKE AWAY & SWEET HOUSE"
+    },
+    "title": {
+      "en": "Corso di Porta Romana",
+      "it": "Corso di Porta Romana"
+    },
+    "lead": {
+      "en": "Shalimar Porta Romana is made for quick lunches, easy dinners and food to take home.",
+      "it": "Shalimar Porta Romana è pensato per pranzi veloci, cene semplici e cibo da asporto."
+    },
+    "paragraphs": [
+      {
+        "en": "Choose a vegetarian or meat meal box, or order separately from the counter. The menu includes samosas, pakora, biryani, chicken tikka, curries, daal, vegetables, naan and roti.",
+        "it": "Scegli un box vegetariano o di carne, oppure ordina al banco. Il menu include samosa, pakora, biryani, chicken tikka, curry, daal, verdure, naan e roti."
+      },
+      {
+        "en": "There are only a few seats, so most customers take their food away.",
+        "it": "Ci sono pochi posti a sedere: la maggior parte dei clienti porta via."
+      },
+      {
+        "en": "Before you leave, look at the sweet counter. Depending on the day, you may find gulab jamun, laddu, rasgulla and barfi made with coconut, pistachio, almond or carrot.",
+        "it": "Prima di uscire, guarda il bancone dei dolci. A seconda del giorno trovi gulab jamun, laddu, rasgulla e barfi al cocco, pistacchio, mandorla o carota."
+      }
+    ],
+    "addressLine": "Corso di Porta Romana 25, Milano",
+    "ctaOrder": {
+      "en": "Order takeaway",
+      "it": "Ordina asporto"
+    },
+    "ctaMenu": {
+      "en": "View the takeaway menu",
+      "it": "Vedi il menu take away"
+    }
+  },
+  "menuGuide": {
+    "eyebrow": {
+      "en": "THE MENU",
+      "it": "IL MENU"
+    },
+    "title": {
+      "en": "What would you like?",
+      "it": "Cosa ti va di mangiare?"
+    },
+    "chapters": [
+      {
+        "title": {
+          "en": "From the tandoor",
+          "it": "Dal tandoor"
+        },
+        "body": {
+          "en": "Chicken tandoori, chicken tikka, malai tikka, seekh kebab, lamb tikka and fish tandoori. The meat or fish is marinated with spices and cooked at high heat in the tandoor.",
+          "it": "Chicken tandoori, chicken tikka, malai tikka, seekh kebab, lamb tikka e fish tandoori. Carne o pesce marinati con spezie e cotti ad alta temperatura nel tandoor."
+        }
+      },
+      {
+        "title": {
+          "en": "Curries",
+          "it": "Curry"
+        },
+        "body": {
+          "en": "Chicken, lamb, fish and prawn dishes prepared in different styles, from mild korma to hotter madras and vindaloo. If you do not eat spicy food, ask us for a recommendation.",
+          "it": "Piatti di pollo, agnello, pesce e gamberi in stili diversi, dal delicato korma al più piccante madras e vindaloo. Se non mangi piccante, chiedici un consiglio."
+        }
+      },
+      {
+        "title": {
+          "en": "Biryani and rice",
+          "it": "Biryani e riso"
+        },
+        "body": {
+          "en": "Basmati rice served plain, as pulao or cooked as biryani with vegetables, chicken, lamb or prawns.",
+          "it": "Riso basmati in bianco, come pulao o come biryani con verdure, pollo, agnello o gamberi."
+        }
+      },
+      {
+        "title": {
+          "en": "Vegetarian dishes",
+          "it": "Piatti vegetariani"
+        },
+        "body": {
+          "en": "Daal tarka, daal makhani, chana masala, palak paneer, aloo gobi, aubergine, spinach, potatoes and mixed vegetables. These are complete dishes, not side orders.",
+          "it": "Daal tarka, daal makhani, chana masala, palak paneer, aloo gobi, melanzane, spinaci, patate e verdure miste. Sono piatti completi, non contorni."
+        }
+      },
+      {
+        "title": {
+          "en": "Bread",
+          "it": "Pane"
+        },
+        "body": {
+          "en": "Naan, butter naan, garlic naan, cheese naan, keema naan, roti, chapati and stuffed breads.",
+          "it": "Naan, butter naan, garlic naan, cheese naan, keema naan, roti, chapati e pani farciti."
+        }
+      },
+      {
+        "title": {
+          "en": "Sweets",
+          "it": "Dolci"
+        },
+        "body": {
+          "en": "Kulfi, kheer, gulab jamun and coconut barfi at Viale Toscana. At Porta Romana, the sweet counter also includes laddu, rasgulla and different kinds of barfi.",
+          "it": "Kulfi, kheer, gulab jamun e coconut barfi in Viale Toscana. A Porta Romana il bancone dolci include anche laddu, rasgulla e diversi tipi di barfi."
+        }
+      }
+    ],
+    "ctaRestaurant": {
+      "en": "Restaurant menu",
+      "it": "Menu ristorante"
+    },
+    "ctaTakeaway": {
+      "en": "Takeaway menu",
+      "it": "Menu take away"
+    }
+  },
+  "guide": {
+    "eyebrow": {
+      "en": "NEW TO THE MENU?",
+      "it": "PRIMA VOLTA?"
+    },
+    "title": {
+      "en": "A simple place to start",
+      "it": "Un modo semplice per iniziare"
+    },
+    "paragraphs": [
+      {
+        "en": "Order a few dishes and share them.",
+        "it": "Ordina alcuni piatti e condividili."
+      },
+      {
+        "en": "Try samosas to begin, followed by chicken tandoori or chicken tikka. Add one curry, one vegetarian dish, basmati rice and naan for the table.",
+        "it": "Prova le samosa per iniziare, poi chicken tandoori o chicken tikka. Aggiungi un curry, un piatto vegetariano, riso basmati e naan per il tavolo."
+      },
+      {
+        "en": "For something mild, try chicken korma or butter chicken.",
+        "it": "Per qualcosa di delicato, prova chicken korma o butter chicken."
+      },
+      {
+        "en": "For more heat, ask about madras, vindaloo or karahi.",
+        "it": "Per più piccante, chiedi di madras, vindaloo o karahi."
+      },
+      {
+        "en": "For a vegetarian meal, start with daal, chana masala or palak paneer and add rice or bread.",
+        "it": "Per un pasto vegetariano, inizia con daal, chana masala o palak paneer e aggiungi riso o pane."
+      },
+      {
+        "en": "You do not need to know the names of every dish. Tell us what you normally enjoy and how spicy you want your food.",
+        "it": "Non serve conoscere il nome di ogni piatto. Dicci cosa ti piace di solito e quanto lo vuoi piccante."
+      }
+    ]
+  },
+  "reviews": {
+    "eyebrow": {
+      "en": "REVIEWS",
+      "it": "RECENSIONI"
+    },
+    "title": {
+      "en": "What customers mention most",
+      "it": "Cosa dicono più spesso"
+    },
+    "restaurantNote": {
+      "en": "Guests regularly mention the friendly service, wide choice and reasonable prices at Viale Toscana.",
+      "it": "Gli ospiti citano spesso il servizio cordiale, la scelta ampia e i prezzi onesti di Viale Toscana."
+    },
+    "restaurantScore": {
+      "en": "The restaurant is currently rated 8.9 out of 10 on TheFork, based on approximately 380 reviews.",
+      "it": "Il ristorante è valutato 8,9 su 10 su TheFork, su circa 380 recensioni."
+    },
+    "takeawayScore": {
+      "en": "The Porta Romana takeaway is currently rated 4.1 out of 5 on Tripadvisor, based on approximately 120 reviews.",
+      "it": "Il take away di Porta Romana è valutato 4,1 su 5 su Tripadvisor, su circa 120 recensioni."
+    },
+    "takeawayNote": {
+      "en": "Customers often recommend the samosas, cheese naan and affordable meal boxes.",
+      "it": "I clienti consigliano spesso le samosa, il cheese naan e i box a buon prezzo."
+    },
+    "footnote": {
+      "en": "Ratings checked in October 2026 and may change.",
+      "it": "Valutazioni verificate a ottobre 2026 e soggette a variazioni."
+    },
+    "quotes": [
+      {
+        "text": {
+          "en": "Small, well-appointed room, clean, great food, reasonable prices and friendly staff. The menu has many specialities worth coming back to try.",
+          "it": "Sala piccola e curata, pulita, ottimo cibo, prezzi onesti e personale cordiale. Il menu ha molte specialità per cui vale tornare."
+        },
+        "author": "Nicola N.",
+        "source": "Tripadvisor · July 2025"
+      },
+      {
+        "text": {
+          "en": "Excellent cuisine, not particularly spicy, with attentive service and very interesting prices. I will return with the family.",
+          "it": "Ottima cucina, non particolarmente piccante, con servizio attento e prezzi molto interessanti. Tornerò con la famiglia."
+        },
+        "author": "Mariaregina7",
+        "source": "Tripadvisor · November 2023"
+      }
+    ]
+  },
+  "locations": {
+    "restaurant": {
+      "eyebrow": {
+        "en": "RESTAURANT",
+        "it": "RISTORANTE"
+      },
+      "title": "Viale Toscana 2",
+      "area": "20136 Milano",
+      "phones": [
+        {
+          "display": "+39 02 9166 3939",
+          "tel": "tel:+390291663939"
+        },
+        {
+          "display": "+39 339 178 5899",
+          "tel": "tel:+393391785899"
+        }
+      ],
+      "hoursLabel": {
+        "en": "Hours",
+        "it": "Orari"
+      },
+      "hours": [
+        {
+          "label": {
+            "en": "Tuesday to Sunday",
+            "it": "Martedì–domenica"
+          },
+          "value": "11:30–14:20 · 18:00–22:10"
+        },
+        {
+          "label": {
+            "en": "Monday",
+            "it": "Lunedì"
+          },
+          "value": {
+            "en": "Closed",
+            "it": "Chiuso"
+          },
+          "closed": true
+        }
+      ],
+      "note": {
+        "en": "Reservations are available by phone.",
+        "it": "Le prenotazioni si fanno per telefono."
+      },
+      "ctaCall": {
+        "en": "Call to book",
+        "it": "Chiama per prenotare"
+      },
+      "ctaMaps": {
+        "en": "Open in Maps",
+        "it": "Apri in Maps"
+      },
+      "maps": "https://www.google.com/maps/search/?api=1&query=Shalimar+Viale+Toscana+2+20136+Milano"
+    },
+    "takeaway": {
+      "eyebrow": {
+        "en": "TAKEAWAY & SWEET HOUSE",
+        "it": "TAKE AWAY & SWEET HOUSE"
+      },
+      "title": "Corso di Porta Romana 25",
+      "area": "20122 Milano",
+      "phones": [
+        {
+          "display": "+39 02 5830 7508",
+          "tel": "tel:+390258307508"
+        }
+      ],
+      "hoursLabel": {
+        "en": "Pickup hours",
+        "it": "Orari ritiro"
+      },
+      "hours": [
+        {
+          "label": {
+            "en": "Every day",
+            "it": "Tutti i giorni"
+          },
+          "value": "11:00–21:30"
+        }
+      ],
+      "note": {
+        "en": "Delivery hours may finish earlier. Check the ordering page or call before placing a late order.",
+        "it": "La delivery può chiudere prima. Controlla la pagina ordini o chiama prima di un ordine tardi."
+      },
+      "note2": {
+        "en": "No reservation is required.",
+        "it": "Non serve prenotare."
+      },
+      "ctaCall": {
+        "en": "Call the takeaway",
+        "it": "Chiama il take away"
+      },
+      "ctaOrder": {
+        "en": "Order online",
+        "it": "Ordina online"
+      },
+      "ctaMaps": {
+        "en": "Open in Maps",
+        "it": "Apri in Maps"
+      },
+      "maps": "https://www.google.com/maps/search/?api=1&query=Shalimar+Corso+di+Porta+Romana+25+20122+Milano",
+      "orderUrl": ""
+    }
+  },
+  "footer": {
+    "copyright": {
+      "en": "© {{year}} Shalimar Milano",
+      "it": "© {{year}} Shalimar Milano"
+    }
+  },
+  "links": {
+    "restaurantMenu": "/menu",
+    "takeawayMenu": "/menu",
+    "orderOnline": ""
+  }
+}
