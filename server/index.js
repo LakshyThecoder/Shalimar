@@ -145,21 +145,20 @@ app.get("/api/health", (_req, res) => {
   res.json({ ok: true, free: true });
 });
 
-/** Serve sitemaps with correct content-type (never fall through to SPA HTML) */
-function sendPublicXml(res, filename) {
-  const file = path.join(ROOT, "public", filename);
+/** Serve sitemap / robots as plain files (never SPA HTML) */
+app.get("/sitemap.xml", (_req, res) => {
+  const file = path.join(ROOT, "public", "sitemap.xml");
   if (!fs.existsSync(file)) {
     res.status(404).type("text").send("Not found");
     return;
   }
-  res.type("application/xml").send(fs.readFileSync(file, "utf8"));
-}
-app.get("/sitemap.xml", (_req, res) => sendPublicXml(res, "sitemap.xml"));
-app.get("/sitemap-pages.xml", (_req, res) => sendPublicXml(res, "sitemap-pages.xml"));
-app.get("/sitemap-images.xml", (_req, res) => sendPublicXml(res, "sitemap-images.xml"));
+  res.setHeader("Content-Type", "application/xml; charset=utf-8");
+  res.send(fs.readFileSync(file));
+});
 app.get("/robots.txt", (_req, res) => {
   const file = path.join(ROOT, "public", "robots.txt");
-  res.type("text/plain").send(fs.readFileSync(file, "utf8"));
+  res.setHeader("Content-Type", "text/plain; charset=utf-8");
+  res.send(fs.readFileSync(file));
 });
 
 /** Public website content */

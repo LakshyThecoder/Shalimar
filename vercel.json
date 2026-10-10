@@ -17,23 +17,23 @@
       ]
     },
     {
-      "source": "/sitemap(.*).xml",
+      "source": "/sitemap.xml",
       "headers": [
         { "key": "Content-Type", "value": "application/xml; charset=utf-8" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        { "key": "Cache-Control", "value": "public, max-age=300" }
       ]
     },
     {
       "source": "/robots.txt",
       "headers": [
         { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        { "key": "Cache-Control", "value": "public, max-age=300" }
       ]
     }
   ],
   "rewrites": [
     {
-      "source": "/((?!robots\\.txt|sitemap\\.xml|sitemap-pages\\.xml|sitemap-images\\.xml|sitemap\\.xsl|og-shalimar\\.jpg|favicon\\.svg|uploads/).*)",
+      "source": "/((?!robots\\.txt|sitemap\\.xml|og-shalimar\\.jpg|favicon\\.svg|uploads/).*)",
       "destination": "/index.html"
     }
   ]
