@@ -1,8 +1,22 @@
-# Shalimar Milano — crawl rules
+# Shalimar Milano
 User-agent: *
 Allow: /
-Disallow: /admin
-Disallow: /api/
-Disallow: /uploads/
+Allow: /menu
+Allow: /og-shalimar.jpg
+Allow: /sitemap.xml
+Allow: /sitemap-pages.xml
+Allow: /sitemap-images.xml
 
-Sitemap: https://shalimar-milano.vercel.app/sitemap.xml
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Disallow: /qrmenu
+Disallow: /qrmenu/
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://shalimar.vercel.app/sitemap.xml

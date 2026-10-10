@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://shalimar-milano.vercel.app/</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://shalimar-milano.vercel.app/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://shalimar-milano.vercel.app/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://shalimar-milano.vercel.app/" />
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://shalimar-milano.vercel.app/menu</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://shalimar-milano.vercel.app/menu" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://shalimar-milano.vercel.app/menu" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://shalimar-milano.vercel.app/menu" />
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://shalimar-milano.vercel.app/qrmenu</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-</urlset>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://shalimar.vercel.app/sitemap-pages.xml</loc>
+    <lastmod>2026-10-10</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://shalimar.vercel.app/sitemap-images.xml</loc>
+    <lastmod>2026-10-10</lastmod>
+  </sitemap>
+</sitemapindex>

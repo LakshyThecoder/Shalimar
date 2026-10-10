@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://shalimar.vercel.app/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <image:image>
+      <image:loc>https://shalimar.vercel.app/og-shalimar.jpg</image:loc>
+      <image:title>Shalimar Milano - Best Halal Indian Restaurant</image:title>
+      <image:caption>Halal Indian and Pakistani food in Milan - Shalimar restaurant Viale Toscana and takeaway Porta Romana</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://shalimar.vercel.app/menu</loc>
+    <lastmod>2026-10-10</lastmod>
+    <image:image>
+      <image:loc>https://shalimar.vercel.app/og-shalimar.jpg</image:loc>
+      <image:title>Shalimar Menu - Indian Halal Milano</image:title>
+      <image:caption>Full Shalimar menu: tandoor, curry, biryani, vegetarian, naan, sweets</image:caption>
+    </image:image>
+  </url>
+</urlset>

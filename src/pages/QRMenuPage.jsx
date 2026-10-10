@@ -8,7 +8,11 @@ export default function QRMenuPage() {
   const initialBranch = branch === "takeaway" || branch === "restaurant" ? branch : null;
   return (
     <>
-      <Seo routeKey="qrmenu" pathOverride={branch ? `/qrmenu/${branch}` : "/qrmenu"} />
+      <Seo
+        routeKey="qrmenu"
+        noindex
+        pathOverride={branch ? `/qrmenu/${branch}` : "/qrmenu"}
+      />
       <MenuDisplay showPrices={true} initialBranch={initialBranch} />
     </>
   );

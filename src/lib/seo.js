@@ -11,7 +11,7 @@ export function getSiteUrl() {
     const origin = window.location.origin;
     if (!/localhost|127\.0\.0\.1/.test(origin)) return origin;
   }
-  return "https://shalimar-milano.vercel.app";
+  return "https://shalimar.vercel.app";
 }
 
 export const DEFAULT_OG_IMAGE = "/og-shalimar.jpg";
