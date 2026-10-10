@@ -14,7 +14,7 @@ const DATA = path.join(ROOT, "data");
 const SITE_URL = (
   process.env.SITE_URL ||
   process.env.VITE_SITE_URL ||
-  "https://shalimar.vercel.app"
+  "https://www.shalimarmilano.store"
 ).replace(/\/$/, "");
 
 function readUpdatedAt(file, fallback = new Date().toISOString()) {

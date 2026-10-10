@@ -5,30 +5,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://shalimar.vercel.app/</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://shalimar.vercel.app/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://shalimar.vercel.app/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://shalimar.vercel.app/" />
+    <loc>https://www.shalimarmilano.store/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.shalimarmilano.store/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.shalimarmilano.store/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shalimarmilano.store/" />
     <lastmod>2026-10-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://shalimar.vercel.app/og-shalimar.jpg</image:loc>
+      <image:loc>https://www.shalimarmilano.store/og-shalimar.jpg</image:loc>
       <image:title>Shalimar Milano - Halal Indian restaurant</image:title>
       <image:caption>Best Halal Indian and Pakistani restaurant and takeaway in Milan - Viale Toscana and Porta Romana</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://shalimar.vercel.app/menu</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://shalimar.vercel.app/menu" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://shalimar.vercel.app/menu" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://shalimar.vercel.app/menu" />
+    <loc>https://www.shalimarmilano.store/menu</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.shalimarmilano.store/menu" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.shalimarmilano.store/menu" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shalimarmilano.store/menu" />
     <lastmod>2026-10-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
     <image:image>
-      <image:loc>https://shalimar.vercel.app/og-shalimar.jpg</image:loc>
+      <image:loc>https://www.shalimarmilano.store/og-shalimar.jpg</image:loc>
       <image:title>Shalimar menu - Indian Halal Milano</image:title>
       <image:caption>Tandoor, curries, biryani, naan and sweets at Shalimar Milan</image:caption>
     </image:image>

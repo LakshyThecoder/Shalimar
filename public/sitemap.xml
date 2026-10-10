@@ -2,11 +2,11 @@
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://shalimar.vercel.app/sitemap-pages.xml</loc>
+    <loc>https://www.shalimarmilano.store/sitemap-pages.xml</loc>
     <lastmod>2026-10-10</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://shalimar.vercel.app/sitemap-images.xml</loc>
+    <loc>https://www.shalimarmilano.store/sitemap-images.xml</loc>
     <lastmod>2026-10-10</lastmod>
   </sitemap>
 </sitemapindex>
