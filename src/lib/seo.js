@@ -30,6 +30,7 @@ export const LOCAL_BUSINESS = {
     maps: "https://www.google.com/maps/search/?api=1&query=Shalimar+Viale+Toscana+2+20136+Milano",
     priceRange: "€€",
     servesCuisine: ["Indian", "Pakistani", "Halal"],
+    geo: { lat: 45.4438, lng: 9.1942 },
   },
   takeaway: {
     name: "Shalimar Take Away & Sweet House",
@@ -43,6 +44,7 @@ export const LOCAL_BUSINESS = {
     maps: "https://www.google.com/maps/search/?api=1&query=Shalimar+Corso+di+Porta+Romana+25+20122+Milano",
     priceRange: "€",
     servesCuisine: ["Indian", "Pakistani", "Halal"],
+    geo: { lat: 45.4566, lng: 9.1989 },
   },
 };
 
@@ -127,14 +129,23 @@ function placeNode(loc, id) {
     priceRange: loc.priceRange,
     servesCuisine: loc.servesCuisine,
     address: postalAddress(loc),
+    geo: loc.geo
+      ? {
+          "@type": "GeoCoordinates",
+          latitude: loc.geo.lat,
+          longitude: loc.geo.lng,
+        }
+      : undefined,
     hasMap: loc.maps,
     acceptsReservations: id.includes("restaurant"),
     keywords:
-      "Halal, Indian restaurant Milan, best Indian food, Shalimar, Pakistani cuisine",
-    areaServed: {
-      "@type": "City",
-      name: "Milan",
-    },
+      "Halal, Indian restaurant Milan, best Indian food, Shalimar, Pakistani cuisine, ristorante indiano Milano",
+    areaServed: [
+      { "@type": "City", name: "Milan" },
+      { "@type": "City", name: "Milano" },
+    ],
+    paymentAccepted: "Cash, Credit Card, Debit Card",
+    currenciesAccepted: "EUR",
   };
 }
 
