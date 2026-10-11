@@ -7,6 +7,10 @@ const handler = serverless(app, {
 });
 
 export default async function vercelHandler(req, res) {
+  // Preserve /api/... path when rewritten to this function
+  if (req.url && !req.url.startsWith("/api")) {
+    req.url = `/api${req.url.startsWith("/") ? "" : "/"}${req.url}`;
+  }
   return handler(req, res);
 }
 
