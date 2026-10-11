@@ -175,9 +175,12 @@ export default function AdminPage() {
   const upload = async (file, onUrl) => {
     if (!file) return;
     try {
+      setToast("Compressing photo…");
       const r = await adminUploadPhoto(file);
       onUrl(r.url);
-      setToast("Photo uploaded — remember to Save menu");
+      setToast(
+        `Photo compressed to ${r.savedLabel || "ok"} — remember to Save menu`
+      );
     } catch (err) {
       setToast(err.message);
     }
@@ -840,7 +843,7 @@ function PhotoDrop({ url, onUpload, onClear, label, large = false }) {
         )}
         <input
           type="file"
-          accept="image/*"
+          accept="image/jpeg,image/png,image/webp,image/gif"
           className="hidden"
           onChange={(e) => onFile(e.target.files?.[0])}
         />

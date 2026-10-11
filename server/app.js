@@ -94,6 +94,9 @@ export function createApp({ serveStatic = true } = {}) {
     }
   }
 
+  /** Hard cap — client compresses to ~380 KB; reject anything over 500 KB. */
+  const MAX_UPLOAD_BYTES = 500 * 1024;
+
   const upload = multer({
     storage: useBlob() ? multer.memoryStorage() : multer.diskStorage({
       destination: (_req, _file, cb) => cb(null, UPLOAD_DIR),
@@ -103,7 +106,7 @@ export function createApp({ serveStatic = true } = {}) {
         cb(null, `${Date.now()}-${safe}${ext}`);
       },
     }),
-    limits: { fileSize: 8 * 1024 * 1024 },
+    limits: { fileSize: MAX_UPLOAD_BYTES },
     fileFilter: (_req, file, cb) => {
       const ok = ["image/jpeg", "image/png", "image/webp", "image/gif"].includes(file.mimetype);
       if (!ok) {
@@ -281,11 +284,30 @@ export function createApp({ serveStatic = true } = {}) {
   app.post("/api/admin/upload", requireAuth, (req, res) => {
     upload.single("photo")(req, res, async (err) => {
       if (err) {
-        res.status(400).json({ error: err.message });
+        const tooBig = err.code === "LIMIT_FILE_SIZE";
+        res.status(400).json({
+          error: tooBig
+            ? `Photo too large — max ${Math.round(MAX_UPLOAD_BYTES / 1024)} KB after compression`
+            : err.message,
+        });
         return;
       }
       if (!req.file) {
         res.status(400).json({ error: "No file uploaded" });
+        return;
+      }
+      const size = req.file.size || req.file.buffer?.length || 0;
+      if (size > MAX_UPLOAD_BYTES) {
+        if (!useBlob() && req.file.path) {
+          try {
+            fs.unlinkSync(req.file.path);
+          } catch {
+            /* ignore */
+          }
+        }
+        res.status(400).json({
+          error: `Photo too large — max ${Math.round(MAX_UPLOAD_BYTES / 1024)} KB after compression`,
+        });
         return;
       }
       try {
@@ -294,10 +316,10 @@ export function createApp({ serveStatic = true } = {}) {
           const safe = slugify(path.basename(req.file.originalname || "photo", ext)) || "photo";
           const pathname = `shalimar/uploads/${Date.now()}-${safe}${ext}`;
           const url = await uploadBinaryBlob(pathname, req.file.buffer, req.file.mimetype);
-          res.json({ ok: true, url });
+          res.json({ ok: true, url, bytes: size });
           return;
         }
-        res.json({ ok: true, url: `/uploads/${req.file.filename}` });
+        res.json({ ok: true, url: `/uploads/${req.file.filename}`, bytes: size });
       } catch (e) {
         res.status(500).json({ error: e.message });
       }

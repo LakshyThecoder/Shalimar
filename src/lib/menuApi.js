@@ -1,3 +1,5 @@
+import { compressImage, formatBytes } from "./compressImage";
+
 const API_BASE = "";
 
 async function request(path, options = {}) {
@@ -72,12 +74,18 @@ export async function adminSaveMenu(branch, sections) {
 }
 
 export async function adminUploadPhoto(file) {
+  const compressed = await compressImage(file);
   const form = new FormData();
-  form.append("photo", file);
-  return request("/api/admin/upload", {
+  form.append("photo", compressed);
+  const data = await request("/api/admin/upload", {
     method: "POST",
     body: form,
   });
+  return {
+    ...data,
+    bytes: compressed.size,
+    savedLabel: formatBytes(compressed.size),
+  };
 }
 
 export async function adminDeletePhoto(url) {
