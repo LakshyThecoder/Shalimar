@@ -3,7 +3,7 @@
 const t = (en, it) => ({ en, it });
 
 export const SITE_DEFAULT = {
-  version: 1,
+  version: 2,
   updatedAt: null,
   brand: {
     name: "SHALIMAR",
@@ -239,10 +239,6 @@ export const SITE_DEFAULT = {
       hoursLabel: t("Hours", "Orari"),
       hours: [
         {
-          label: t("Sunday", "Domenica"),
-          value: "11:30–14:30 · 18:00–22:30",
-        },
-        {
           label: t("Monday", "Lunedì"),
           value: t("Closed", "Chiuso"),
           closed: true,
@@ -267,6 +263,10 @@ export const SITE_DEFAULT = {
           label: t("Saturday", "Sabato"),
           value: "11:30–14:30 · 18:00–22:30",
         },
+        {
+          label: t("Sunday", "Domenica"),
+          value: "11:30–14:30 · 18:00–22:30",
+        },
       ],
       note: t(
         "Reservations are available by phone.",
@@ -284,7 +284,31 @@ export const SITE_DEFAULT = {
       hoursLabel: t("Pickup hours", "Orari ritiro"),
       hours: [
         {
-          label: t("Every day", "Tutti i giorni"),
+          label: t("Monday", "Lunedì"),
+          value: "11:00–21:30",
+        },
+        {
+          label: t("Tuesday", "Martedì"),
+          value: "11:00–21:30",
+        },
+        {
+          label: t("Wednesday", "Mercoledì"),
+          value: "11:00–21:30",
+        },
+        {
+          label: t("Thursday", "Giovedì"),
+          value: "11:00–21:30",
+        },
+        {
+          label: t("Friday", "Venerdì"),
+          value: "11:00–21:30",
+        },
+        {
+          label: t("Saturday", "Sabato"),
+          value: "11:00–21:30",
+        },
+        {
+          label: t("Sunday", "Domenica"),
           value: "11:00–21:30",
         },
       ],

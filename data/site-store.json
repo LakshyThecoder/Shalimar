@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "updatedAt": "2026-10-10T18:12:22.066Z",
   "brand": {
     "name": "SHALIMAR",
@@ -367,13 +367,6 @@
       "hours": [
         {
           "label": {
-            "en": "Sunday",
-            "it": "Domenica"
-          },
-          "value": "11:30–14:30 · 18:00–22:30"
-        },
-        {
-          "label": {
             "en": "Monday",
             "it": "Lunedì"
           },
@@ -417,6 +410,13 @@
             "it": "Sabato"
           },
           "value": "11:30–14:30 · 18:00–22:30"
+        },
+        {
+          "label": {
+            "en": "Sunday",
+            "it": "Domenica"
+          },
+          "value": "11:30–14:30 · 18:00–22:30"
         }
       ],
       "note": {
@@ -453,8 +453,50 @@
       "hours": [
         {
           "label": {
-            "en": "Every day",
-            "it": "Tutti i giorni"
+            "en": "Monday",
+            "it": "Lunedì"
+          },
+          "value": "11:00–21:30"
+        },
+        {
+          "label": {
+            "en": "Tuesday",
+            "it": "Martedì"
+          },
+          "value": "11:00–21:30"
+        },
+        {
+          "label": {
+            "en": "Wednesday",
+            "it": "Mercoledì"
+          },
+          "value": "11:00–21:30"
+        },
+        {
+          "label": {
+            "en": "Thursday",
+            "it": "Giovedì"
+          },
+          "value": "11:00–21:30"
+        },
+        {
+          "label": {
+            "en": "Friday",
+            "it": "Venerdì"
+          },
+          "value": "11:00–21:30"
+        },
+        {
+          "label": {
+            "en": "Saturday",
+            "it": "Sabato"
+          },
+          "value": "11:00–21:30"
+        },
+        {
+          "label": {
+            "en": "Sunday",
+            "it": "Domenica"
           },
           "value": "11:00–21:30"
         }

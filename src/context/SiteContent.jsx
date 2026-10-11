@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { fetchSite, tx, SITE_DEFAULT } from "../lib/siteApi";
+import { fetchSite, normalizeSiteHours, tx, SITE_DEFAULT } from "../lib/siteApi";
 
 const SiteContext = createContext({
   site: SITE_DEFAULT,
@@ -14,7 +14,7 @@ const SiteContext = createContext({
 export function SiteProvider({ children }) {
   const { i18n } = useTranslation();
   const lang = i18n.language?.startsWith("it") ? "it" : "en";
-  const [site, setSite] = useState(SITE_DEFAULT);
+  const [site, setSite] = useState(() => normalizeSiteHours(structuredClone(SITE_DEFAULT)));
   const [loading, setLoading] = useState(true);
   const [fromApi, setFromApi] = useState(false);
 
@@ -27,7 +27,7 @@ export function SiteProvider({ children }) {
         setFromApi(Boolean(data?.updatedAt));
       })
       .catch(() => {
-        setSite(SITE_DEFAULT);
+        setSite(normalizeSiteHours(structuredClone(SITE_DEFAULT)));
         setFromApi(false);
       })
       .finally(() => setLoading(false));

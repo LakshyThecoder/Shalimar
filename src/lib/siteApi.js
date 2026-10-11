@@ -39,12 +39,37 @@ async function request(path, options = {}) {
   return data;
 }
 
+/** Ensure visit section always lists a full week of hours (not a 2-line summary). */
+export function normalizeSiteHours(site) {
+  if (!site?.locations) return site;
+  const out = site;
+  for (const key of ["restaurant", "takeaway"]) {
+    const defHours = SITE_DEFAULT.locations?.[key]?.hours;
+    if (!defHours?.length) continue;
+    const cur = out.locations?.[key]?.hours;
+    const raw = JSON.stringify(cur || []);
+    const stale =
+      !Array.isArray(cur) ||
+      cur.length < 7 ||
+      raw.includes("14:20") ||
+      raw.includes("22:10") ||
+      raw.includes("Every day") ||
+      raw.includes("Tutti i giorni") ||
+      raw.includes("Tuesday to Sunday") ||
+      raw.includes("Martedì–domenica");
+    if (stale && out.locations?.[key]) {
+      out.locations[key].hours = structuredClone(defHours);
+    }
+  }
+  return out;
+}
+
 export async function fetchSite() {
-  return request("/api/site");
+  return normalizeSiteHours(await request("/api/site"));
 }
 
 export async function adminGetSite() {
-  return request("/api/admin/site");
+  return normalizeSiteHours(await request("/api/admin/site"));
 }
 
 export async function adminSaveSite(site) {
