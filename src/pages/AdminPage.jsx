@@ -212,7 +212,9 @@ export default function AdminPage() {
           <p className="font-editorial italic text-sh-saffron text-lg">शालिमार</p>
           <h1 className="mt-1 font-display text-4xl uppercase tracking-tight">Admin</h1>
           <p className="mt-2 text-sm text-white/50">Edit the website and menus in one place.</p>
-          <p className="mt-1 text-xs text-white/35">Use http://localhost:5174/admin</p>
+          <p className="mt-1 text-xs text-white/35">
+            Live site needs Vercel Blob storage connected. Local: localhost:5174/admin
+          </p>
 
           <label className="mt-8 block text-xs uppercase tracking-[0.16em] text-white/45">
             ID

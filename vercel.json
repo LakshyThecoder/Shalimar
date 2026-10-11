@@ -32,9 +32,6 @@
     }
   ],
   "rewrites": [
-    {
-      "source": "/((?!robots\\.txt|sitemap\\.xml|og-shalimar\\.jpg|favicon\\.svg|uploads/).*)",
-      "destination": "/index.html"
-    }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

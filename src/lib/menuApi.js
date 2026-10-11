@@ -12,14 +12,19 @@ async function request(path, options = {}) {
       },
     });
   } catch {
-    throw new Error("Cannot reach the API. Run npm run dev and open http://localhost:5174");
+    throw new Error(
+      "Cannot reach the API. Locally run npm run dev. On the live site, check Vercel env (BLOB_READ_WRITE_TOKEN)."
+    );
   }
 
   const raw = await res.text();
   const looksHtml = /^\s*<!doctype html/i.test(raw) || /^\s*<html/i.test(raw);
   if (looksHtml) {
+    const local = typeof window !== "undefined" && /localhost|127\.0\.0\.1/.test(window.location.host);
     throw new Error(
-      "Wrong app on this port — open Shalimar at http://localhost:5174/admin (not 5173)"
+      local
+        ? "Wrong app on this port — open Shalimar at http://localhost:5174/admin (not 5173)"
+        : "Admin API is not deployed. Redeploy with the /api serverless function and Blob storage."
     );
   }
 
@@ -76,10 +81,14 @@ export async function adminUploadPhoto(file) {
 }
 
 export async function adminDeletePhoto(url) {
-  if (!url || !String(url).startsWith("/uploads/")) return { ok: true };
+  const s = String(url || "");
+  if (!s) return { ok: true };
+  const isLocal = s.startsWith("/uploads/");
+  const isBlob = s.includes("blob.vercel-storage.com");
+  if (!isLocal && !isBlob) return { ok: true };
   return request("/api/admin/upload", {
     method: "DELETE",
-    body: JSON.stringify({ url }),
+    body: JSON.stringify({ url: s }),
   });
 }
 
