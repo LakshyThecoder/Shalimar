@@ -3,7 +3,13 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { writeJsonAtomic } from "./atomicWrite.js";
 import { buildMenuStore } from "./menuSeedData.js";
-import { assertProdStorage, readJsonBlob, useBlob, writeJsonBlob } from "./blobStore.js";
+import {
+  assertProdStorage,
+  missingProdBlob,
+  readJsonBlob,
+  useBlob,
+  writeJsonBlob,
+} from "./blobStore.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const ROOT = path.resolve(__dirname, "..");
@@ -29,7 +35,10 @@ function readStoreLocal() {
 }
 
 export async function readStore() {
-  assertProdStorage();
+  if (missingProdBlob()) {
+    // Fast fallback so the public site does not 504 while Blob is not connected
+    return buildMenuStore();
+  }
   if (useBlob()) {
     const remote = await readJsonBlob(MENU_BLOB);
     if (remote) return remote;

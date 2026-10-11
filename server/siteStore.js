@@ -3,7 +3,13 @@ import path from "path";
 import { DATA_DIR, ensureDirs } from "./store.js";
 import { SITE_DEFAULT } from "../src/data/siteDefault.js";
 import { deepMerge, writeJsonAtomic } from "./atomicWrite.js";
-import { assertProdStorage, readJsonBlob, useBlob, writeJsonBlob } from "./blobStore.js";
+import {
+  assertProdStorage,
+  missingProdBlob,
+  readJsonBlob,
+  useBlob,
+  writeJsonBlob,
+} from "./blobStore.js";
 
 function withFullWeekHours(site) {
   const out = site;
@@ -44,7 +50,13 @@ function seedLocal(force = false) {
 }
 
 export async function readSite() {
-  assertProdStorage();
+  if (missingProdBlob()) {
+    return withFullWeekHours(
+      deepMerge(structuredClone(SITE_DEFAULT), {
+        updatedAt: new Date().toISOString(),
+      })
+    );
+  }
   if (useBlob()) {
     const remote = await readJsonBlob(SITE_BLOB);
     if (remote) return withFullWeekHours(deepMerge(structuredClone(SITE_DEFAULT), remote));

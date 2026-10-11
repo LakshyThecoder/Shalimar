@@ -4,9 +4,14 @@ export function useBlob() {
   return Boolean(process.env.BLOB_READ_WRITE_TOKEN);
 }
 
-/** Vercel has no persistent disk — Blob token is required there. */
+/** True when running on Vercel without Blob — reads can use defaults; writes must fail clearly. */
+export function missingProdBlob() {
+  return Boolean(process.env.VERCEL) && !useBlob();
+}
+
+/** Vercel has no persistent disk — Blob token is required to save. */
 export function assertProdStorage() {
-  if (process.env.VERCEL && !useBlob()) {
+  if (missingProdBlob()) {
     throw new Error(
       "Production storage missing: add a Vercel Blob store (BLOB_READ_WRITE_TOKEN) in project settings."
     );
