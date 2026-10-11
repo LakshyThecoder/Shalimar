@@ -833,7 +833,7 @@ function PhotoDrop({ url, onUpload, onClear, label, large = false }) {
         ) : (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 text-center px-4">
             <span className="text-sh-saffron text-sm font-semibold">Add photo</span>
-            <span className="text-xs text-white/40">Click or drop JPG / PNG</span>
+            <span className="text-xs text-white/40">Auto-compressed · max 500 KB</span>
           </div>
         )}
         {url && (
