@@ -192,7 +192,7 @@ export function buildLocalBusinessJsonLd() {
               "Sunday",
             ],
             opens: "11:30",
-            closes: "14:20",
+            closes: "14:30",
           },
           {
             "@type": "OpeningHoursSpecification",
@@ -205,7 +205,7 @@ export function buildLocalBusinessJsonLd() {
               "Sunday",
             ],
             opens: "18:00",
-            closes: "22:10",
+            closes: "22:30",
           },
         ],
       },

@@ -6,13 +6,13 @@ import { IMG } from "../lib/images";
 import { RESTAURANT, TAKEAWAY } from "../data/locations";
 
 const RESTAURANT_HOURS = [
-  { day: "sunday", hours: "11:30 – 14:20 · 14:30 – 22:30" },
+  { day: "sunday", hours: "11:30–14:30 · 18:00–22:30" },
   { day: "monday", hours: "closed" },
-  { day: "tuesday", hours: "11:30 – 14:20 · 14:30 – 22:30" },
-  { day: "wednesday", hours: "11:30 – 14:20 · 14:30 – 22:30" },
-  { day: "thursday", hours: "11:30 – 14:20 · 14:30 – 22:30" },
-  { day: "friday", hours: "11:30 – 14:20 · 14:30 – 22:30" },
-  { day: "saturday", hours: "11:30 – 14:20 · 14:30 – 22:30" },
+  { day: "tuesday", hours: "11:30–14:30 · 18:00–22:30" },
+  { day: "wednesday", hours: "11:30–14:30 · 18:00–22:30" },
+  { day: "thursday", hours: "11:30–14:30 · 18:00–22:30" },
+  { day: "friday", hours: "11:30–14:30 · 18:00–22:30" },
+  { day: "saturday", hours: "11:30–14:30 · 18:00–22:30" },
 ];
 
 const TAKEAWAY_HOURS = [
@@ -23,7 +23,7 @@ const TAKEAWAY_HOURS = [
   "thursday",
   "friday",
   "saturday",
-].map((day) => ({ day, hours: "11:30 – 21:30" }));
+].map((day) => ({ day, hours: "11:00–21:30" }));
 
 export default function Visit() {
   const { t } = useTranslation();

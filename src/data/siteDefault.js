@@ -239,13 +239,33 @@ export const SITE_DEFAULT = {
       hoursLabel: t("Hours", "Orari"),
       hours: [
         {
-          label: t("Tuesday to Sunday", "Martedì–domenica"),
-          value: "11:30–14:20 · 18:00–22:10",
+          label: t("Sunday", "Domenica"),
+          value: "11:30–14:30 · 18:00–22:30",
         },
         {
           label: t("Monday", "Lunedì"),
           value: t("Closed", "Chiuso"),
           closed: true,
+        },
+        {
+          label: t("Tuesday", "Martedì"),
+          value: "11:30–14:30 · 18:00–22:30",
+        },
+        {
+          label: t("Wednesday", "Mercoledì"),
+          value: "11:30–14:30 · 18:00–22:30",
+        },
+        {
+          label: t("Thursday", "Giovedì"),
+          value: "11:30–14:30 · 18:00–22:30",
+        },
+        {
+          label: t("Friday", "Venerdì"),
+          value: "11:30–14:30 · 18:00–22:30",
+        },
+        {
+          label: t("Saturday", "Sabato"),
+          value: "11:30–14:30 · 18:00–22:30",
         },
       ],
       note: t(

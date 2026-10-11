@@ -367,10 +367,10 @@
       "hours": [
         {
           "label": {
-            "en": "Tuesday to Sunday",
-            "it": "Martedì–domenica"
+            "en": "Sunday",
+            "it": "Domenica"
           },
-          "value": "11:30–14:20 · 18:00–22:10"
+          "value": "11:30–14:30 · 18:00–22:30"
         },
         {
           "label": {
@@ -382,6 +382,41 @@
             "it": "Chiuso"
           },
           "closed": true
+        },
+        {
+          "label": {
+            "en": "Tuesday",
+            "it": "Martedì"
+          },
+          "value": "11:30–14:30 · 18:00–22:30"
+        },
+        {
+          "label": {
+            "en": "Wednesday",
+            "it": "Mercoledì"
+          },
+          "value": "11:30–14:30 · 18:00–22:30"
+        },
+        {
+          "label": {
+            "en": "Thursday",
+            "it": "Giovedì"
+          },
+          "value": "11:30–14:30 · 18:00–22:30"
+        },
+        {
+          "label": {
+            "en": "Friday",
+            "it": "Venerdì"
+          },
+          "value": "11:30–14:30 · 18:00–22:30"
+        },
+        {
+          "label": {
+            "en": "Saturday",
+            "it": "Sabato"
+          },
+          "value": "11:30–14:30 · 18:00–22:30"
         }
       ],
       "note": {
